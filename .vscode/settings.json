@@ -14,6 +14,7 @@
         "irq.h": "c",
         "os_cfg.h": "c",
         "cpu.h": "c",
-        "time.h": "c"
+        "time.h": "c",
+        "log.h": "c"
     },
 }

@@ -93,7 +93,9 @@
 				1,
 				2,
 				3,
-				8
+				10,
+				12,
+				13
 			]
 		}
 	],
@@ -140,7 +142,9 @@
 				1,
 				2,
 				3,
-				8
+				10,
+				12,
+				13
 			]
 		},
 		{
@@ -151,7 +155,9 @@
 				5,
 				6,
 				7,
-				9
+				8,
+				9,
+				11
 			]
 		}
 	],
@@ -203,6 +209,16 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "source/kernel/include/tools/klib.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/kernel/include/tools/log.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "source/kernel/init/init.c",
 			"sourceGroupIndex" : 1
@@ -211,6 +227,18 @@
 			"backtrace" : 1,
 			"path" : "source/kernel/init/init.h",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "source/kernel/tools/klib.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "source/kernel/tools/log.c",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

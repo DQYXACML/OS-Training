@@ -27,6 +27,9 @@
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -143,13 +146,45 @@ source/kernel/CMakeFiles/kernel.dir/init/init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kernel.dir/init/init.c.s"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/diy-x86os-master/start/start/source/kernel/init/init.c -o CMakeFiles/kernel.dir/init/init.c.s
 
+source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj: source/kernel/CMakeFiles/kernel.dir/flags.make
+source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj: source/kernel/CMakeFiles/kernel.dir/includes_C.rsp
+source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj: C:/diy-x86os-master/start/start/source/kernel/tools/klib.c
+source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj: source/kernel/CMakeFiles/kernel.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj"
+	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj -MF CMakeFiles/kernel.dir/tools/klib.c.obj.d -o CMakeFiles/kernel.dir/tools/klib.c.obj -c C:/diy-x86os-master/start/start/source/kernel/tools/klib.c
+
+source/kernel/CMakeFiles/kernel.dir/tools/klib.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kernel.dir/tools/klib.c.i"
+	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:/diy-x86os-master/start/start/source/kernel/tools/klib.c > CMakeFiles/kernel.dir/tools/klib.c.i
+
+source/kernel/CMakeFiles/kernel.dir/tools/klib.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kernel.dir/tools/klib.c.s"
+	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/diy-x86os-master/start/start/source/kernel/tools/klib.c -o CMakeFiles/kernel.dir/tools/klib.c.s
+
+source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj: source/kernel/CMakeFiles/kernel.dir/flags.make
+source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj: source/kernel/CMakeFiles/kernel.dir/includes_C.rsp
+source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj: C:/diy-x86os-master/start/start/source/kernel/tools/log.c
+source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj: source/kernel/CMakeFiles/kernel.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj"
+	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj -MF CMakeFiles/kernel.dir/tools/log.c.obj.d -o CMakeFiles/kernel.dir/tools/log.c.obj -c C:/diy-x86os-master/start/start/source/kernel/tools/log.c
+
+source/kernel/CMakeFiles/kernel.dir/tools/log.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kernel.dir/tools/log.c.i"
+	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:/diy-x86os-master/start/start/source/kernel/tools/log.c > CMakeFiles/kernel.dir/tools/log.c.i
+
+source/kernel/CMakeFiles/kernel.dir/tools/log.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kernel.dir/tools/log.c.s"
+	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/diy-x86os-master/start/start/source/kernel/tools/log.c -o CMakeFiles/kernel.dir/tools/log.c.s
+
 # Object files for target kernel
 kernel_OBJECTS = \
 "CMakeFiles/kernel.dir/init/start.S.obj" \
 "CMakeFiles/kernel.dir/cpu/cpu.c.obj" \
 "CMakeFiles/kernel.dir/cpu/irq.c.obj" \
 "CMakeFiles/kernel.dir/dev/time.c.obj" \
-"CMakeFiles/kernel.dir/init/init.c.obj"
+"CMakeFiles/kernel.dir/init/init.c.obj" \
+"CMakeFiles/kernel.dir/tools/klib.c.obj" \
+"CMakeFiles/kernel.dir/tools/log.c.obj"
 
 # External object files for target kernel
 kernel_EXTERNAL_OBJECTS =
@@ -159,10 +194,12 @@ source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.obj
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/cpu/irq.c.obj
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/dev/time.c.obj
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/init/init.c.obj
+source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj
+source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/build.make
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/linkLibs.rsp
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable kernel.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable kernel.exe"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && x86_64-elf-ld @CMakeFiles/kernel.dir/objects1.rsp -m elf_i386  -T C:/diy-x86os-master/start/start/source/kernel/kernel.lds -o C:/diy-x86os-master/start/start/build/source/kernel/kernel.elf
 	cd C:/diy-x86os-master/start/start/build/source/kernel && x86_64-elf-objcopy -S kernel.elf C:/diy-x86os-master/start/start/../../image/kernel.elf
 	cd C:/diy-x86os-master/start/start/build/source/kernel && x86_64-elf-objdump -x -d -S -m i386 C:/diy-x86os-master/start/start/build/source/kernel/kernel.elf > kernel_dis.txt
