@@ -84,3 +84,31 @@ exception_handler virtual_exception, 20, 0
 
 # 硬件中断
 exception_handler timer, 0x20, 0
+
+// eax, ecx, edx由调用者自动保存
+// ebx, esi, edi, ebp需要由被调用者保存和恢复
+// cs/ds/es/fs/gs/ss不用保存，因为都是相同的
+// esp不用保存，只需要让esp保存在调用之前的状态
+// eflags ?
+    .text
+    .global simple_switch
+simple_switch:
+    movl 4(%esp), %eax   // 取from->stack
+	movl 8(%esp), %edx   // 取to->stack
+
+	// 保存前一任务的状态
+	push %ebp
+	push %ebx
+	push %esi
+	push %edi
+
+	// 切换栈
+	mov %esp, (%eax)    // from->stack = esp
+  	mov %edx, %esp      // esp = to->stack
+
+	// 加载下一任务的栈
+	pop %edi
+	pop %esi
+	pop %ebx
+	pop %ebp
+  	ret

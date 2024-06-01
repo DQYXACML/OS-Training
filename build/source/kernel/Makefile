@@ -133,6 +133,30 @@ kernel/fast:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/build
 .PHONY : kernel/fast
 
+core/task.obj: core/task.c.obj
+.PHONY : core/task.obj
+
+# target to build an object file
+core/task.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/core/task.c.obj
+.PHONY : core/task.c.obj
+
+core/task.i: core/task.c.i
+.PHONY : core/task.i
+
+# target to preprocess a source file
+core/task.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/core/task.c.i
+.PHONY : core/task.c.i
+
+core/task.s: core/task.c.s
+.PHONY : core/task.s
+
+# target to generate assembly for a file
+core/task.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/core/task.c.s
+.PHONY : core/task.c.s
+
 cpu/cpu.obj: cpu/cpu.c.obj
 .PHONY : cpu/cpu.obj
 
@@ -294,6 +318,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... kernel"
+	@echo "... core/task.obj"
+	@echo "... core/task.i"
+	@echo "... core/task.s"
 	@echo "... cpu/cpu.obj"
 	@echo "... cpu/cpu.i"
 	@echo "... cpu/cpu.s"

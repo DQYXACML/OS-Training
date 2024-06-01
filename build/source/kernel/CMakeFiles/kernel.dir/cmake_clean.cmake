@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/kernel.dir/core/task.c.obj"
+  "CMakeFiles/kernel.dir/core/task.c.obj.d"
   "CMakeFiles/kernel.dir/cpu/cpu.c.obj"
   "CMakeFiles/kernel.dir/cpu/cpu.c.obj.d"
   "CMakeFiles/kernel.dir/cpu/irq.c.obj"

@@ -22,6 +22,19 @@ void segment_desc_set(int selector, uint32_t base, uint32_t limit, uint16_t attr
     desc->attr = attr | (((limit >> 16) & 0xFF) << 8);
 }
 
+int get_alloc_desc()
+{
+    for (int i = 1; i < GDT_TABLE_SIZE; i++)
+    {
+        segment_desc_t *desc = gdt_table + i;
+        if (desc->attr == 0) // 根据属性是否为0判断
+        {
+            return i * sizeof(segment_desc_t);
+        }
+    }
+    return -1;
+}
+
 void init_gdt(void)
 {
     for (int i = 0; i < GDT_TABLE_SIZE; i++)
@@ -50,4 +63,9 @@ void gate_desc_set(gate_desc_t *desc, uint16_t selector, uint32_t offset, uint16
 void cpu_init(void)
 {
     init_gdt();
+}
+
+void switch_to_tss(uint32_t tss_selector)
+{
+    far_jump(tss_selector, 0);
 }

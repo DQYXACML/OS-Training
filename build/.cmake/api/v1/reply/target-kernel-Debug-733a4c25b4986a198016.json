@@ -93,9 +93,10 @@
 				1,
 				2,
 				3,
-				10,
+				4,
 				12,
-				13
+				14,
+				15
 			]
 		}
 	],
@@ -142,22 +143,24 @@
 				1,
 				2,
 				3,
-				10,
+				4,
 				12,
-				13
+				14,
+				15
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				4,
 				5,
 				6,
 				7,
 				8,
 				9,
-				11
+				10,
+				11,
+				13
 			]
 		}
 	],
@@ -168,6 +171,12 @@
 			"compileGroupIndex" : 0,
 			"path" : "source/kernel/init/start.S",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "source/kernel/core/task.c",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
@@ -186,6 +195,11 @@
 			"compileGroupIndex" : 1,
 			"path" : "source/kernel/dev/time.c",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/kernel/include/core/task.h",
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
