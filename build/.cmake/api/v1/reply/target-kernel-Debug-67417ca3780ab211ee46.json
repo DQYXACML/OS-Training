@@ -94,9 +94,12 @@
 				2,
 				3,
 				4,
-				12,
-				14,
-				15
+				15,
+				17,
+				18,
+				19,
+				20,
+				21
 			]
 		}
 	],
@@ -144,9 +147,12 @@
 				2,
 				3,
 				4,
-				12,
-				14,
-				15
+				15,
+				17,
+				18,
+				19,
+				20,
+				21
 			]
 		},
 		{
@@ -160,7 +166,10 @@
 				9,
 				10,
 				11,
-				13
+				12,
+				13,
+				14,
+				16
 			]
 		}
 	],
@@ -218,12 +227,27 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "source/kernel/include/ipc/mutex.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/kernel/include/ipc/sem.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
 			"path" : "source/kernel/include/os_cfg.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
 			"path" : "source/kernel/include/tools/klib.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/kernel/include/tools/list.h",
 			"sourceGroupIndex" : 2
 		},
 		{
@@ -245,7 +269,25 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
+			"path" : "source/kernel/ipc/mutex.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "source/kernel/ipc/sem.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
 			"path" : "source/kernel/tools/klib.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "source/kernel/tools/list.c",
 			"sourceGroupIndex" : 1
 		},
 		{

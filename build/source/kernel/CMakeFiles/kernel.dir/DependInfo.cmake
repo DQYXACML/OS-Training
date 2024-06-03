@@ -25,7 +25,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/diy-x86os-master/start/start/source/kernel/cpu/irq.c" "source/kernel/CMakeFiles/kernel.dir/cpu/irq.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/cpu/irq.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/dev/time.c" "source/kernel/CMakeFiles/kernel.dir/dev/time.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/dev/time.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/init/init.c" "source/kernel/CMakeFiles/kernel.dir/init/init.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/init/init.c.obj.d"
+  "C:/diy-x86os-master/start/start/source/kernel/ipc/mutex.c" "source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.obj.d"
+  "C:/diy-x86os-master/start/start/source/kernel/ipc/sem.c" "source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/tools/klib.c" "source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj.d"
+  "C:/diy-x86os-master/start/start/source/kernel/tools/list.c" "source/kernel/CMakeFiles/kernel.dir/tools/list.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/tools/list.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/tools/log.c" "source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj.d"
   )
 

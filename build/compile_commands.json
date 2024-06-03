@@ -67,9 +67,27 @@
 },
 {
   "directory": "C:/diy-x86os-master/start/start/build/source/kernel",
+  "command": "C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/ipc/mutex.c.obj -c C:/diy-x86os-master/start/start/source/kernel/ipc/mutex.c",
+  "file": "C:/diy-x86os-master/start/start/source/kernel/ipc/mutex.c",
+  "output": "source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.obj"
+},
+{
+  "directory": "C:/diy-x86os-master/start/start/build/source/kernel",
+  "command": "C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/ipc/sem.c.obj -c C:/diy-x86os-master/start/start/source/kernel/ipc/sem.c",
+  "file": "C:/diy-x86os-master/start/start/source/kernel/ipc/sem.c",
+  "output": "source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.obj"
+},
+{
+  "directory": "C:/diy-x86os-master/start/start/build/source/kernel",
   "command": "C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/tools/klib.c.obj -c C:/diy-x86os-master/start/start/source/kernel/tools/klib.c",
   "file": "C:/diy-x86os-master/start/start/source/kernel/tools/klib.c",
   "output": "source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj"
+},
+{
+  "directory": "C:/diy-x86os-master/start/start/build/source/kernel",
+  "command": "C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/tools/list.c.obj -c C:/diy-x86os-master/start/start/source/kernel/tools/list.c",
+  "file": "C:/diy-x86os-master/start/start/source/kernel/tools/list.c",
+  "output": "source/kernel/CMakeFiles/kernel.dir/tools/list.c.obj"
 },
 {
   "directory": "C:/diy-x86os-master/start/start/build/source/kernel",

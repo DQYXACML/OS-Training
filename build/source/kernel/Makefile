@@ -31,9 +31,6 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -261,6 +258,54 @@ init/start.S.obj:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/init/start.S.obj
 .PHONY : init/start.S.obj
 
+ipc/mutex.obj: ipc/mutex.c.obj
+.PHONY : ipc/mutex.obj
+
+# target to build an object file
+ipc/mutex.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.obj
+.PHONY : ipc/mutex.c.obj
+
+ipc/mutex.i: ipc/mutex.c.i
+.PHONY : ipc/mutex.i
+
+# target to preprocess a source file
+ipc/mutex.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.i
+.PHONY : ipc/mutex.c.i
+
+ipc/mutex.s: ipc/mutex.c.s
+.PHONY : ipc/mutex.s
+
+# target to generate assembly for a file
+ipc/mutex.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.s
+.PHONY : ipc/mutex.c.s
+
+ipc/sem.obj: ipc/sem.c.obj
+.PHONY : ipc/sem.obj
+
+# target to build an object file
+ipc/sem.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.obj
+.PHONY : ipc/sem.c.obj
+
+ipc/sem.i: ipc/sem.c.i
+.PHONY : ipc/sem.i
+
+# target to preprocess a source file
+ipc/sem.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.i
+.PHONY : ipc/sem.c.i
+
+ipc/sem.s: ipc/sem.c.s
+.PHONY : ipc/sem.s
+
+# target to generate assembly for a file
+ipc/sem.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.s
+.PHONY : ipc/sem.c.s
+
 tools/klib.obj: tools/klib.c.obj
 .PHONY : tools/klib.obj
 
@@ -284,6 +329,30 @@ tools/klib.s: tools/klib.c.s
 tools/klib.c.s:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/tools/klib.c.s
 .PHONY : tools/klib.c.s
+
+tools/list.obj: tools/list.c.obj
+.PHONY : tools/list.obj
+
+# target to build an object file
+tools/list.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/tools/list.c.obj
+.PHONY : tools/list.c.obj
+
+tools/list.i: tools/list.c.i
+.PHONY : tools/list.i
+
+# target to preprocess a source file
+tools/list.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/tools/list.c.i
+.PHONY : tools/list.c.i
+
+tools/list.s: tools/list.c.s
+.PHONY : tools/list.s
+
+# target to generate assembly for a file
+tools/list.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/tools/list.c.s
+.PHONY : tools/list.c.s
 
 tools/log.obj: tools/log.c.obj
 .PHONY : tools/log.obj
@@ -334,9 +403,18 @@ help:
 	@echo "... init/init.i"
 	@echo "... init/init.s"
 	@echo "... init/start.obj"
+	@echo "... ipc/mutex.obj"
+	@echo "... ipc/mutex.i"
+	@echo "... ipc/mutex.s"
+	@echo "... ipc/sem.obj"
+	@echo "... ipc/sem.i"
+	@echo "... ipc/sem.s"
 	@echo "... tools/klib.obj"
 	@echo "... tools/klib.i"
 	@echo "... tools/klib.s"
+	@echo "... tools/list.obj"
+	@echo "... tools/list.i"
+	@echo "... tools/list.s"
 	@echo "... tools/log.obj"
 	@echo "... tools/log.i"
 	@echo "... tools/log.s"
