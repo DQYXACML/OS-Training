@@ -29,6 +29,14 @@ static int tss_init(task_t *task, uint32_t entry, uint32_t esp)
     task->tss.cs = KERNEL_SELECTOR_CS;
     task->tss.eflags = EFLAGS_DEFAULT | EFLAGS_IF;
 
+    // 页表初始化
+    uint32_t page_dir = memory_create_uvm();
+    if (page_dir == 0)
+    {
+        gdt_free_sel(tss_sel);
+        return -1;
+    }
+    task->tss.cr3 = page_dir;
     task->tss_sel = tss_sel;
     return 0;
 }
@@ -163,7 +171,7 @@ int sys_sched_yield(void)
  */
 static task_t *task_next_run(void)
 {
-    if (list_count(&task_manager.ready_list == 0))
+    if (list_count(&task_manager.ready_list) == 0)
     {
         return &task_manager.idle_task;
     }

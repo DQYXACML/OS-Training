@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/kernel.dir/core/memory.c.obj"
+  "CMakeFiles/kernel.dir/core/memory.c.obj.d"
   "CMakeFiles/kernel.dir/core/task.c.obj"
   "CMakeFiles/kernel.dir/core/task.c.obj.d"
   "CMakeFiles/kernel.dir/cpu/cpu.c.obj"
@@ -14,6 +16,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/kernel.dir/ipc/mutex.c.obj.d"
   "CMakeFiles/kernel.dir/ipc/sem.c.obj"
   "CMakeFiles/kernel.dir/ipc/sem.c.obj.d"
+  "CMakeFiles/kernel.dir/tools/bitmap.c.obj"
+  "CMakeFiles/kernel.dir/tools/bitmap.c.obj.d"
   "CMakeFiles/kernel.dir/tools/klib.c.obj"
   "CMakeFiles/kernel.dir/tools/klib.c.obj.d"
   "CMakeFiles/kernel.dir/tools/list.c.obj"

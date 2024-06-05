@@ -10,12 +10,16 @@
 #include "tools/list.h"
 #include "comm/cpu_instr.h"
 #include "ipc/sem.h"
+#include "core/memory.h"
 
 void kernel_init(boot_info_t *boot_info)
 {
     cpu_init();
     log_init();
     irq_init();
+
+    // 内存初始化要放前面一点，因为后面的代码可能需要内存分配
+    memory_init(boot_info);
     time_init();
 
     task_manager_init();
@@ -85,7 +89,7 @@ void init_main(void)
     {
         log_printf("init_main: %d", count++);
         sem_notify(&sem);
-        sys_msleep(1000);
+        // sys_msleep(1000);
         // task_switch_from_to(task_first_task(), &init_task);
         // sys_sched_yield();
     }

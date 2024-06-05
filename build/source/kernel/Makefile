@@ -130,6 +130,30 @@ kernel/fast:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/build
 .PHONY : kernel/fast
 
+core/memory.obj: core/memory.c.obj
+.PHONY : core/memory.obj
+
+# target to build an object file
+core/memory.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/core/memory.c.obj
+.PHONY : core/memory.c.obj
+
+core/memory.i: core/memory.c.i
+.PHONY : core/memory.i
+
+# target to preprocess a source file
+core/memory.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/core/memory.c.i
+.PHONY : core/memory.c.i
+
+core/memory.s: core/memory.c.s
+.PHONY : core/memory.s
+
+# target to generate assembly for a file
+core/memory.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/core/memory.c.s
+.PHONY : core/memory.c.s
+
 core/task.obj: core/task.c.obj
 .PHONY : core/task.obj
 
@@ -306,6 +330,30 @@ ipc/sem.c.s:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.s
 .PHONY : ipc/sem.c.s
 
+tools/bitmap.obj: tools/bitmap.c.obj
+.PHONY : tools/bitmap.obj
+
+# target to build an object file
+tools/bitmap.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/tools/bitmap.c.obj
+.PHONY : tools/bitmap.c.obj
+
+tools/bitmap.i: tools/bitmap.c.i
+.PHONY : tools/bitmap.i
+
+# target to preprocess a source file
+tools/bitmap.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/tools/bitmap.c.i
+.PHONY : tools/bitmap.c.i
+
+tools/bitmap.s: tools/bitmap.c.s
+.PHONY : tools/bitmap.s
+
+# target to generate assembly for a file
+tools/bitmap.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/tools/bitmap.c.s
+.PHONY : tools/bitmap.c.s
+
 tools/klib.obj: tools/klib.c.obj
 .PHONY : tools/klib.obj
 
@@ -387,6 +435,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... kernel"
+	@echo "... core/memory.obj"
+	@echo "... core/memory.i"
+	@echo "... core/memory.s"
 	@echo "... core/task.obj"
 	@echo "... core/task.i"
 	@echo "... core/task.s"
@@ -409,6 +460,9 @@ help:
 	@echo "... ipc/sem.obj"
 	@echo "... ipc/sem.i"
 	@echo "... ipc/sem.s"
+	@echo "... tools/bitmap.obj"
+	@echo "... tools/bitmap.i"
+	@echo "... tools/bitmap.s"
 	@echo "... tools/klib.obj"
 	@echo "... tools/klib.i"
 	@echo "... tools/klib.s"

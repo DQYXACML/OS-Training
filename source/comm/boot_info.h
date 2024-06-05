@@ -5,7 +5,7 @@
 
 #define BOOT_RAM_REGION_MAX 10
 #define SECTOR_SIZE 512
-#define SYS_KERNEL_ADDR (1024 * 1024)
+#define SYS_KERNEL_ADDR (1024 * 1024) // 内核加载的起始地址
 
 typedef struct _boot_info_t
 {

@@ -25,6 +25,13 @@ void segment_desc_set(int selector, uint32_t base, uint32_t limit, uint16_t attr
     desc->attr = attr | (((limit >> 16) & 0xFF) << 8);
 }
 
+void gdt_free_sel(int sel)
+{
+    mutex_lock(&mutex);
+    gdt_table[sel / sizeof(segment_desc_t)].attr = 0;
+    mutex_unlock(&mutex);
+}
+
 int get_alloc_desc()
 {
     // irq_state_t state = irq_enter_protection();
