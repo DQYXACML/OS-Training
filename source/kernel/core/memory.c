@@ -2,10 +2,19 @@
 #include "tools/log.h"
 #include "core/memory.h"
 #include "cpu/mmu.h"
+#include "core/task.h"
 
 static addr_alloc_t paddr_alloc; // 物理地址分配结构
 
 static pde_t kernel_page_dir[PDE_CNT] __attribute__((aligned(MEM_PAGE_SIZE))); // 内核页目录表
+
+/**
+ * @brief 获取当前页表地址
+ */
+static pde_t *current_page_dir(void)
+{
+    return (pde_t *)task_current()->tss.cr3;
+}
 
 /**
  * @brief 初始化地址分配结构
@@ -207,6 +216,80 @@ uint32_t memory_create_uvm(void)
     }
 
     return (uint32_t)page_dir;
+}
+
+uint32_t memory_alloc_for_page_dir(uint32_t page_dir, uint32_t vaddr, uint32_t size, int perm)
+{
+    uint32_t curr_vaddr = vaddr;
+    int page_count = up2(size, MEM_PAGE_SIZE) / MEM_PAGE_SIZE;
+    vaddr = down2(vaddr, MEM_PAGE_SIZE);
+
+    // 逐页分配内存，然后建立映射关系
+    for (int i = 0; i < page_count; i++)
+    {
+        // 分配需要的内存
+        uint32_t paddr = addr_alloc_page(&paddr_alloc, 1);
+        if (paddr == 0)
+        {
+            log_printf("mem alloc failed. no memory");
+            return 0;
+        }
+
+        // 建立分配的内存与指定地址的关联
+        int err = memory_create_map((pde_t *)page_dir, curr_vaddr, paddr, 1, perm);
+        if (err < 0)
+        {
+            log_printf("create memory map failed. err = %d", err);
+            // addr_free_page(&paddr_alloc, vaddr, i + 1); 清理之前分配的页
+            return -1;
+        }
+
+        curr_vaddr += MEM_PAGE_SIZE;
+    }
+
+    return 0;
+}
+
+/**
+ * @brief 分配一页内存
+ * 主要用于内核空间内存的分配，不用于进程内存空间
+ */
+uint32_t memory_alloc_page(void)
+{
+    // 内核空间虚拟地址与物理地址相同
+    return addr_alloc_page(&paddr_alloc, 1);
+}
+
+/**
+ * @brief 释放一页内存
+ */
+void memory_free_page(uint32_t addr)
+{
+    if (addr < MEMORY_TASK_BASE)
+    {
+        // 内核空间，直接释放
+        addr_free_page(&paddr_alloc, addr, 1);
+    }
+    else
+    {
+        // 进程空间，还要释放页表
+        pte_t *pte = find_pte(current_page_dir(), addr, 0);
+        ASSERT((pte == (pte_t *)0) && pte->present);
+
+        // 释放内存页
+        addr_free_page(&paddr_alloc, pte_paddr(pte), 1);
+
+        // 释放页表
+        pte->v = 0;
+    }
+}
+
+/**
+ * @brief 为指定的虚拟地址空间分配多页内存
+ */
+int memory_alloc_page_for(uint32_t addr, uint32_t size, int perm)
+{
+    return memory_alloc_for_page_dir(task_current()->tss.cr3, addr, size, perm);
 }
 
 /**

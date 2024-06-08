@@ -16,13 +16,32 @@ source/kernel/CMakeFiles/kernel.dir/core/memory.c.obj: C:/diy-x86os-master/start
   C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h \
   C:/x86_64-elf-tools-windows/lib/gcc/x86_64-elf/7.1.0/include/stdarg.h
 
+source/kernel/CMakeFiles/kernel.dir/core/syscall.c.obj: C:/diy-x86os-master/start/start/source/kernel/core/syscall.c \
+  C:/diy-x86os-master/start/start/source/comm/boot_info.h \
+  C:/diy-x86os-master/start/start/source/comm/types.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/core/memory.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/tools/bitmap.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/tools/klib.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h \
+  C:/x86_64-elf-tools-windows/lib/gcc/x86_64-elf/7.1.0/include/stdarg.h
+
 source/kernel/CMakeFiles/kernel.dir/core/task.c.obj: C:/diy-x86os-master/start/start/source/kernel/core/task.c \
+  C:/diy-x86os-master/start/start/source/comm/boot_info.h \
   C:/diy-x86os-master/start/start/source/comm/cpu_instr.h \
   C:/diy-x86os-master/start/start/source/comm/types.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/core/memory.h \
   C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/cpu/mmu.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
   C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/tools/bitmap.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/klib.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h \
@@ -31,6 +50,7 @@ source/kernel/CMakeFiles/kernel.dir/core/task.c.obj: C:/diy-x86os-master/start/s
 source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.obj: C:/diy-x86os-master/start/start/source/kernel/cpu/cpu.c \
   C:/diy-x86os-master/start/start/source/comm/cpu_instr.h \
   C:/diy-x86os-master/start/start/source/comm/types.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h \
   C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h \
@@ -52,6 +72,16 @@ source/kernel/CMakeFiles/kernel.dir/dev/time.c.obj: C:/diy-x86os-master/start/st
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h \
   C:/diy-x86os-master/start/start/source/kernel/include/dev/time.h \
   C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h
+
+source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj: C:/diy-x86os-master/start/start/source/kernel/init/first_task.c \
+  C:/diy-x86os-master/start/start/source/applib/lib_syscall.h \
+  C:/diy-x86os-master/start/start/source/comm/types.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h
 
 source/kernel/CMakeFiles/kernel.dir/init/init.c.obj: C:/diy-x86os-master/start/start/source/kernel/init/init.c \
   C:/diy-x86os-master/start/start/source/comm/boot_info.h \
@@ -124,6 +154,8 @@ C:/diy-x86os-master/start/start/source/kernel/include/dev/time.h:
 
 C:/diy-x86os-master/start/start/source/kernel/include/core/memory.h:
 
+C:/diy-x86os-master/start/start/source/kernel/core/syscall.c:
+
 C:/diy-x86os-master/start/start/source/comm/boot_info.h:
 
 C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h:
@@ -150,6 +182,8 @@ C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h:
 
 C:/x86_64-elf-tools-windows/lib/gcc/x86_64-elf/7.1.0/include/stdarg.h:
 
+C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h:
+
 C:/diy-x86os-master/start/start/source/kernel/init/init.c:
 
 C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h:
@@ -163,6 +197,10 @@ C:/diy-x86os-master/start/start/source/kernel/tools/bitmap.c:
 C:/diy-x86os-master/start/start/source/kernel/cpu/irq.c:
 
 C:/diy-x86os-master/start/start/source/kernel/dev/time.c:
+
+C:/diy-x86os-master/start/start/source/kernel/init/first_task.c:
+
+C:/diy-x86os-master/start/start/source/applib/lib_syscall.h:
 
 C:/diy-x86os-master/start/start/source/kernel/init/init.h:
 

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/kernel.dir/core/memory.c.obj"
   "CMakeFiles/kernel.dir/core/memory.c.obj.d"
+  "CMakeFiles/kernel.dir/core/syscall.c.obj"
+  "CMakeFiles/kernel.dir/core/syscall.c.obj.d"
   "CMakeFiles/kernel.dir/core/task.c.obj"
   "CMakeFiles/kernel.dir/core/task.c.obj.d"
   "CMakeFiles/kernel.dir/cpu/cpu.c.obj"
@@ -9,6 +11,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/kernel.dir/cpu/irq.c.obj.d"
   "CMakeFiles/kernel.dir/dev/time.c.obj"
   "CMakeFiles/kernel.dir/dev/time.c.obj.d"
+  "CMakeFiles/kernel.dir/init/first_task.c.obj"
+  "CMakeFiles/kernel.dir/init/first_task.c.obj.d"
+  "CMakeFiles/kernel.dir/init/first_task_entry.S.obj"
   "CMakeFiles/kernel.dir/init/init.c.obj"
   "CMakeFiles/kernel.dir/init/init.c.obj.d"
   "CMakeFiles/kernel.dir/init/start.S.obj"

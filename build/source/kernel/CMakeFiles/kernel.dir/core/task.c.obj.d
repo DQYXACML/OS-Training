@@ -9,4 +9,10 @@ source/kernel/CMakeFiles/kernel.dir/core/task.c.obj: \
  C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h \
  C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h \
  C:/diy-x86os-master/start/start/source/comm/cpu_instr.h \
- C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h
+ C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/cpu/mmu.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/core/memory.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/tools/bitmap.h \
+ C:/diy-x86os-master/start/start/source/comm/boot_info.h \
+ C:/diy-x86os-master/start/start/source/comm/types.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h

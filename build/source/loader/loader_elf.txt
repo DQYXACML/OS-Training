@@ -22,8 +22,8 @@ ELF Header:
 Section Headers:
   [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
   [ 0]                   NULL            00000000 000000 000000 00      0   0  0
-  [ 1] .text             PROGBITS        00008000 001000 0006b8 00  AX  0   0  1
-  [ 2] .rodata           PROGBITS        000086b8 0016b8 000048 00   A  0   0  1
+  [ 1] .text             PROGBITS        00008000 001000 0006b1 00  AX  0   0  1
+  [ 2] .rodata           PROGBITS        000086b1 0016b1 000048 00   A  0   0  1
   [ 3] .data             PROGBITS        00009000 002000 002000 00  WA  0   0 4096
   [ 4] .bss              NOBITS          0000b000 004000 000054 00  WA  0   0 32
   [ 5] .comment          PROGBITS        00000000 004000 000011 01  MS  0   0  1
@@ -47,7 +47,7 @@ There are no section groups in this file.
 
 Program Headers:
   Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
-  LOAD           0x001000 0x00008000 0x00008000 0x00700 0x00700 R E 0x1000
+  LOAD           0x001000 0x00008000 0x00008000 0x006f9 0x006f9 R E 0x1000
   LOAD           0x002000 0x00009000 0x00009000 0x02000 0x02054 RW  0x1000
 
  Section to Segment mapping:
@@ -65,7 +65,7 @@ Symbol table '.symtab' contains 47 entries:
    Num:    Value  Size Type    Bind   Vis      Ndx Name
      0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
      1: 00008000     0 SECTION LOCAL  DEFAULT    1 
-     2: 000086b8     0 SECTION LOCAL  DEFAULT    2 
+     2: 000086b1     0 SECTION LOCAL  DEFAULT    2 
      3: 00009000     0 SECTION LOCAL  DEFAULT    3 
      4: 0000b000     0 SECTION LOCAL  DEFAULT    4 
      5: 00000000     0 SECTION LOCAL  DEFAULT    5 
@@ -86,24 +86,24 @@ Symbol table '.symtab' contains 47 entries:
     20: 000080dc    43 FUNC    LOCAL  DEFAULT    1 far_jump
     21: 00008107    59 FUNC    LOCAL  DEFAULT    1 show_msg
     22: 00008142   313 FUNC    LOCAL  DEFAULT    1 detect_memory
-    23: 0000827b   150 FUNC    LOCAL  DEFAULT    1 enter_protect_mode
+    23: 0000827b   146 FUNC    LOCAL  DEFAULT    1 enter_protect_mode
     24: 00000000     0 FILE    LOCAL  DEFAULT  ABS loader_32.c
-    25: 00008334    29 FUNC    LOCAL  DEFAULT    1 inb
-    26: 00008351    31 FUNC    LOCAL  DEFAULT    1 inw
-    27: 00008370    31 FUNC    LOCAL  DEFAULT    1 outb
-    28: 0000838f    17 FUNC    LOCAL  DEFAULT    1 read_cr0
-    29: 000083a0    12 FUNC    LOCAL  DEFAULT    1 write_cr0
-    30: 000083ac    12 FUNC    LOCAL  DEFAULT    1 write_cr3
-    31: 000083b8    17 FUNC    LOCAL  DEFAULT    1 read_cr4
-    32: 000083c9    12 FUNC    LOCAL  DEFAULT    1 write_cr4
-    33: 000083d5   303 FUNC    LOCAL  DEFAULT    1 read_disk
-    34: 00008504   282 FUNC    LOCAL  DEFAULT    1 reload_elf_file
-    35: 0000861e     5 FUNC    LOCAL  DEFAULT    1 die
-    36: 0000a000  4096 OBJECT  LOCAL  DEFAULT    3 page_dir.1897
-    37: 00008311    35 FUNC    GLOBAL DEFAULT    1 loader_entry
+    25: 00008330    29 FUNC    LOCAL  DEFAULT    1 inb
+    26: 0000834d    31 FUNC    LOCAL  DEFAULT    1 inw
+    27: 0000836c    31 FUNC    LOCAL  DEFAULT    1 outb
+    28: 0000838b    17 FUNC    LOCAL  DEFAULT    1 read_cr0
+    29: 0000839c    12 FUNC    LOCAL  DEFAULT    1 write_cr0
+    30: 000083a8    12 FUNC    LOCAL  DEFAULT    1 write_cr3
+    31: 000083b4    17 FUNC    LOCAL  DEFAULT    1 read_cr4
+    32: 000083c5    12 FUNC    LOCAL  DEFAULT    1 write_cr4
+    33: 000083d1   303 FUNC    LOCAL  DEFAULT    1 read_disk
+    34: 00008500   282 FUNC    LOCAL  DEFAULT    1 reload_elf_file
+    35: 0000861a     5 FUNC    LOCAL  DEFAULT    1 die
+    36: 0000a000  4096 OBJECT  LOCAL  DEFAULT    3 page_dir.1900
+    37: 0000830d    35 FUNC    GLOBAL DEFAULT    1 loader_entry
     38: 00009000    24 OBJECT  GLOBAL DEFAULT    3 gdt_table
-    39: 00008667    81 FUNC    GLOBAL DEFAULT    1 load_kernel
-    40: 00008623    68 FUNC    GLOBAL DEFAULT    1 enable_page_mode
+    39: 00008660    81 FUNC    GLOBAL DEFAULT    1 load_kernel
+    40: 0000861f    65 FUNC    GLOBAL DEFAULT    1 enable_page_mode
     41: 0000b000    84 OBJECT  GLOBAL DEFAULT    4 boot_info
     42: 00008000     0 NOTYPE  GLOBAL DEFAULT    1 _start
     43: 0000b000     0 NOTYPE  GLOBAL DEFAULT    4 __bss_start

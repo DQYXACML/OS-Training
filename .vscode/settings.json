@@ -17,6 +17,7 @@
         "time.h": "c",
         "log.h": "c",
         "list.h": "c",
-        "sem.h": "c"
+        "sem.h": "c",
+        "syscall.h": "c"
     },
 }

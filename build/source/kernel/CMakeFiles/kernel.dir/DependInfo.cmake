@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
+  "C:/diy-x86os-master/start/start/source/kernel/init/first_task_entry.S" "C:/diy-x86os-master/start/start/build/source/kernel/CMakeFiles/kernel.dir/init/first_task_entry.S.obj"
   "C:/diy-x86os-master/start/start/source/kernel/init/start.S" "C:/diy-x86os-master/start/start/build/source/kernel/CMakeFiles/kernel.dir/init/start.S.obj"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
@@ -21,10 +22,12 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/diy-x86os-master/start/start/source/kernel/core/memory.c" "source/kernel/CMakeFiles/kernel.dir/core/memory.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/core/memory.c.obj.d"
+  "C:/diy-x86os-master/start/start/source/kernel/core/syscall.c" "source/kernel/CMakeFiles/kernel.dir/core/syscall.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/core/syscall.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/core/task.c" "source/kernel/CMakeFiles/kernel.dir/core/task.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/core/task.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/cpu/cpu.c" "source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/cpu/irq.c" "source/kernel/CMakeFiles/kernel.dir/cpu/irq.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/cpu/irq.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/dev/time.c" "source/kernel/CMakeFiles/kernel.dir/dev/time.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/dev/time.c.obj.d"
+  "C:/diy-x86os-master/start/start/source/kernel/init/first_task.c" "source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/init/init.c" "source/kernel/CMakeFiles/kernel.dir/init/init.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/init/init.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/ipc/mutex.c" "source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/ipc/sem.c" "source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.obj.d"

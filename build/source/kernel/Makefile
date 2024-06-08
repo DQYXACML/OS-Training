@@ -31,6 +31,9 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -154,6 +157,30 @@ core/memory.c.s:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/core/memory.c.s
 .PHONY : core/memory.c.s
 
+core/syscall.obj: core/syscall.c.obj
+.PHONY : core/syscall.obj
+
+# target to build an object file
+core/syscall.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/core/syscall.c.obj
+.PHONY : core/syscall.c.obj
+
+core/syscall.i: core/syscall.c.i
+.PHONY : core/syscall.i
+
+# target to preprocess a source file
+core/syscall.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/core/syscall.c.i
+.PHONY : core/syscall.c.i
+
+core/syscall.s: core/syscall.c.s
+.PHONY : core/syscall.s
+
+# target to generate assembly for a file
+core/syscall.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/core/syscall.c.s
+.PHONY : core/syscall.c.s
+
 core/task.obj: core/task.c.obj
 .PHONY : core/task.obj
 
@@ -249,6 +276,38 @@ dev/time.s: dev/time.c.s
 dev/time.c.s:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/time.c.s
 .PHONY : dev/time.c.s
+
+init/first_task.obj: init/first_task.c.obj
+.PHONY : init/first_task.obj
+
+# target to build an object file
+init/first_task.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj
+.PHONY : init/first_task.c.obj
+
+init/first_task.i: init/first_task.c.i
+.PHONY : init/first_task.i
+
+# target to preprocess a source file
+init/first_task.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/init/first_task.c.i
+.PHONY : init/first_task.c.i
+
+init/first_task.s: init/first_task.c.s
+.PHONY : init/first_task.s
+
+# target to generate assembly for a file
+init/first_task.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/init/first_task.c.s
+.PHONY : init/first_task.c.s
+
+init/first_task_entry.obj: init/first_task_entry.S.obj
+.PHONY : init/first_task_entry.obj
+
+# target to build an object file
+init/first_task_entry.S.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/init/first_task_entry.S.obj
+.PHONY : init/first_task_entry.S.obj
 
 init/init.obj: init/init.c.obj
 .PHONY : init/init.obj
@@ -438,6 +497,9 @@ help:
 	@echo "... core/memory.obj"
 	@echo "... core/memory.i"
 	@echo "... core/memory.s"
+	@echo "... core/syscall.obj"
+	@echo "... core/syscall.i"
+	@echo "... core/syscall.s"
 	@echo "... core/task.obj"
 	@echo "... core/task.i"
 	@echo "... core/task.s"
@@ -450,6 +512,10 @@ help:
 	@echo "... dev/time.obj"
 	@echo "... dev/time.i"
 	@echo "... dev/time.s"
+	@echo "... init/first_task.obj"
+	@echo "... init/first_task.i"
+	@echo "... init/first_task.s"
+	@echo "... init/first_task_entry.obj"
 	@echo "... init/init.obj"
 	@echo "... init/init.i"
 	@echo "... init/init.s"

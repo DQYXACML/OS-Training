@@ -43,6 +43,7 @@ typedef struct _tss_t
 #define GATE_P_PRESENT (1 << 15)
 #define GATE_DPL0 (0 << 13)
 #define GATE_DPL3 (3 << 13)
+#define GATE_TYPE_SYSCALL (0xC << 8) // 调用门
 
 #define SEG_G (1 << 15)
 #define SEG_D (1 << 14) // D/B 标志位控制32位还是16位，1为32位
@@ -50,6 +51,9 @@ typedef struct _tss_t
 
 #define SEG_DPL0 (0 << 5) // 区分权限
 #define SEG_DPL3 (3 << 5)
+
+#define SEG_CPL0 (0 << 0) // 区分CPL权限
+#define SEG_CPL3 (3 << 0)
 
 #define SEG_S_SYSTEM (0 << 4) // 是否为中断门等特殊段
 #define SEG_S_NORMAL (1 << 4) // 代码段或者数据段等普通的段

@@ -8,6 +8,8 @@
 
 C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h
 
+C:/diy-x86os-master/start/start/source/kernel/init/first_task_entry.S
+
 C:/diy-x86os-master/start/start/source/kernel/init/start.S
 os_cfg.h
 C:/diy-x86os-master/start/start/source/kernel/init/os_cfg.h
