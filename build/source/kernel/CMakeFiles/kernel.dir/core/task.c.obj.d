@@ -15,4 +15,7 @@ source/kernel/CMakeFiles/kernel.dir/core/task.c.obj: \
  C:/diy-x86os-master/start/start/source/kernel/include/tools/bitmap.h \
  C:/diy-x86os-master/start/start/source/comm/boot_info.h \
  C:/diy-x86os-master/start/start/source/comm/types.h \
- C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h
+ C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/fs/fs.h \
+ C:/diy-x86os-master/start/start/source/comm/elf.h

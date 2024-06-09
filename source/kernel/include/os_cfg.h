@@ -8,4 +8,5 @@
 #define SELECTOR_SYSCALL (3 * 8)     // 调用门的选择子
 #define OS_TICK_MS 10                // 每毫秒的时钟数
 #define OS_VERSION "1.0.0"
+#define TASK_NR 128
 #endif

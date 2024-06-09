@@ -10,7 +10,9 @@
 					[
 						1,
 						2,
-						3
+						3,
+						4,
+						5
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -32,7 +34,7 @@
 					"source" : "source/boot",
 					"targetIndexes" : 
 					[
-						0
+						1
 					]
 				},
 				{
@@ -47,7 +49,7 @@
 					"source" : "source/loader",
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -62,7 +64,37 @@
 					"source" : "source/kernel",
 					"targetIndexes" : 
 					[
-						1
+						2
+					]
+				},
+				{
+					"build" : "source/applib",
+					"jsonFile" : "directory-source.applib-Debug-5e5d462fbfa8010f6a72.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "source/applib",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "source/shell",
+					"jsonFile" : "directory-source.shell-Debug-9bcd9f15bf3fe254031f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "source/shell",
+					"targetIndexes" : 
+					[
+						4
 					]
 				}
 			],
@@ -74,7 +106,9 @@
 					[
 						1,
 						2,
-						3
+						3,
+						4,
+						5
 					],
 					"directoryIndexes" : 
 					[
@@ -91,7 +125,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						0
+						1
 					]
 				},
 				{
@@ -103,7 +137,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -115,12 +149,43 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						1
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "app",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "shell",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 4,
+					"id" : "app::@2ef8eb2e4770df38f87f",
+					"jsonFile" : "target-app-Debug-bc0a34aaa9a89b4d795d.json",
+					"name" : "app",
+					"projectIndex" : 4
+				},
 				{
 					"directoryIndex" : 1,
 					"id" : "boot::@a4fbfdde3044a49ad01d",
@@ -131,7 +196,7 @@
 				{
 					"directoryIndex" : 3,
 					"id" : "kernel::@483af936ae9a949d521e",
-					"jsonFile" : "target-kernel-Debug-1d4923d3e287e8795ba9.json",
+					"jsonFile" : "target-kernel-Debug-e59926d26f53e58414ea.json",
 					"name" : "kernel",
 					"projectIndex" : 3
 				},
@@ -141,6 +206,13 @@
 					"jsonFile" : "target-loader-Debug-bd278b668ccf5c55456c.json",
 					"name" : "loader",
 					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shell::@3c59f89bbaefae7d5c66",
+					"jsonFile" : "target-shell-Debug-cc411429f8bbb08bb71d.json",
+					"name" : "shell",
+					"projectIndex" : 5
 				}
 			]
 		}

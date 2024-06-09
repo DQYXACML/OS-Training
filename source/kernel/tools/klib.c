@@ -251,3 +251,41 @@ void panic(const char *file, int line, const char *func, const char *cond)
         hlt();
     }
 }
+
+/**
+ * @brief 从路径中解释文件名
+ */
+char *get_file_name(char *name)
+{
+    char *s = name;
+
+    // 定位到结束符
+    while (*s != '\0')
+    {
+        s++;
+    }
+
+    // 反向搜索，直到找到反斜杆或者到文件开头
+    while ((*s != '\\') && (*s != '/') && (s >= name))
+    {
+        s--;
+    }
+    return s + 1;
+}
+
+/**
+ * @brief 计算字符串的数量
+ */
+int strings_count(char **start)
+{
+    int count = 0;
+
+    if (start)
+    {
+        while (*start++)
+        {
+            count++;
+        }
+    }
+    return count;
+}

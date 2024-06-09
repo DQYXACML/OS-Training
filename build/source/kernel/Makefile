@@ -277,6 +277,30 @@ dev/time.c.s:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/time.c.s
 .PHONY : dev/time.c.s
 
+fs/fs.obj: fs/fs.c.obj
+.PHONY : fs/fs.obj
+
+# target to build an object file
+fs/fs.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj
+.PHONY : fs/fs.c.obj
+
+fs/fs.i: fs/fs.c.i
+.PHONY : fs/fs.i
+
+# target to preprocess a source file
+fs/fs.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/fs/fs.c.i
+.PHONY : fs/fs.c.i
+
+fs/fs.s: fs/fs.c.s
+.PHONY : fs/fs.s
+
+# target to generate assembly for a file
+fs/fs.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/fs/fs.c.s
+.PHONY : fs/fs.c.s
+
 init/first_task.obj: init/first_task.c.obj
 .PHONY : init/first_task.obj
 
@@ -512,6 +536,9 @@ help:
 	@echo "... dev/time.obj"
 	@echo "... dev/time.i"
 	@echo "... dev/time.s"
+	@echo "... fs/fs.obj"
+	@echo "... fs/fs.i"
+	@echo "... fs/fs.s"
 	@echo "... init/first_task.obj"
 	@echo "... init/first_task.i"
 	@echo "... init/first_task.s"

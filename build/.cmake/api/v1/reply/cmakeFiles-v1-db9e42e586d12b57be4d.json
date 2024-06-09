@@ -138,6 +138,12 @@
 		},
 		{
 			"path" : "source/kernel/CMakeLists.txt"
+		},
+		{
+			"path" : "source/applib/CMakeLists.txt"
+		},
+		{
+			"path" : "source/shell/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

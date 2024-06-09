@@ -791,7 +791,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "4"
+			"value" : "6"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -1278,6 +1278,42 @@
 			"value" : "TRUE"
 		},
 		{
+			"name" : "app_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/diy-x86os-master/start/start/build/source/applib"
+		},
+		{
+			"name" : "app_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "app_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/diy-x86os-master/start/start/source/applib"
+		},
+		{
 			"name" : "boot_BINARY_DIR",
 			"properties" : 
 			[
@@ -1420,6 +1456,42 @@
 			],
 			"type" : "STATIC",
 			"value" : "C:/diy-x86os-master/start/start"
+		},
+		{
+			"name" : "shell_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/diy-x86os-master/start/start/build/source/shell"
+		},
+		{
+			"name" : "shell_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "shell_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/diy-x86os-master/start/start/source/shell"
 		}
 	],
 	"kind" : "cache",

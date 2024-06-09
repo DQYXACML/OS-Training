@@ -67,7 +67,7 @@
 			"sourceIndexes" : 
 			[
 				0,
-				22
+				24
 			]
 		},
 		{
@@ -97,14 +97,15 @@
 				4,
 				5,
 				6,
-				21,
+				7,
 				23,
 				25,
-				26,
 				27,
 				28,
 				29,
-				30
+				30,
+				31,
+				32
 			]
 		}
 	],
@@ -142,7 +143,7 @@
 			"sourceIndexes" : 
 			[
 				0,
-				22
+				24
 			]
 		},
 		{
@@ -155,21 +156,21 @@
 				4,
 				5,
 				6,
-				21,
+				7,
 				23,
 				25,
-				26,
 				27,
 				28,
 				29,
-				30
+				30,
+				31,
+				32
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				7,
 				8,
 				9,
 				10,
@@ -183,7 +184,9 @@
 				18,
 				19,
 				20,
-				24
+				21,
+				22,
+				26
 			]
 		}
 	],
@@ -233,6 +236,12 @@
 		},
 		{
 			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "source/kernel/fs/fs.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
 			"path" : "source/kernel/include/core/memory.h",
 			"sourceGroupIndex" : 2
 		},
@@ -264,6 +273,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "source/kernel/include/dev/time.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/kernel/include/fs/fs.h",
 			"sourceGroupIndex" : 2
 		},
 		{

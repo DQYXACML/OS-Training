@@ -1,0 +1,192 @@
+
+File: C:/diy-x86os-master/start/start/build/source/applib/libapp.a(crt0.S.obj)
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              REL (Relocatable file)
+  Machine:                           Intel 80386
+  Version:                           0x1
+  Entry point address:               0x0
+  Start of program headers:          0 (bytes into file)
+  Start of section headers:          724 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               52 (bytes)
+  Size of program headers:           0 (bytes)
+  Number of program headers:         0
+  Size of section headers:           40 (bytes)
+  Number of section headers:         15
+  Section header string table index: 14
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .text             PROGBITS        00000000 000034 000010 00  AX  0   0  1
+  [ 2] .rel.text         REL             00000000 000220 000008 08   I 12   1  4
+  [ 3] .data             PROGBITS        00000000 000044 000000 00  WA  0   0  1
+  [ 4] .bss              NOBITS          00000000 000044 000000 00  WA  0   0  1
+  [ 5] .debug_line       PROGBITS        00000000 000044 000067 00      0   0  1
+  [ 6] .rel.debug_line   REL             00000000 000228 000008 08   I 12   5  4
+  [ 7] .debug_info       PROGBITS        00000000 0000ab 00008f 00      0   0  1
+  [ 8] .rel.debug_info   REL             00000000 000230 000020 08   I 12   7  4
+  [ 9] .debug_abbrev     PROGBITS        00000000 00013a 000014 00      0   0  1
+  [10] .debug_aranges    PROGBITS        00000000 000150 000020 00      0   0  8
+  [11] .rel.debug_arange REL             00000000 000250 000010 08   I 12  10  4
+  [12] .symtab           SYMTAB          00000000 000170 0000a0 10     13   8  4
+  [13] .strtab           STRTAB          00000000 000210 00000f 00      0   0  1
+  [14] .shstrtab         STRTAB          00000000 000260 000071 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  p (processor specific)
+
+There are no section groups in this file.
+
+There are no program headers in this file.
+
+Relocation section '.rel.text' at offset 0x220 contains 1 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+0000000c  00000902 R_386_PC32        00000000   cstart
+
+Relocation section '.rel.debug_line' at offset 0x228 contains 1 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+00000058  00000101 R_386_32          00000000   .text
+
+Relocation section '.rel.debug_info' at offset 0x230 contains 4 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+00000006  00000501 R_386_32          00000000   .debug_abbrev
+0000000c  00000601 R_386_32          00000000   .debug_line
+00000010  00000101 R_386_32          00000000   .text
+00000014  00000101 R_386_32          00000000   .text
+
+Relocation section '.rel.debug_aranges' at offset 0x250 contains 2 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+00000006  00000401 R_386_32          00000000   .debug_info
+00000010  00000101 R_386_32          00000000   .text
+
+The decoding of unwind sections for machine type Intel 80386 is not currently supported.
+
+Symbol table '.symtab' contains 10 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00000000     0 SECTION LOCAL  DEFAULT    1 
+     2: 00000000     0 SECTION LOCAL  DEFAULT    3 
+     3: 00000000     0 SECTION LOCAL  DEFAULT    4 
+     4: 00000000     0 SECTION LOCAL  DEFAULT    7 
+     5: 00000000     0 SECTION LOCAL  DEFAULT    9 
+     6: 00000000     0 SECTION LOCAL  DEFAULT    5 
+     7: 00000000     0 SECTION LOCAL  DEFAULT   10 
+     8: 00000000     0 NOTYPE  GLOBAL DEFAULT    1 _start
+     9: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND cstart
+
+No version information found in this file.
+
+File: C:/diy-x86os-master/start/start/build/source/applib/libapp.a(cstart.c.obj)
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              REL (Relocatable file)
+  Machine:                           Intel 80386
+  Version:                           0x1
+  Entry point address:               0x0
+  Start of program headers:          0 (bytes into file)
+  Start of section headers:          1276 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               52 (bytes)
+  Size of program headers:           0 (bytes)
+  Number of program headers:         0
+  Size of section headers:           40 (bytes)
+  Number of section headers:         19
+  Section header string table index: 18
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .text             PROGBITS        00000000 000034 00001a 00  AX  0   0  1
+  [ 2] .rel.text         REL             00000000 0003dc 000008 08   I 16   1  4
+  [ 3] .data             PROGBITS        00000000 00004e 000000 00  WA  0   0  1
+  [ 4] .bss              NOBITS          00000000 00004e 000000 00  WA  0   0  1
+  [ 5] .debug_info       PROGBITS        00000000 00004e 000072 00      0   0  1
+  [ 6] .rel.debug_info   REL             00000000 0003e4 000058 08   I 16   5  4
+  [ 7] .debug_abbrev     PROGBITS        00000000 0000c0 00005c 00      0   0  1
+  [ 8] .debug_aranges    PROGBITS        00000000 00011c 000020 00      0   0  1
+  [ 9] .rel.debug_arange REL             00000000 00043c 000010 08   I 16   8  4
+  [10] .debug_line       PROGBITS        00000000 00013c 000067 00      0   0  1
+  [11] .rel.debug_line   REL             00000000 00044c 000008 08   I 16  10  4
+  [12] .debug_str        PROGBITS        00000000 0001a3 0000f9 01  MS  0   0  1
+  [13] .comment          PROGBITS        00000000 00029c 000012 01  MS  0   0  1
+  [14] .debug_frame      PROGBITS        00000000 0002b0 000034 00      0   0  4
+  [15] .rel.debug_frame  REL             00000000 000454 000010 08   I 16  14  4
+  [16] .symtab           SYMTAB          00000000 0002e4 0000e0 10     17  12  4
+  [17] .strtab           STRTAB          00000000 0003c4 000016 00      0   0  1
+  [18] .shstrtab         STRTAB          00000000 000464 000096 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  p (processor specific)
+
+There are no section groups in this file.
+
+There are no program headers in this file.
+
+Relocation section '.rel.text' at offset 0x3dc contains 1 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+00000010  00000d02 R_386_PC32        00000000   main
+
+Relocation section '.rel.debug_info' at offset 0x3e4 contains 11 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+00000006  00000601 R_386_32          00000000   .debug_abbrev
+0000000c  00000901 R_386_32          00000000   .debug_str
+00000011  00000901 R_386_32          00000000   .debug_str
+00000015  00000901 R_386_32          00000000   .debug_str
+00000019  00000201 R_386_32          00000000   .text
+00000021  00000801 R_386_32          00000000   .debug_line
+0000002d  00000901 R_386_32          00000000   .debug_str
+00000033  00000201 R_386_32          00000000   .text
+00000042  00000901 R_386_32          00000000   .debug_str
+00000050  00000901 R_386_32          00000000   .debug_str
+0000006d  00000901 R_386_32          00000000   .debug_str
+
+Relocation section '.rel.debug_aranges' at offset 0x43c contains 2 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+00000006  00000501 R_386_32          00000000   .debug_info
+00000010  00000201 R_386_32          00000000   .text
+
+Relocation section '.rel.debug_line' at offset 0x44c contains 1 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+0000005a  00000201 R_386_32          00000000   .text
+
+Relocation section '.rel.debug_frame' at offset 0x454 contains 2 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+00000018  00000a01 R_386_32          00000000   .debug_frame
+0000001c  00000201 R_386_32          00000000   .text
+
+The decoding of unwind sections for machine type Intel 80386 is not currently supported.
+
+Symbol table '.symtab' contains 14 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00000000     0 FILE    LOCAL  DEFAULT  ABS cstart.c
+     2: 00000000     0 SECTION LOCAL  DEFAULT    1 
+     3: 00000000     0 SECTION LOCAL  DEFAULT    3 
+     4: 00000000     0 SECTION LOCAL  DEFAULT    4 
+     5: 00000000     0 SECTION LOCAL  DEFAULT    5 
+     6: 00000000     0 SECTION LOCAL  DEFAULT    7 
+     7: 00000000     0 SECTION LOCAL  DEFAULT    8 
+     8: 00000000     0 SECTION LOCAL  DEFAULT   10 
+     9: 00000000     0 SECTION LOCAL  DEFAULT   12 
+    10: 00000000     0 SECTION LOCAL  DEFAULT   14 
+    11: 00000000     0 SECTION LOCAL  DEFAULT   13 
+    12: 00000000    26 FUNC    GLOBAL DEFAULT    1 cstart
+    13: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND main
+
+No version information found in this file.

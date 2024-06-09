@@ -18,6 +18,7 @@
         "log.h": "c",
         "list.h": "c",
         "sem.h": "c",
-        "syscall.h": "c"
+        "syscall.h": "c",
+        "klib.h": "c"
     },
 }

@@ -1,0 +1,144 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "source/shell/shell.exe"
+		},
+		{
+			"path" : "source/shell/shell.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"add_dependencies",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"source/shell/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 58,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 40,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "C:/diy-x86os-master/start/start/source"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "C:/diy-x86os-master/start/start/source/kernel/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/diy-x86os-master/start/start/source/shell/../applib"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "app::@2ef8eb2e4770df38f87f"
+		}
+	],
+	"id" : "shell::@3c59f89bbaefae7d5c66",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-m elf_i386 -T C:/diy-x86os-master/start/start/source/shell/link.lds -L C:/diy-x86os-master/start/start/build/source/applib/ -lapp -L C:/diy-x86os-master/start/start/build/../../newlib/i686-elf/lib -lm -lc",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "shell",
+	"nameOnDisk" : "shell.exe",
+	"paths" : 
+	{
+		"build" : "source/shell",
+		"source" : "source/shell"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/shell/main.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

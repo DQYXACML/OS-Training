@@ -9,3 +9,9 @@ C:/diy-x86os-master/start/start/build/source/loader/CMakeFiles/rebuild_cache.dir
 C:/diy-x86os-master/start/start/build/source/kernel/CMakeFiles/kernel.dir
 C:/diy-x86os-master/start/start/build/source/kernel/CMakeFiles/edit_cache.dir
 C:/diy-x86os-master/start/start/build/source/kernel/CMakeFiles/rebuild_cache.dir
+C:/diy-x86os-master/start/start/build/source/applib/CMakeFiles/app.dir
+C:/diy-x86os-master/start/start/build/source/applib/CMakeFiles/edit_cache.dir
+C:/diy-x86os-master/start/start/build/source/applib/CMakeFiles/rebuild_cache.dir
+C:/diy-x86os-master/start/start/build/source/shell/CMakeFiles/shell.dir
+C:/diy-x86os-master/start/start/build/source/shell/CMakeFiles/edit_cache.dir
+C:/diy-x86os-master/start/start/build/source/shell/CMakeFiles/rebuild_cache.dir

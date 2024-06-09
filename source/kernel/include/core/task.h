@@ -23,6 +23,7 @@ typedef struct _task_t
     char name[TASK_NAME_SIZE]; // 任务名字
 
     int pid;
+    struct _task_t *parent; // 父进程
 
     int sleep_ticks; // CPU 睡眠时间片
     int time_ticks;  // CPU 时间片
@@ -65,10 +66,25 @@ int sys_sched_yield(void);
 void task_dispatch(void);
 void task_time_tick(void); // 时钟终端处理函数
 
+// 系统调用
 void sys_msleep(uint32_t ms);
 int sys_getpid(void);
+int sys_fork(void);
+int sys_execve(char *name, char **argv, char **env);
+int sys_yield(void);
+void sys_exit(int status);
+int sys_wait(int *status);
+
 void task_set_sleep(task_t *task, uint32_t ticks);
 void task_set_wakeup(task_t *task);
 
 task_t *task_current(void);
+
+typedef struct _task_args_t
+{
+    uint32_t ret_addr; // 返回地址
+    uint32_t argc;
+    char **argv;
+} task_args_t;
+
 #endif
