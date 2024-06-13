@@ -2,6 +2,7 @@
 #include "tools/klib.h"
 #include "core/task.h"
 #include "tools/log.h"
+#include "fs/fs.h"
 #include "core/memory.h"
 
 // 系统调用处理函数类型
@@ -23,14 +24,14 @@ static const syscall_handler_t sys_table[] = {
     // [SYS_wait] = (syscall_handler_t)sys_wait,
     // [SYS_exit] = (syscall_handler_t)sys_exit,
 
-    // [SYS_open] = (syscall_handler_t)sys_open,
-    // [SYS_read] = (syscall_handler_t)sys_read,
-    // [SYS_write] = (syscall_handler_t)sys_write,
-    // [SYS_close] = (syscall_handler_t)sys_close,
-    // [SYS_lseek] = (syscall_handler_t)sys_lseek,
-    // [SYS_isatty] = (syscall_handler_t)sys_isatty,
-    // [SYS_sbrk] = (syscall_handler_t)sys_sbrk,
-    // [SYS_fstat] = (syscall_handler_t)sys_fstat,
+    [SYS_open] = (syscall_handler_t)sys_open,
+    [SYS_read] = (syscall_handler_t)sys_read,
+    [SYS_write] = (syscall_handler_t)sys_write,
+    [SYS_close] = (syscall_handler_t)sys_close,
+    [SYS_lseek] = (syscall_handler_t)sys_lseek,
+    [SYS_isatty] = (syscall_handler_t)sys_isatty,
+    [SYS_sbrk] = (syscall_handler_t)sys_sbrk,
+    [SYS_fstat] = (syscall_handler_t)sys_fstat,
     // [SYS_dup] = (syscall_handler_t)sys_dup,
     // [SYS_ioctl] = (syscall_handler_t)sys_ioctl,
 

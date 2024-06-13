@@ -17,6 +17,7 @@ set(CMAKE_ASM_COMPILER_ID "GNU")
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "C:/diy-x86os-master/start/start/source"
   "C:/diy-x86os-master/start/start/source/kernel/include"
+  "C:/diy-x86os-master/start/start/../newlib/i686-elf/include"
   )
 
 # The set of dependency files which are needed:
@@ -26,6 +27,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/diy-x86os-master/start/start/source/kernel/core/task.c" "source/kernel/CMakeFiles/kernel.dir/core/task.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/core/task.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/cpu/cpu.c" "source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/cpu/irq.c" "source/kernel/CMakeFiles/kernel.dir/cpu/irq.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/cpu/irq.c.obj.d"
+  "C:/diy-x86os-master/start/start/source/kernel/dev/console.c" "source/kernel/CMakeFiles/kernel.dir/dev/console.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/dev/console.c.obj.d"
+  "C:/diy-x86os-master/start/start/source/kernel/dev/kbd.c" "source/kernel/CMakeFiles/kernel.dir/dev/kbd.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/dev/kbd.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/dev/time.c" "source/kernel/CMakeFiles/kernel.dir/dev/time.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/dev/time.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/fs/fs.c" "source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/init/first_task.c" "source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj.d"

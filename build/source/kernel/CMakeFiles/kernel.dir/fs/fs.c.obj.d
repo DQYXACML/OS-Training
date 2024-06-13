@@ -1,10 +1,46 @@
 source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj: \
  C:/diy-x86os-master/start/start/source/kernel/fs/fs.c \
  C:/diy-x86os-master/start/start/source/kernel/include/fs/fs.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\stat.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\_ansi.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\newlib.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\_newlib_version.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\config.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\machine\ieeefp.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\features.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\time.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\_ansi.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\cdefs.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\machine\_default_types.h \
+ c:\x86_64-elf-tools-windows\lib\gcc\x86_64-elf\7.1.0\include\stddef.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\reent.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_types.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\machine\_types.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\lock.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\machine\time.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\types.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_stdint.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\machine\endian.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\machine\_endian.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\select.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_sigset.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_timeval.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\timespec.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_timespec.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_pthreadtypes.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\sched.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\machine\types.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_locale.h \
  C:/diy-x86os-master/start/start/source/comm/types.h \
  C:/diy-x86os-master/start/start/source/kernel/include/tools/klib.h \
  c:\x86_64-elf-tools-windows\lib\gcc\x86_64-elf\7.1.0\include\stdarg.h \
  C:/diy-x86os-master/start/start/source/loader/loader.h \
  C:/diy-x86os-master/start/start/source/comm/boot_info.h \
  C:/diy-x86os-master/start/start/source/comm/types.h \
- C:/diy-x86os-master/start/start/source/comm/cpu_instr.h
+ C:/diy-x86os-master/start/start/source/comm/cpu_instr.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/dev/console.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h

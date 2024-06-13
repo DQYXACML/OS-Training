@@ -67,6 +67,18 @@
 },
 {
   "directory": "C:/diy-x86os-master/start/start/build/source/kernel",
+  "command": "C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/dev/console.c.obj -c C:/diy-x86os-master/start/start/source/kernel/dev/console.c",
+  "file": "C:/diy-x86os-master/start/start/source/kernel/dev/console.c",
+  "output": "source/kernel/CMakeFiles/kernel.dir/dev/console.c.obj"
+},
+{
+  "directory": "C:/diy-x86os-master/start/start/build/source/kernel",
+  "command": "C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/dev/kbd.c.obj -c C:/diy-x86os-master/start/start/source/kernel/dev/kbd.c",
+  "file": "C:/diy-x86os-master/start/start/source/kernel/dev/kbd.c",
+  "output": "source/kernel/CMakeFiles/kernel.dir/dev/kbd.c.obj"
+},
+{
+  "directory": "C:/diy-x86os-master/start/start/build/source/kernel",
   "command": "C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/dev/time.c.obj -c C:/diy-x86os-master/start/start/source/kernel/dev/time.c",
   "file": "C:/diy-x86os-master/start/start/source/kernel/dev/time.c",
   "output": "source/kernel/CMakeFiles/kernel.dir/dev/time.c.obj"
@@ -142,6 +154,12 @@
   "command": "C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/app.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/app.dir/cstart.c.obj -c C:/diy-x86os-master/start/start/source/applib/cstart.c",
   "file": "C:/diy-x86os-master/start/start/source/applib/cstart.c",
   "output": "source/applib/CMakeFiles/app.dir/cstart.c.obj"
+},
+{
+  "directory": "C:/diy-x86os-master/start/start/build/source/applib",
+  "command": "C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/app.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/app.dir/lib_syscall.c.obj -c C:/diy-x86os-master/start/start/source/applib/lib_syscall.c",
+  "file": "C:/diy-x86os-master/start/start/source/applib/lib_syscall.c",
+  "output": "source/applib/CMakeFiles/app.dir/lib_syscall.c.obj"
 },
 {
   "directory": "C:/diy-x86os-master/start/start/build/source/shell",

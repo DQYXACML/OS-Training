@@ -16,8 +16,8 @@ SECTIONS
 	}
 
 	.bss : {
-		__bss_start__ = .;
+		PROVIDE(__bss_start__ = .);
 		*(*.bss)
-    	__bss_end__ = . ;
+    	PROVIDE(__bss_end__ = . );
 	}
 }

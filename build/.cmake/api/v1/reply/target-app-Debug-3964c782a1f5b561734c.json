@@ -59,6 +59,10 @@
 				{
 					"backtrace" : 3,
 					"path" : "C:/diy-x86os-master/start/start/source/kernel/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/diy-x86os-master/start/start/../newlib/i686-elf/include"
 				}
 			],
 			"language" : "ASM",
@@ -83,12 +87,17 @@
 				{
 					"backtrace" : 3,
 					"path" : "C:/diy-x86os-master/start/start/source/kernel/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/diy-x86os-master/start/start/../newlib/i686-elf/include"
 				}
 			],
 			"language" : "C",
 			"sourceIndexes" : 
 			[
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -113,14 +122,15 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				1
+				1,
+				2
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				2
+				3
 			]
 		}
 	],
@@ -136,6 +146,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "source/applib/cstart.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "source/applib/lib_syscall.c",
 			"sourceGroupIndex" : 1
 		},
 		{

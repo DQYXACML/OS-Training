@@ -45,6 +45,7 @@
 
 #define IRQ_PIC_START 0x20 // PIC中断起始号
 #define IRQ0_TIMER 0x20
+#define IRQ1_KEYBOARD 0x21
 
 // 内存页相关
 #define ERR_PAGE_P (1 << 0)

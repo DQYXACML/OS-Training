@@ -25,6 +25,9 @@ typedef struct _task_t
     int pid;
     struct _task_t *parent; // 父进程
 
+    uint32_t heap_start; // 堆的顶层地址
+    uint32_t heap_end;   // 堆结束地址
+
     int sleep_ticks; // CPU 睡眠时间片
     int time_ticks;  // CPU 时间片
     int slice_ticks; // 递减时间片计数

@@ -3,6 +3,7 @@
 #include "core/memory.h"
 #include "cpu/mmu.h"
 #include "core/task.h"
+#include "dev/console.h"
 
 static addr_alloc_t paddr_alloc; // 物理地址分配结构
 
@@ -169,9 +170,10 @@ void create_kernel_table(void)
     // 地址映射表, 用于建立内核级的地址映射
     // 地址不变，但是添加了属性
     static memory_map_t kernel_map[] = {
-        {kernel_base, s_text, kernel_base, PTE_W},         // 内核栈区
-        {s_text, e_text, s_text, 0},                       // 内核代码区
-        {s_data, (void *)(MEM_EBDA_START), s_data, PTE_W}, // 内核数据区
+        {kernel_base, s_text, kernel_base, PTE_W},                                                // 内核栈区
+        {s_text, e_text, s_text, 0},                                                              // 内核代码区
+        {s_data, (void *)(MEM_EBDA_START), s_data, PTE_W},                                        // 内核数据区
+        {(void *)CONSOLE_DISP_ADDR, (void *)CONSOLE_DISP_END, (void *)CONSOLE_VIDEO_BASE, PTE_W}, // 显存映射B8000
         // 1M以上空间扩展V\P一一映射，方便直接操作
         {(void *)MEM_EXT_START, (void *)MEM_EXT_END, (void *)MEM_EXT_START, PTE_W},
     };
@@ -488,4 +490,57 @@ void memory_init(boot_info_t *boot_info)
     //     addr += 4096 * 2;
     //     log_printf("alloc addr: 0x%x", addr);
     // }
+}
+
+/**
+ * @brief 调整堆的内存分配，返回堆之前的指针
+ */
+char *sys_sbrk(int incr)
+{
+    task_t *task = task_current();
+    char *pre_heap_end = (char *)task->heap_end;
+    int pre_incr = incr;
+    ASSERT(incr >= 0);
+    // 如果地址为0，则返回有效的heap区域的顶端
+    if (incr == 0)
+    {
+        log_printf("sbrk(0): end = 0x%x", pre_heap_end);
+        return pre_heap_end;
+    }
+    uint32_t start = task->heap_end;
+    uint32_t end = start + incr;
+
+    // 起始偏移非0
+    int start_offset = start % MEM_PAGE_SIZE;
+    if (start_offset)
+    {
+        // 不超过1页，只调整
+        if (start_offset + incr <= MEM_PAGE_SIZE)
+        {
+            task->heap_end = end;
+            return pre_heap_end;
+        }
+        else
+        {
+            // 超过1页，先只调本页的
+            uint32_t curr_size = MEM_PAGE_SIZE - start_offset;
+            start += curr_size;
+            incr -= curr_size;
+        }
+    }
+    // 处理其余的，起始对齐的页边界的
+    if (incr)
+    {
+        uint32_t curr_size = end - start;
+        int err = memory_alloc_page_for(start, curr_size, PTE_P | PTE_U | PTE_W);
+        if (err < 0)
+        {
+            log_printf("sbrk: alloc mem failed.");
+            return (char *)-1;
+        }
+    }
+
+    // log_printf("sbrk(%d): end = 0x%x", pre_incr, end);
+    task->heap_end = end;
+    return (char *)pre_heap_end;
 }

@@ -1,2 +1,2 @@
-C:/x86_64-elf-tools-windows/bin/x86_64-elf-ar.exe qc libapp.a CMakeFiles/app.dir/crt0.S.obj CMakeFiles/app.dir/cstart.c.obj
+C:/x86_64-elf-tools-windows/bin/x86_64-elf-ar.exe qc libapp.a CMakeFiles/app.dir/crt0.S.obj CMakeFiles/app.dir/cstart.c.obj CMakeFiles/app.dir/lib_syscall.c.obj
 C:/x86_64-elf-tools-windows/bin/x86_64-elf-ranlib.exe libapp.a

@@ -97,6 +97,9 @@ int task_init(task_t *task, const char *name, int flag, uint32_t entry, uint32_t
     kernel_strncpy(task->name, name, TASK_NAME_SIZE);
     task->state = TASK_CREATED;
     task->sleep_ticks = 0;
+    task->parent = (task_t *)0;
+    task->heap_start = 0;
+    task->heap_end = 0;
     task->time_ticks = TASK_TIME_SLICE_DEFAULT;
     task->slice_ticks = task->time_ticks;
     list_node_init(&task->all_node);
@@ -157,6 +160,9 @@ void task_first_init(void)
 
     uint32_t first_start = (uint32_t)first_task_entry;
     task_init(&task_manager.first_task, "first task", 0, first_start, first_start + alloc_size);
+    task_manager.first_task.heap_start = (uint32_t)e_first_task; // 这里不对
+    task_manager.first_task.heap_end = task_manager.first_task.heap_start;
+
     // 写TR寄存器，指示当前运行的第一个任务
     write_tr(task_manager.first_task.tss_sel);
     task_manager.curr_task = &task_manager.first_task;
@@ -640,8 +646,9 @@ static uint32_t load_elf_file(task_t *task, const char *name, uint32_t page_dir)
         }
 
         // 简单起见，不检查了，以最后的地址为bss的地址
-        // task->heap_start = elf_phdr.p_vaddr + elf_phdr.p_memsz;
-        // task->heap_end = task->heap_start;
+        // 最后地址是最后一个elf段加载的地址
+        task->heap_start = elf_phdr.p_vaddr + elf_phdr.p_memsz;
+        task->heap_end = task->heap_start;
     }
     sys_close(file);
     return elf_hdr.e_entry;

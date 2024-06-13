@@ -31,9 +31,6 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -165,6 +162,30 @@ cstart.c.s:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/applib/CMakeFiles/app.dir/build.make source/applib/CMakeFiles/app.dir/cstart.c.s
 .PHONY : cstart.c.s
 
+lib_syscall.obj: lib_syscall.c.obj
+.PHONY : lib_syscall.obj
+
+# target to build an object file
+lib_syscall.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/applib/CMakeFiles/app.dir/build.make source/applib/CMakeFiles/app.dir/lib_syscall.c.obj
+.PHONY : lib_syscall.c.obj
+
+lib_syscall.i: lib_syscall.c.i
+.PHONY : lib_syscall.i
+
+# target to preprocess a source file
+lib_syscall.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/applib/CMakeFiles/app.dir/build.make source/applib/CMakeFiles/app.dir/lib_syscall.c.i
+.PHONY : lib_syscall.c.i
+
+lib_syscall.s: lib_syscall.c.s
+.PHONY : lib_syscall.s
+
+# target to generate assembly for a file
+lib_syscall.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/applib/CMakeFiles/app.dir/build.make source/applib/CMakeFiles/app.dir/lib_syscall.c.s
+.PHONY : lib_syscall.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -178,6 +199,9 @@ help:
 	@echo "... cstart.obj"
 	@echo "... cstart.i"
 	@echo "... cstart.s"
+	@echo "... lib_syscall.obj"
+	@echo "... lib_syscall.i"
+	@echo "... lib_syscall.s"
 .PHONY : help
 
 

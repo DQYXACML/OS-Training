@@ -2,6 +2,8 @@
 #include "comm/types.h"
 #include "tools/klib.h"
 #include "loader/loader.h"
+#include "tools/log.h"
+#include "dev/console.h"
 
 #define FS_TABLE_SIZE 10 // 文件系统表数量
 static uint8_t TEMP_ADDR[100 * 1024];
@@ -62,6 +64,12 @@ int sys_read(int file, char *ptr, int len)
 
 int sys_write(int file, char *ptr, int len)
 {
+    if (file == 1)
+    {
+        // ptr[len] = '\0';
+        console_write(0, ptr, len);
+        // log_printf("%s", ptr);
+    }
     return -1;
 }
 
@@ -72,10 +80,27 @@ int sys_lseek(int file, int ptr, int dir)
         temp_pos = (uint8_t *)(TEMP_ADDR + ptr);
         return 0;
     }
+
     return -1;
 }
 
 int sys_close(int file)
+{
+    return 0;
+}
+
+/**
+ * 判断文件描述符与tty关联
+ */
+int sys_isatty(int file)
+{
+    return 0;
+}
+
+/**
+ * @brief 获取文件状态
+ */
+int sys_fstat(int file, struct stat *st)
 {
     return 0;
 }

@@ -16,11 +16,13 @@ set(CMAKE_ASM_COMPILER_ID "GNU")
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "C:/diy-x86os-master/start/start/source"
   "C:/diy-x86os-master/start/start/source/kernel/include"
+  "C:/diy-x86os-master/start/start/../newlib/i686-elf/include"
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/diy-x86os-master/start/start/source/applib/cstart.c" "source/applib/CMakeFiles/app.dir/cstart.c.obj" "gcc" "source/applib/CMakeFiles/app.dir/cstart.c.obj.d"
+  "C:/diy-x86os-master/start/start/source/applib/lib_syscall.c" "source/applib/CMakeFiles/app.dir/lib_syscall.c.obj" "gcc" "source/applib/CMakeFiles/app.dir/lib_syscall.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

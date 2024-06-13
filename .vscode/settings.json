@@ -19,6 +19,8 @@
         "list.h": "c",
         "sem.h": "c",
         "syscall.h": "c",
-        "klib.h": "c"
+        "klib.h": "c",
+        "fs.h": "c",
+        "stdlib.h": "c"
     },
 }

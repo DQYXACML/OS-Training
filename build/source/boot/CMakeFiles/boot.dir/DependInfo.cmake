@@ -16,6 +16,7 @@ set(CMAKE_ASM_COMPILER_ID "GNU")
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "C:/diy-x86os-master/start/start/source"
   "C:/diy-x86os-master/start/start/source/kernel/include"
+  "C:/diy-x86os-master/start/start/../newlib/i686-elf/include"
   )
 
 # The set of dependency files which are needed:

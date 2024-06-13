@@ -84,6 +84,7 @@ exception_handler virtual_exception, 20, 0
 
 # 硬件中断
 exception_handler timer, 0x20, 0
+exception_handler kbd, 0x21, 0
 
 // eax, ecx, edx由调用者自动保存
 // ebx, esi, edi, ebp需要由被调用者保存和恢复
