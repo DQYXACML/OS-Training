@@ -289,7 +289,7 @@ void do_handler_kbd(exception_frame_t *frame)
         // E1字符，不处理
         recv_state = BEGIN_E1;
     }
-    elsewwww
+    else
     {
         switch (recv_state)
         {
