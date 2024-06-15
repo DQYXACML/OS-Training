@@ -78,7 +78,7 @@
 			"sourceIndexes" : 
 			[
 				0,
-				28
+				34
 			]
 		},
 		{
@@ -115,14 +115,17 @@
 				7,
 				8,
 				9,
-				27,
-				29,
-				31,
-				32,
+				10,
+				11,
+				12,
 				33,
-				34,
 				35,
-				36
+				37,
+				38,
+				39,
+				40,
+				41,
+				42
 			]
 		}
 	],
@@ -167,7 +170,7 @@
 			"sourceIndexes" : 
 			[
 				0,
-				28
+				34
 			]
 		},
 		{
@@ -183,23 +186,23 @@
 				7,
 				8,
 				9,
-				27,
-				29,
-				31,
-				32,
+				10,
+				11,
+				12,
 				33,
-				34,
 				35,
-				36
+				37,
+				38,
+				39,
+				40,
+				41,
+				42
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				10,
-				11,
-				12,
 				13,
 				14,
 				15,
@@ -214,7 +217,13 @@
 				24,
 				25,
 				26,
-				30
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				36
 			]
 		}
 	],
@@ -265,6 +274,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
+			"path" : "source/kernel/dev/dev.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
 			"path" : "source/kernel/dev/kbd.c",
 			"sourceGroupIndex" : 1
 		},
@@ -272,6 +287,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "source/kernel/dev/time.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "source/kernel/dev/tty.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "source/kernel/fs/file.c",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -317,12 +344,27 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "source/kernel/include/dev/dev.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
 			"path" : "source/kernel/include/dev/kbd.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
 			"path" : "source/kernel/include/dev/time.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/kernel/include/dev/tty.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/kernel/include/fs/file.h",
 			"sourceGroupIndex" : 2
 		},
 		{

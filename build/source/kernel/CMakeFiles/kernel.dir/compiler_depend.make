@@ -10,7 +10,10 @@ source/kernel/CMakeFiles/kernel.dir/core/memory.c.obj: C:/diy-x86os-master/start
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/mmu.h \
   C:/diy-x86os-master/start/start/source/kernel/include/dev/console.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/tty.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
   C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/bitmap.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/klib.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
@@ -24,6 +27,7 @@ source/kernel/CMakeFiles/kernel.dir/core/syscall.c.obj: C:/diy-x86os-master/star
   C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h \
   C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
   C:/diy-x86os-master/start/start/source/kernel/include/fs/fs.h \
   C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/bitmap.h \
@@ -72,6 +76,7 @@ source/kernel/CMakeFiles/kernel.dir/core/task.c.obj: C:/diy-x86os-master/start/s
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/mmu.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
   C:/diy-x86os-master/start/start/source/kernel/include/fs/fs.h \
   C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
   C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h \
@@ -117,6 +122,7 @@ source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.obj: C:/diy-x86os-master/start/sta
   C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
   C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
   C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h
@@ -136,9 +142,19 @@ source/kernel/CMakeFiles/kernel.dir/dev/console.c.obj: C:/diy-x86os-master/start
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h \
   C:/diy-x86os-master/start/start/source/kernel/include/dev/console.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/tty.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
   C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/klib.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
+  C:/x86_64-elf-tools-windows/lib/gcc/x86_64-elf/7.1.0/include/stdarg.h
+
+source/kernel/CMakeFiles/kernel.dir/dev/dev.c.obj: C:/diy-x86os-master/start/start/source/kernel/dev/dev.c \
+  C:/diy-x86os-master/start/start/source/comm/types.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/dev.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/tools/klib.h \
   C:/x86_64-elf-tools-windows/lib/gcc/x86_64-elf/7.1.0/include/stdarg.h
 
 source/kernel/CMakeFiles/kernel.dir/dev/kbd.c.obj: C:/diy-x86os-master/start/start/source/kernel/dev/kbd.c \
@@ -146,7 +162,10 @@ source/kernel/CMakeFiles/kernel.dir/dev/kbd.c.obj: C:/diy-x86os-master/start/sta
   C:/diy-x86os-master/start/start/source/comm/types.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h \
   C:/diy-x86os-master/start/start/source/kernel/include/dev/kbd.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/tty.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/klib.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h \
   C:/x86_64-elf-tools-windows/lib/gcc/x86_64-elf/7.1.0/include/stdarg.h
 
@@ -157,6 +176,31 @@ source/kernel/CMakeFiles/kernel.dir/dev/time.c.obj: C:/diy-x86os-master/start/st
   C:/diy-x86os-master/start/start/source/kernel/include/dev/time.h \
   C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h
 
+source/kernel/CMakeFiles/kernel.dir/dev/tty.c.obj: C:/diy-x86os-master/start/start/source/kernel/dev/tty.c \
+  C:/diy-x86os-master/start/start/source/comm/types.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/console.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/dev.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/kbd.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/tty.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h
+
+source/kernel/CMakeFiles/kernel.dir/fs/file.c.obj: C:/diy-x86os-master/start/start/source/kernel/fs/file.c \
+  C:/diy-x86os-master/start/start/source/comm/types.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/tools/klib.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
+  C:/x86_64-elf-tools-windows/lib/gcc/x86_64-elf/7.1.0/include/stdarg.h
+
 source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj: C:/diy-x86os-master/start/start/source/kernel/fs/fs.c \
   C:/diy-x86os-master/start/start/source/comm/boot_info.h \
   C:/diy-x86os-master/start/start/source/comm/cpu_instr.h \
@@ -164,8 +208,12 @@ source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj: C:/diy-x86os-master/start/start
   C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
   C:/diy-x86os-master/start/start/source/kernel/include/dev/console.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/dev.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/tty.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
   C:/diy-x86os-master/start/start/source/kernel/include/fs/fs.h \
   C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/klib.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h \
@@ -207,6 +255,9 @@ source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj: C:/diy-x86os-master/s
   C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h \
   C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/tty.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h \
   C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h \
@@ -251,6 +302,9 @@ source/kernel/CMakeFiles/kernel.dir/init/init.c.obj: C:/diy-x86os-master/start/s
   C:/diy-x86os-master/start/start/source/kernel/include/dev/console.h \
   C:/diy-x86os-master/start/start/source/kernel/include/dev/kbd.h \
   C:/diy-x86os-master/start/start/source/kernel/include/dev/time.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/tty.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/fs/fs.h \
   C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
   C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h \
   C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h \
@@ -259,13 +313,43 @@ source/kernel/CMakeFiles/kernel.dir/init/init.c.obj: C:/diy-x86os-master/start/s
   C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h \
   C:/diy-x86os-master/start/start/source/kernel/init/init.h \
-  C:/x86_64-elf-tools-windows/lib/gcc/x86_64-elf/7.1.0/include/stdarg.h
+  C:/diy-x86os-master/start/newlib/i686-elf/include/_ansi.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/_newlib_version.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/machine/_default_types.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/machine/_endian.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/machine/_types.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/machine/endian.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/machine/ieeefp.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/machine/time.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/machine/types.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/newlib.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/_locale.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/_pthreadtypes.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/_sigset.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/_stdint.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/_timespec.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/_timeval.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/_types.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/cdefs.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/config.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/features.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/lock.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/reent.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/sched.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/select.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/stat.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/timespec.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/sys/types.h \
+  C:/diy-x86os-master/start/newlib/i686-elf/include/time.h \
+  C:/x86_64-elf-tools-windows/lib/gcc/x86_64-elf/7.1.0/include/stdarg.h \
+  C:/x86_64-elf-tools-windows/lib/gcc/x86_64-elf/7.1.0/include/stddef.h
 
 source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.obj: C:/diy-x86os-master/start/start/source/kernel/ipc/mutex.c \
   C:/diy-x86os-master/start/start/source/comm/types.h \
   C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
   C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h
 
@@ -274,6 +358,7 @@ source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.obj: C:/diy-x86os-master/start/sta
   C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
   C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h
 
@@ -299,7 +384,11 @@ source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj: C:/diy-x86os-master/start/s
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
   C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h \
   C:/diy-x86os-master/start/start/source/kernel/include/dev/console.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/dev.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/tty.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
   C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/klib.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
   C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h \
@@ -322,6 +411,8 @@ C:/diy-x86os-master/start/start/source/comm/boot_info.h:
 
 C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h:
 
+C:/diy-x86os-master/start/start/source/kernel/include/dev/tty.h:
+
 C:/diy-x86os-master/start/start/source/comm/types.h:
 
 C:/diy-x86os-master/start/start/source/kernel/include/core/task.h:
@@ -332,13 +423,17 @@ C:/diy-x86os-master/start/start/source/kernel/include/cpu/mmu.h:
 
 C:/diy-x86os-master/start/start/source/kernel/include/dev/console.h:
 
-C:/diy-x86os-master/start/start/source/loader/loader.h:
+C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h:
 
 C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h:
 
 C:/diy-x86os-master/start/newlib/i686-elf/include/sys/_timeval.h:
 
 C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h:
+
+C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h:
+
+C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h:
 
 C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h:
 
@@ -349,10 +444,6 @@ C:/diy-x86os-master/start/start/source/kernel/include/tools/bitmap.h:
 C:/diy-x86os-master/start/newlib/i686-elf/include/sys/lock.h:
 
 C:/diy-x86os-master/start/start/source/kernel/include/tools/klib.h:
-
-C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h:
-
-C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h:
 
 C:/diy-x86os-master/start/newlib/i686-elf/include/sys/timespec.h:
 
@@ -370,8 +461,6 @@ C:/diy-x86os-master/start/newlib/i686-elf/include/sys/reent.h:
 
 C:/diy-x86os-master/start/start/source/kernel/include/fs/fs.h:
 
-C:/diy-x86os-master/start/start/source/kernel/fs/fs.c:
-
 C:/diy-x86os-master/start/newlib/i686-elf/include/_ansi.h:
 
 C:/diy-x86os-master/start/newlib/i686-elf/include/_newlib_version.h:
@@ -386,13 +475,15 @@ C:/diy-x86os-master/start/newlib/i686-elf/include/machine/_endian.h:
 
 C:/diy-x86os-master/start/newlib/i686-elf/include/machine/endian.h:
 
-C:/diy-x86os-master/start/newlib/i686-elf/include/machine/ieeefp.h:
-
-C:/diy-x86os-master/start/start/source/kernel/init/init.c:
+C:/diy-x86os-master/start/start/source/kernel/include/dev/dev.h:
 
 C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h:
 
 C:/diy-x86os-master/start/start/source/kernel/core/task.c:
+
+C:/diy-x86os-master/start/start/source/kernel/init/init.c:
+
+C:/diy-x86os-master/start/newlib/i686-elf/include/machine/ieeefp.h:
 
 C:/diy-x86os-master/start/newlib/i686-elf/include/machine/time.h:
 
@@ -428,7 +519,17 @@ C:/diy-x86os-master/start/start/source/kernel/cpu/cpu.c:
 
 C:/diy-x86os-master/start/start/source/kernel/cpu/irq.c:
 
+C:/diy-x86os-master/start/start/source/kernel/dev/dev.c:
+
 C:/diy-x86os-master/start/start/source/kernel/dev/kbd.c:
+
+C:/diy-x86os-master/start/start/source/kernel/dev/tty.c:
+
+C:/diy-x86os-master/start/start/source/kernel/fs/file.c:
+
+C:/diy-x86os-master/start/start/source/kernel/fs/fs.c:
+
+C:/diy-x86os-master/start/start/source/loader/loader.h:
 
 C:/diy-x86os-master/start/start/source/kernel/init/first_task.c:
 

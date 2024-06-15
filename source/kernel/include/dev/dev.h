@@ -15,7 +15,7 @@ enum
 struct _dev_desc_t;
 
 /**
- * @brief 设备驱动接口
+ * @brief 设备驱动接口(特定的设备)
  */
 typedef struct _device_t
 {
@@ -27,7 +27,7 @@ typedef struct _device_t
 } device_t;
 
 /**
- * @brief 设备描述结构
+ * @brief 设备描述结构(某一类设备)
  */
 typedef struct _dev_desc_t
 {

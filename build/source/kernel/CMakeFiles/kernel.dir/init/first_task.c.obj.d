@@ -5,6 +5,7 @@ source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj: \
  C:/diy-x86os-master/start/start/source/comm/types.h \
  C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
  C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
  C:/diy-x86os-master/start/start/source/applib/lib_syscall.h \
  C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h \
  C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h \
@@ -38,4 +39,6 @@ source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj: \
  c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_pthreadtypes.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\sys\sched.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\machine\types.h \
- c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_locale.h
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_locale.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/dev/tty.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h

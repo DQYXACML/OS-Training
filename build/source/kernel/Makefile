@@ -31,6 +31,9 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -274,6 +277,30 @@ dev/console.c.s:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/console.c.s
 .PHONY : dev/console.c.s
 
+dev/dev.obj: dev/dev.c.obj
+.PHONY : dev/dev.obj
+
+# target to build an object file
+dev/dev.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/dev.c.obj
+.PHONY : dev/dev.c.obj
+
+dev/dev.i: dev/dev.c.i
+.PHONY : dev/dev.i
+
+# target to preprocess a source file
+dev/dev.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/dev.c.i
+.PHONY : dev/dev.c.i
+
+dev/dev.s: dev/dev.c.s
+.PHONY : dev/dev.s
+
+# target to generate assembly for a file
+dev/dev.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/dev.c.s
+.PHONY : dev/dev.c.s
+
 dev/kbd.obj: dev/kbd.c.obj
 .PHONY : dev/kbd.obj
 
@@ -321,6 +348,54 @@ dev/time.s: dev/time.c.s
 dev/time.c.s:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/time.c.s
 .PHONY : dev/time.c.s
+
+dev/tty.obj: dev/tty.c.obj
+.PHONY : dev/tty.obj
+
+# target to build an object file
+dev/tty.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/tty.c.obj
+.PHONY : dev/tty.c.obj
+
+dev/tty.i: dev/tty.c.i
+.PHONY : dev/tty.i
+
+# target to preprocess a source file
+dev/tty.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/tty.c.i
+.PHONY : dev/tty.c.i
+
+dev/tty.s: dev/tty.c.s
+.PHONY : dev/tty.s
+
+# target to generate assembly for a file
+dev/tty.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/tty.c.s
+.PHONY : dev/tty.c.s
+
+fs/file.obj: fs/file.c.obj
+.PHONY : fs/file.obj
+
+# target to build an object file
+fs/file.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/fs/file.c.obj
+.PHONY : fs/file.c.obj
+
+fs/file.i: fs/file.c.i
+.PHONY : fs/file.i
+
+# target to preprocess a source file
+fs/file.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/fs/file.c.i
+.PHONY : fs/file.c.i
+
+fs/file.s: fs/file.c.s
+.PHONY : fs/file.s
+
+# target to generate assembly for a file
+fs/file.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/fs/file.c.s
+.PHONY : fs/file.c.s
 
 fs/fs.obj: fs/fs.c.obj
 .PHONY : fs/fs.obj
@@ -581,12 +656,21 @@ help:
 	@echo "... dev/console.obj"
 	@echo "... dev/console.i"
 	@echo "... dev/console.s"
+	@echo "... dev/dev.obj"
+	@echo "... dev/dev.i"
+	@echo "... dev/dev.s"
 	@echo "... dev/kbd.obj"
 	@echo "... dev/kbd.i"
 	@echo "... dev/kbd.s"
 	@echo "... dev/time.obj"
 	@echo "... dev/time.i"
 	@echo "... dev/time.s"
+	@echo "... dev/tty.obj"
+	@echo "... dev/tty.i"
+	@echo "... dev/tty.s"
+	@echo "... fs/file.obj"
+	@echo "... fs/file.i"
+	@echo "... fs/file.s"
 	@echo "... fs/fs.obj"
 	@echo "... fs/fs.i"
 	@echo "... fs/fs.s"

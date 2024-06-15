@@ -13,20 +13,21 @@
 #include "core/memory.h"
 #include "dev/console.h"
 #include "dev/kbd.h"
+#include "fs/fs.h"
 
 void kernel_init(boot_info_t *boot_info)
 {
     cpu_init();
+    irq_init();
     log_init();
-    console_init();
 
     // 内存初始化要放前面一点，因为后面的代码可能需要内存分配
     memory_init(boot_info);
-    irq_init();
+    fs_init();
+
     time_init();
 
     task_manager_init();
-    kbd_init();
 }
 
 // static task_t init_task;

@@ -12,6 +12,9 @@ source/kernel/CMakeFiles/kernel.dir/core/memory.c.obj: \
  C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
  C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
  C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
  C:/diy-x86os-master/start/start/source/kernel/include/cpu/mmu.h \
  C:/diy-x86os-master/start/start/source/comm/cpu_instr.h \
- C:/diy-x86os-master/start/start/source/kernel/include/dev/console.h
+ C:/diy-x86os-master/start/start/source/kernel/include/dev/console.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/dev/tty.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h

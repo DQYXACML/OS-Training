@@ -1,8 +1,10 @@
 #include "lib_syscall.h"
 #include <stdio.h>
 
+char cmd_buf[256];
 int main(int argc, char **argv)
 {
+#if 0
     sbrk(0);
     sbrk(100);
     sbrk(200);
@@ -23,19 +25,26 @@ int main(int argc, char **argv)
     printf("\033[32;25;39m123\n");
 
     printf("\033[2J");
-
+#endif
+    open(argv[0], 0); // int fd=0;
+    dup(0);
+    dup(0);
+    // open("tty:0", 0); // int fd=1;
+    // open("tty:0", 0); // int fd=2;
     printf("Hello from shell\n");
-    for (int i = 0; i < argc; i++)
-    {
-        printf("arg: %s\n", argv[i]);
-    }
+    // for (int i = 0; i < argc; i++)
+    // {
+    //     printf("arg: %s\n", argv[i]);
+    // }
 
-    fork();
-    yield();
+    // fork();
+    // yield();
 
     for (;;)
     {
-        printf("shell pid=%d\n", getpid());
-        msleep(1000);
+        gets(cmd_buf);
+        puts(cmd_buf);
+        // printf("shell pid=%d\n", getpid());
+        // msleep(1000);
     }
 }

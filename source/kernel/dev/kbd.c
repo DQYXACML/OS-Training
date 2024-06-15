@@ -3,6 +3,7 @@
 #include "dev/kbd.h"
 #include "tools/log.h"
 #include "tools/klib.h"
+#include "dev/tty.h"
 
 static kbd_state_t kbd_state; // 键盘状态
 
@@ -142,7 +143,7 @@ static void do_fx_key(int key)
     int index = key - KEY_F1;
     if (kbd_state.lctrl_press || kbd_state.rctrl_press)
     {
-        // tty_select(index);
+        tty_select(index);
     }
 }
 
@@ -222,8 +223,8 @@ static void do_normal_key(uint8_t raw_code)
             }
 
             // 最后，不管是否是控制字符，都会被写入
-            log_printf("key=%c", key);
-            // tty_in(key);
+            // log_printf("key=%c", key);
+            tty_in(key);
         }
         break;
     }
@@ -312,6 +313,7 @@ void do_handler_kbd(exception_frame_t *frame)
  */
 void kbd_init(void)
 {
+    // 限制只调用一次
     static int inited = 0;
 
     if (!inited)

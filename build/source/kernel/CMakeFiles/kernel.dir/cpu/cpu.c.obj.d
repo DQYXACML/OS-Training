@@ -8,4 +8,5 @@ source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.obj: \
  C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
  C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
  C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
  C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h

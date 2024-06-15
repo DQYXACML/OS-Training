@@ -2,15 +2,18 @@
 #include "tools/klib.h"
 #include "comm/cpu_instr.h"
 #include "cpu/irq.h"
+#include "dev/tty.h"
 
-#define CONSOLE_NR 1 // 控制台的数量
+#define CONSOLE_NR 8 // 控制台的数量
 
 static console_t console_buf[CONSOLE_NR];
+static int curr_console_idx = 0;
 
 /**
  * @brief 读取当前光标的位置
  */
-static int read_cursor_pos(void)
+static int
+read_cursor_pos(void)
 {
     int pos;
 
@@ -156,64 +159,64 @@ void restore_cursor(console_t *console)
 /**
  * 初始化控制台及键盘
  */
-// int console_init(int idx)
-// {
-//     console_t *console = console_buf + idx;
-
-//     console->display_cols = CONSOLE_COL_MAX;
-//     console->display_rows = CONSOLE_ROW_MAX;
-//     console->disp_base = (disp_char_t *)CONSOLE_DISP_ADDR + idx * console->display_cols * console->display_rows;
-
-//     console->foreground = COLOR_White;
-//     console->background = COLOR_Black;
-//     if (idx == 0)
-//     {
-//         int cursor_pos = read_cursor_pos();
-//         console->cursor_row = cursor_pos / console->display_cols;
-//         console->cursor_col = cursor_pos % console->display_cols;
-//     }
-//     else
-//     {
-//         console->cursor_row = 0;
-//         console->cursor_col = 0;
-//         clear_display(console);
-//     }
-
-//     console->old_cursor_row = console->cursor_row;
-//     console->old_cursor_col = console->cursor_col;
-
-//     mutex_init(&console->mutex);
-//     return 0;
-// }
-
-int console_init(void)
+int console_init(int idx)
 {
-    for (int i = 0; i < CONSOLE_NR; i++)
+    console_t *console = console_buf + idx;
+
+    console->display_cols = CONSOLE_COL_MAX;
+    console->display_rows = CONSOLE_ROW_MAX;
+    console->disp_base = (disp_char_t *)CONSOLE_DISP_ADDR + idx * console->display_cols * console->display_rows;
+
+    console->foreground = COLOR_White;
+    console->background = COLOR_Black;
+    if (idx == 0)
     {
-        console_t *console = console_buf + i;
-        console->display_cols = CONSOLE_COL_MAX;
-        console->display_rows = CONSOLE_ROW_MAX;
-
-        // 设置背景
-        console->foreground = COLOR_White;
-        console->background = COLOR_Black;
-
-        // 读取光标位置
         int cursor_pos = read_cursor_pos();
         console->cursor_row = cursor_pos / console->display_cols;
         console->cursor_col = cursor_pos % console->display_cols;
-
-        console->old_cursor_row = console->cursor_row;
-        console->old_cursor_col = console->cursor_col;
-        console->write_state = CONSOLE_WRITE_NORMAL;
-
-        console->disp_base = (disp_char_t *)CONSOLE_DISP_ADDR + i * console->display_cols * console->display_rows;
-
-        // 清空
+    }
+    else
+    {
+        console->cursor_row = 0;
+        console->cursor_col = 0;
         clear_display(console);
     }
+
+    console->old_cursor_row = console->cursor_row;
+    console->old_cursor_col = console->cursor_col;
+
+    mutex_init(&console->mutex);
     return 0;
 }
+
+// int console_init(void)
+// {
+//     for (int i = 0; i < CONSOLE_NR; i++)
+//     {
+//         console_t *console = console_buf + i;
+//         console->display_cols = CONSOLE_COL_MAX;
+//         console->display_rows = CONSOLE_ROW_MAX;
+
+//         // 设置背景
+//         console->foreground = COLOR_White;
+//         console->background = COLOR_Black;
+
+//         // 读取光标位置
+//         int cursor_pos = read_cursor_pos();
+//         console->cursor_row = cursor_pos / console->display_cols;
+//         console->cursor_col = cursor_pos % console->display_cols;
+
+//         console->old_cursor_row = console->cursor_row;
+//         console->old_cursor_col = console->cursor_col;
+//         console->write_state = CONSOLE_WRITE_NORMAL;
+
+//         console->disp_base = (disp_char_t *)CONSOLE_DISP_ADDR + i * console->display_cols * console->display_rows;
+
+//         // 清空
+//         clear_display(console);
+//     }
+//     return 0;
+// }
 
 /**
  * 光标左移
@@ -504,34 +507,102 @@ static void write_esc_square(console_t *console, char c)
     }
 }
 
+void console_select(int idx)
+{
+    console_t *console = console_buf + idx;
+    if (console->disp_base == 0)
+    {
+        // 可能没有初始化，先初始化一下
+        console_init(idx);
+    }
+
+    uint16_t pos = idx * console->display_cols * console->display_rows;
+
+    outb(0x3D4, 0xC); // 写高地址
+    outb(0x3D5, (uint8_t)((pos >> 8) & 0xFF));
+    outb(0x3D4, 0xD); // 写低地址
+    outb(0x3D5, (uint8_t)(pos & 0xFF));
+
+    // 更新光标到当前屏幕
+    curr_console_idx = idx;
+    update_cursor_pos(console);
+}
+
+void console_set_cursor(int idx, int visiable)
+{
+    console_t *console = console_buf + idx;
+
+    irq_state_t state = irq_enter_protection();
+    if (visiable)
+    {
+        outb(0x3D4, 0x0A);
+        outb(0x3D5, (inb(0x3D5) & 0xC0) | 0);
+        outb(0x3D4, 0x0B);
+        outb(0x3D5, (inb(0x3D5) & 0xE0) | 15);
+    }
+    else
+    {
+        outb(0x3D4, 0x0A);
+        outb(0x3D5, 0x20);
+    }
+    irq_leave_protection(state);
+}
+
 /**
  * 实现pwdget作为tty的输出
  * 可能有多个进程在写，注意保护
  */
-int console_write(int console, char *data, int size)
+int console_write(tty_t *tty)
 {
-    console_t *c = console_buf + console;
-    int len;
+    console_t *console = console_buf + tty->console_idx;
+    // 下面的写序列涉及到状态机，还有多进程同时写，因此加上锁
+    mutex_lock(&console->mutex);
 
-    for (len = 0; len < size; len++)
+    int len = 0;
+
+    do
     {
-        char ch = *data++;
-        // 特殊模式处理ESC
-        switch (c->write_state)
+        char c;
+
+        // 取字节数据
+        int err = tty_fifo_get(&tty->ofifo, &c);
+        if (err < 0)
         {
-        case CONSOLE_WRITE_NORMAL:
-            write_normal(c, ch);
-            break;
-        case CONSOLE_WRITE_ESC:
-            write_esc(c, ch);
-            break;
-        case CONSOLE_WRITE_SQUARE:
-            write_esc_square(c, ch);
-            break;
-        default:
             break;
         }
+        sem_notify(&tty->osem);
+
+        // 显示出来
+        switch (console->write_state)
+        {
+        case CONSOLE_WRITE_NORMAL:
+        {
+            write_normal(console, c);
+            break;
+        }
+        case CONSOLE_WRITE_ESC:
+            write_esc(console, c);
+            break;
+        case CONSOLE_WRITE_SQUARE:
+            write_esc_square(console, c);
+            break;
+        }
+        len++;
+    } while (1);
+
+    if (tty->console_idx == curr_console_idx)
+    {
+        mutex_unlock(&console->mutex);
+        update_cursor_pos(console);
     }
-    update_cursor_pos(console);
+
     return len;
+}
+
+/**
+ * @brief 关闭控制台及键盘
+ */
+void console_close(int dev)
+{
+    // 似乎不太需要做点什么
 }
