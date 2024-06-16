@@ -466,6 +466,24 @@ void task_uninit(task_t *task)
 }
 
 /**
+ * @brief 从当前进程中拷贝已经打开的文件列表
+ */
+static void copy_opened_files(task_t *child_task)
+{
+    task_t *parent = task_current();
+
+    for (int i = 0; i < TASK_OFILE_NR; i++)
+    {
+        file_t *file = parent->file_table[i];
+        if (file)
+        {
+            file_inc_ref(file);
+            child_task->file_table[i] = parent->file_table[i];
+        }
+    }
+}
+
+/**
  * @brief 创建进程的副本
  */
 int sys_fork(void)
@@ -485,6 +503,10 @@ int sys_fork(void)
     {
         goto fork_failed;
     }
+
+    // 拷贝打开的文件
+    copy_opened_files(child_task);
+
     // 从父进程的栈中取部分状态，然后写入tss。
     // 注意检查esp, eip等是否在用户空间范围内，不然会造成page_fault
     tss_t *tss = &child_task->tss;
@@ -854,4 +876,114 @@ void task_remove_fd(int fd)
     {
         task_current()->file_table[fd] = (file_t *)0;
     }
+}
+
+/**
+ * @brief 等待子进程退出
+ */
+int sys_wait(int *status)
+{
+    task_t *curr_task = task_current();
+    for (;;)
+    {
+        // 遍历，找僵尸状态的进程，然后回收。如果收不到，则进入睡眠态
+        mutex_lock(&task_table_mutex);
+        for (int i = 0; i < TASK_NR; i++)
+        {
+            task_t *task = task_table + i;
+            if (task->parent != curr_task)
+            {
+                continue;
+            }
+            if (task->state == TASK_ZOMBIE)
+            {
+                int pid = task->pid;
+
+                *status = task->status;
+
+                memory_destroy_uvm(task->tss.cr3);
+                memory_free_page(task->tss.esp0 - MEM_PAGE_SIZE);
+                kernel_memset(task, 0, sizeof(task_t));
+
+                mutex_unlock(&task_table_mutex);
+                return pid;
+            }
+        }
+        mutex_unlock(&task_table_mutex);
+
+        // 找不到，则等待
+        irq_state_t state = irq_enter_protection();
+        task_set_block(curr_task);
+        curr_task->state = TASK_WAITING;
+        task_dispatch();
+        irq_leave_protection(state);
+    }
+
+    return 0;
+}
+
+/**
+ * @brief 退出进程
+ */
+void sys_exit(int status)
+{
+    task_t *curr_task = task_current();
+
+    // 关闭所有已经打开的文件, 标准输入输出库会由newlib自行关闭，但这里仍然再处理下
+    for (int fd = 0; fd < TASK_OFILE_NR; fd++)
+    {
+        file_t *file = curr_task->file_table[fd];
+        if (file)
+        {
+            sys_close(fd);
+            curr_task->file_table[fd] = (file_t *)0;
+        }
+    }
+
+    int move_child = 0;
+    // 找所有的子进程，将其转交给init进程
+    mutex_lock(&task_table_mutex);
+    for (int i = 0; i < TASK_OFILE_NR; i++)
+    {
+        task_t *task = task_table + i;
+        if (task->parent == curr_task)
+        {
+            // 有子进程，则转给init_task
+            task->parent = &task_manager.first_task;
+
+            // 如果子进程中有僵尸进程，唤醒回收资源
+            // 并不由自己回收，因为自己将要退出
+            if (task->state == TASK_ZOMBIE)
+            {
+                move_child = 1;
+            }
+        }
+    }
+    mutex_unlock(&task_table_mutex);
+
+    irq_state_t state = irq_enter_protection();
+
+    // 如果有移动子进程，则唤醒init进程
+    task_t *parent = curr_task->parent;
+    if (move_child && (parent != &task_manager.first_task))
+    { // 如果父进程为init进程，在下方唤醒
+        if (task_manager.first_task.state == TASK_WAITING)
+        {
+            task_set_ready(&task_manager.first_task);
+        }
+    }
+
+    // 如果有父任务在wait，则唤醒父任务进行回收
+    // 如果父进程没有等待，则一直处理僵死状态？
+    if (parent->state == TASK_WAITING)
+    {
+        task_set_ready(curr_task->parent);
+    }
+
+    // 保存返回值，进入僵尸状态
+    curr_task->status = status;
+    curr_task->state = TASK_ZOMBIE;
+    task_set_block(curr_task);
+    task_dispatch();
+    irq_leave_protection(state);
 }

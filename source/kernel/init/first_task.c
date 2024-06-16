@@ -52,9 +52,8 @@ int first_task_main(void)
 
     for (;;)
     {
-        // print_msg("task id=%d", pid);
-        // log_printf("first task.");
-        // sys_msleep(1000);
-        msleep(1000);
+        // 不断收集孤儿进程
+        int status;
+        wait(&status);
     }
 }

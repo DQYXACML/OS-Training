@@ -21,6 +21,11 @@
         "syscall.h": "c",
         "klib.h": "c",
         "fs.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "string.h": "c",
+        "main.h": "c",
+        "_locale.h": "c",
+        "strings.h": "c",
+        "STDLIB.H": "cpp"
     },
 }

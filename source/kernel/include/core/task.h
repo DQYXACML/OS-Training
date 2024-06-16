@@ -34,6 +34,8 @@ typedef struct _task_t
     int time_ticks;  // CPU 时间片
     int slice_ticks; // 递减时间片计数
 
+    int status;
+
     list_node_t run_node; // 插入ready_list;
     list_node_t wait_node;
     list_node_t all_node; // 插入task_list;

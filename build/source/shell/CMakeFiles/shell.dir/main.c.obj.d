@@ -34,6 +34,19 @@ source/shell/CMakeFiles/shell.dir/main.c.obj: \
  c:\diy-x86os-master\start\newlib\i686-elf\include\sys\sched.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\machine\types.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_locale.h \
+ C:/diy-x86os-master/start/start/source/shell/main.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
+ C:/diy-x86os-master/start/start/source/comm/types.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\file.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\fcntl.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_default_fcntl.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\string.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\strings.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\string.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\stdio.h \
  c:\x86_64-elf-tools-windows\lib\gcc\x86_64-elf\7.1.0\include\stdarg.h \
- c:\diy-x86os-master\start\newlib\i686-elf\include\sys\stdio.h
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\stdio.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\getopt.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\stdlib.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\machine\stdlib.h \
+ c:\diy-x86os-master\start\newlib\i686-elf\include\alloca.h

@@ -590,9 +590,9 @@ int console_write(tty_t *tty)
         len++;
     } while (1);
 
+    mutex_unlock(&console->mutex);
     if (tty->console_idx == curr_console_idx)
     {
-        mutex_unlock(&console->mutex);
         update_cursor_pos(console);
     }
 

@@ -133,6 +133,13 @@
 			[
 				0
 			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1
+			]
 		}
 	],
 	"sources" : 
@@ -142,6 +149,11 @@
 			"compileGroupIndex" : 0,
 			"path" : "source/shell/main.c",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/shell/main.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"
