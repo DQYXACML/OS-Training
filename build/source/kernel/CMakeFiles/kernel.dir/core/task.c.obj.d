@@ -49,4 +49,7 @@ source/kernel/CMakeFiles/kernel.dir/core/task.c.obj: \
  c:\diy-x86os-master\start\newlib\i686-elf\include\sys\sched.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\machine\types.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_locale.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
+ C:/diy-x86os-master/start/start/source/applib/lib_syscall.h \
+ C:/diy-x86os-master/start/start/source/applib/lib_syscall.h \
  C:/diy-x86os-master/start/start/source/comm/elf.h

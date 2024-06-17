@@ -40,8 +40,12 @@ source/kernel/CMakeFiles/kernel.dir/core/syscall.c.obj: \
  c:\diy-x86os-master\start\newlib\i686-elf\include\sys\sched.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\machine\types.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_locale.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
+ C:/diy-x86os-master/start/start/source/applib/lib_syscall.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h \
+ C:/diy-x86os-master/start/start/source/applib/lib_syscall.h \
  C:/diy-x86os-master/start/start/source/kernel/include/core/memory.h \
  C:/diy-x86os-master/start/start/source/kernel/include/tools/bitmap.h \
  C:/diy-x86os-master/start/start/source/comm/boot_info.h \
- C:/diy-x86os-master/start/start/source/comm/types.h \
- C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h
+ C:/diy-x86os-master/start/start/source/comm/types.h

@@ -97,6 +97,12 @@
 },
 {
   "directory": "C:/diy-x86os-master/start/start/build/source/kernel",
+  "command": "C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj -c C:/diy-x86os-master/start/start/source/kernel/fs/devfs/devfs.c",
+  "file": "C:/diy-x86os-master/start/start/source/kernel/fs/devfs/devfs.c",
+  "output": "source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj"
+},
+{
+  "directory": "C:/diy-x86os-master/start/start/build/source/kernel",
   "command": "C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/fs/file.c.obj -c C:/diy-x86os-master/start/start/source/kernel/fs/file.c",
   "file": "C:/diy-x86os-master/start/start/source/kernel/fs/file.c",
   "output": "source/kernel/CMakeFiles/kernel.dir/fs/file.c.obj"

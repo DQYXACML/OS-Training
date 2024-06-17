@@ -32,6 +32,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/diy-x86os-master/start/start/source/kernel/dev/kbd.c" "source/kernel/CMakeFiles/kernel.dir/dev/kbd.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/dev/kbd.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/dev/time.c" "source/kernel/CMakeFiles/kernel.dir/dev/time.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/dev/time.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/dev/tty.c" "source/kernel/CMakeFiles/kernel.dir/dev/tty.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/dev/tty.c.obj.d"
+  "C:/diy-x86os-master/start/start/source/kernel/fs/devfs/devfs.c" "source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/fs/file.c" "source/kernel/CMakeFiles/kernel.dir/fs/file.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/fs/file.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/fs/fs.c" "source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj.d"
   "C:/diy-x86os-master/start/start/source/kernel/init/first_task.c" "source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj" "gcc" "source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj.d"

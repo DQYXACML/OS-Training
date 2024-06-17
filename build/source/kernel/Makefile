@@ -31,9 +31,6 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -373,6 +370,30 @@ dev/tty.c.s:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/tty.c.s
 .PHONY : dev/tty.c.s
 
+fs/devfs/devfs.obj: fs/devfs/devfs.c.obj
+.PHONY : fs/devfs/devfs.obj
+
+# target to build an object file
+fs/devfs/devfs.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj
+.PHONY : fs/devfs/devfs.c.obj
+
+fs/devfs/devfs.i: fs/devfs/devfs.c.i
+.PHONY : fs/devfs/devfs.i
+
+# target to preprocess a source file
+fs/devfs/devfs.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.i
+.PHONY : fs/devfs/devfs.c.i
+
+fs/devfs/devfs.s: fs/devfs/devfs.c.s
+.PHONY : fs/devfs/devfs.s
+
+# target to generate assembly for a file
+fs/devfs/devfs.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.s
+.PHONY : fs/devfs/devfs.c.s
+
 fs/file.obj: fs/file.c.obj
 .PHONY : fs/file.obj
 
@@ -668,6 +689,9 @@ help:
 	@echo "... dev/tty.obj"
 	@echo "... dev/tty.i"
 	@echo "... dev/tty.s"
+	@echo "... fs/devfs/devfs.obj"
+	@echo "... fs/devfs/devfs.i"
+	@echo "... fs/devfs/devfs.s"
 	@echo "... fs/file.obj"
 	@echo "... fs/file.i"
 	@echo "... fs/file.s"

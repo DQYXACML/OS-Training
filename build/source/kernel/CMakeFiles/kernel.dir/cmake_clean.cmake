@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/kernel.dir/dev/time.c.obj.d"
   "CMakeFiles/kernel.dir/dev/tty.c.obj"
   "CMakeFiles/kernel.dir/dev/tty.c.obj.d"
+  "CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj"
+  "CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj.d"
   "CMakeFiles/kernel.dir/fs/file.c.obj"
   "CMakeFiles/kernel.dir/fs/file.c.obj.d"
   "CMakeFiles/kernel.dir/fs/fs.c.obj"

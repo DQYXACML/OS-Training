@@ -78,7 +78,7 @@
 			"sourceIndexes" : 
 			[
 				0,
-				34
+				36
 			]
 		},
 		{
@@ -118,14 +118,15 @@
 				10,
 				11,
 				12,
-				33,
+				13,
 				35,
 				37,
-				38,
 				39,
 				40,
 				41,
-				42
+				42,
+				43,
+				44
 			]
 		}
 	],
@@ -170,7 +171,7 @@
 			"sourceIndexes" : 
 			[
 				0,
-				34
+				36
 			]
 		},
 		{
@@ -189,21 +190,21 @@
 				10,
 				11,
 				12,
-				33,
+				13,
 				35,
 				37,
-				38,
 				39,
 				40,
 				41,
-				42
+				42,
+				43,
+				44
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				13,
 				14,
 				15,
 				16,
@@ -223,7 +224,9 @@
 				30,
 				31,
 				32,
-				36
+				33,
+				34,
+				38
 			]
 		}
 	],
@@ -298,6 +301,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
+			"path" : "source/kernel/fs/devfs/devfs.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
 			"path" : "source/kernel/fs/file.c",
 			"sourceGroupIndex" : 1
 		},
@@ -360,6 +369,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "source/kernel/include/dev/tty.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/kernel/include/fs/devfs/devfs.h",
 			"sourceGroupIndex" : 2
 		},
 		{

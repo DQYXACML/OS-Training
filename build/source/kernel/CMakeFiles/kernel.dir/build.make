@@ -27,9 +27,6 @@
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -236,11 +233,26 @@ source/kernel/CMakeFiles/kernel.dir/dev/tty.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kernel.dir/dev/tty.c.s"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/diy-x86os-master/start/start/source/kernel/dev/tty.c -o CMakeFiles/kernel.dir/dev/tty.c.s
 
+source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj: source/kernel/CMakeFiles/kernel.dir/flags.make
+source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj: source/kernel/CMakeFiles/kernel.dir/includes_C.rsp
+source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj: C:/diy-x86os-master/start/start/source/kernel/fs/devfs/devfs.c
+source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj: source/kernel/CMakeFiles/kernel.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj"
+	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj -MF CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj.d -o CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj -c C:/diy-x86os-master/start/start/source/kernel/fs/devfs/devfs.c
+
+source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kernel.dir/fs/devfs/devfs.c.i"
+	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:/diy-x86os-master/start/start/source/kernel/fs/devfs/devfs.c > CMakeFiles/kernel.dir/fs/devfs/devfs.c.i
+
+source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kernel.dir/fs/devfs/devfs.c.s"
+	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/diy-x86os-master/start/start/source/kernel/fs/devfs/devfs.c -o CMakeFiles/kernel.dir/fs/devfs/devfs.c.s
+
 source/kernel/CMakeFiles/kernel.dir/fs/file.c.obj: source/kernel/CMakeFiles/kernel.dir/flags.make
 source/kernel/CMakeFiles/kernel.dir/fs/file.c.obj: source/kernel/CMakeFiles/kernel.dir/includes_C.rsp
 source/kernel/CMakeFiles/kernel.dir/fs/file.c.obj: C:/diy-x86os-master/start/start/source/kernel/fs/file.c
 source/kernel/CMakeFiles/kernel.dir/fs/file.c.obj: source/kernel/CMakeFiles/kernel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object source/kernel/CMakeFiles/kernel.dir/fs/file.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object source/kernel/CMakeFiles/kernel.dir/fs/file.c.obj"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT source/kernel/CMakeFiles/kernel.dir/fs/file.c.obj -MF CMakeFiles/kernel.dir/fs/file.c.obj.d -o CMakeFiles/kernel.dir/fs/file.c.obj -c C:/diy-x86os-master/start/start/source/kernel/fs/file.c
 
 source/kernel/CMakeFiles/kernel.dir/fs/file.c.i: cmake_force
@@ -255,7 +267,7 @@ source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj: source/kernel/CMakeFiles/kernel
 source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj: source/kernel/CMakeFiles/kernel.dir/includes_C.rsp
 source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj: C:/diy-x86os-master/start/start/source/kernel/fs/fs.c
 source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj: source/kernel/CMakeFiles/kernel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj -MF CMakeFiles/kernel.dir/fs/fs.c.obj.d -o CMakeFiles/kernel.dir/fs/fs.c.obj -c C:/diy-x86os-master/start/start/source/kernel/fs/fs.c
 
 source/kernel/CMakeFiles/kernel.dir/fs/fs.c.i: cmake_force
@@ -270,7 +282,7 @@ source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj: source/kernel/CMakeFi
 source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj: source/kernel/CMakeFiles/kernel.dir/includes_C.rsp
 source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj: C:/diy-x86os-master/start/start/source/kernel/init/first_task.c
 source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj: source/kernel/CMakeFiles/kernel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj -MF CMakeFiles/kernel.dir/init/first_task.c.obj.d -o CMakeFiles/kernel.dir/init/first_task.c.obj -c C:/diy-x86os-master/start/start/source/kernel/init/first_task.c
 
 source/kernel/CMakeFiles/kernel.dir/init/first_task.c.i: cmake_force
@@ -284,7 +296,7 @@ source/kernel/CMakeFiles/kernel.dir/init/first_task.c.s: cmake_force
 source/kernel/CMakeFiles/kernel.dir/init/first_task_entry.S.obj: source/kernel/CMakeFiles/kernel.dir/flags.make
 source/kernel/CMakeFiles/kernel.dir/init/first_task_entry.S.obj: source/kernel/CMakeFiles/kernel.dir/includes_ASM.rsp
 source/kernel/CMakeFiles/kernel.dir/init/first_task_entry.S.obj: C:/diy-x86os-master/start/start/source/kernel/init/first_task_entry.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building ASM object source/kernel/CMakeFiles/kernel.dir/init/first_task_entry.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building ASM object source/kernel/CMakeFiles/kernel.dir/init/first_task_entry.S.obj"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/kernel.dir/init/first_task_entry.S.obj -c C:/diy-x86os-master/start/start/source/kernel/init/first_task_entry.S
 
 source/kernel/CMakeFiles/kernel.dir/init/first_task_entry.S.i: cmake_force
@@ -299,7 +311,7 @@ source/kernel/CMakeFiles/kernel.dir/init/init.c.obj: source/kernel/CMakeFiles/ke
 source/kernel/CMakeFiles/kernel.dir/init/init.c.obj: source/kernel/CMakeFiles/kernel.dir/includes_C.rsp
 source/kernel/CMakeFiles/kernel.dir/init/init.c.obj: C:/diy-x86os-master/start/start/source/kernel/init/init.c
 source/kernel/CMakeFiles/kernel.dir/init/init.c.obj: source/kernel/CMakeFiles/kernel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object source/kernel/CMakeFiles/kernel.dir/init/init.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object source/kernel/CMakeFiles/kernel.dir/init/init.c.obj"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT source/kernel/CMakeFiles/kernel.dir/init/init.c.obj -MF CMakeFiles/kernel.dir/init/init.c.obj.d -o CMakeFiles/kernel.dir/init/init.c.obj -c C:/diy-x86os-master/start/start/source/kernel/init/init.c
 
 source/kernel/CMakeFiles/kernel.dir/init/init.c.i: cmake_force
@@ -314,7 +326,7 @@ source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.obj: source/kernel/CMakeFiles/ke
 source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.obj: source/kernel/CMakeFiles/kernel.dir/includes_C.rsp
 source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.obj: C:/diy-x86os-master/start/start/source/kernel/ipc/mutex.c
 source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.obj: source/kernel/CMakeFiles/kernel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.obj"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.obj -MF CMakeFiles/kernel.dir/ipc/mutex.c.obj.d -o CMakeFiles/kernel.dir/ipc/mutex.c.obj -c C:/diy-x86os-master/start/start/source/kernel/ipc/mutex.c
 
 source/kernel/CMakeFiles/kernel.dir/ipc/mutex.c.i: cmake_force
@@ -329,7 +341,7 @@ source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.obj: source/kernel/CMakeFiles/kern
 source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.obj: source/kernel/CMakeFiles/kernel.dir/includes_C.rsp
 source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.obj: C:/diy-x86os-master/start/start/source/kernel/ipc/sem.c
 source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.obj: source/kernel/CMakeFiles/kernel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.obj"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.obj -MF CMakeFiles/kernel.dir/ipc/sem.c.obj.d -o CMakeFiles/kernel.dir/ipc/sem.c.obj -c C:/diy-x86os-master/start/start/source/kernel/ipc/sem.c
 
 source/kernel/CMakeFiles/kernel.dir/ipc/sem.c.i: cmake_force
@@ -344,7 +356,7 @@ source/kernel/CMakeFiles/kernel.dir/tools/bitmap.c.obj: source/kernel/CMakeFiles
 source/kernel/CMakeFiles/kernel.dir/tools/bitmap.c.obj: source/kernel/CMakeFiles/kernel.dir/includes_C.rsp
 source/kernel/CMakeFiles/kernel.dir/tools/bitmap.c.obj: C:/diy-x86os-master/start/start/source/kernel/tools/bitmap.c
 source/kernel/CMakeFiles/kernel.dir/tools/bitmap.c.obj: source/kernel/CMakeFiles/kernel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object source/kernel/CMakeFiles/kernel.dir/tools/bitmap.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object source/kernel/CMakeFiles/kernel.dir/tools/bitmap.c.obj"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT source/kernel/CMakeFiles/kernel.dir/tools/bitmap.c.obj -MF CMakeFiles/kernel.dir/tools/bitmap.c.obj.d -o CMakeFiles/kernel.dir/tools/bitmap.c.obj -c C:/diy-x86os-master/start/start/source/kernel/tools/bitmap.c
 
 source/kernel/CMakeFiles/kernel.dir/tools/bitmap.c.i: cmake_force
@@ -359,7 +371,7 @@ source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj: source/kernel/CMakeFiles/k
 source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj: source/kernel/CMakeFiles/kernel.dir/includes_C.rsp
 source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj: C:/diy-x86os-master/start/start/source/kernel/tools/klib.c
 source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj: source/kernel/CMakeFiles/kernel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT source/kernel/CMakeFiles/kernel.dir/tools/klib.c.obj -MF CMakeFiles/kernel.dir/tools/klib.c.obj.d -o CMakeFiles/kernel.dir/tools/klib.c.obj -c C:/diy-x86os-master/start/start/source/kernel/tools/klib.c
 
 source/kernel/CMakeFiles/kernel.dir/tools/klib.c.i: cmake_force
@@ -374,7 +386,7 @@ source/kernel/CMakeFiles/kernel.dir/tools/list.c.obj: source/kernel/CMakeFiles/k
 source/kernel/CMakeFiles/kernel.dir/tools/list.c.obj: source/kernel/CMakeFiles/kernel.dir/includes_C.rsp
 source/kernel/CMakeFiles/kernel.dir/tools/list.c.obj: C:/diy-x86os-master/start/start/source/kernel/tools/list.c
 source/kernel/CMakeFiles/kernel.dir/tools/list.c.obj: source/kernel/CMakeFiles/kernel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object source/kernel/CMakeFiles/kernel.dir/tools/list.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object source/kernel/CMakeFiles/kernel.dir/tools/list.c.obj"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT source/kernel/CMakeFiles/kernel.dir/tools/list.c.obj -MF CMakeFiles/kernel.dir/tools/list.c.obj.d -o CMakeFiles/kernel.dir/tools/list.c.obj -c C:/diy-x86os-master/start/start/source/kernel/tools/list.c
 
 source/kernel/CMakeFiles/kernel.dir/tools/list.c.i: cmake_force
@@ -389,7 +401,7 @@ source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj: source/kernel/CMakeFiles/ke
 source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj: source/kernel/CMakeFiles/kernel.dir/includes_C.rsp
 source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj: C:/diy-x86os-master/start/start/source/kernel/tools/log.c
 source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj: source/kernel/CMakeFiles/kernel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj -MF CMakeFiles/kernel.dir/tools/log.c.obj.d -o CMakeFiles/kernel.dir/tools/log.c.obj -c C:/diy-x86os-master/start/start/source/kernel/tools/log.c
 
 source/kernel/CMakeFiles/kernel.dir/tools/log.c.i: cmake_force
@@ -413,6 +425,7 @@ kernel_OBJECTS = \
 "CMakeFiles/kernel.dir/dev/kbd.c.obj" \
 "CMakeFiles/kernel.dir/dev/time.c.obj" \
 "CMakeFiles/kernel.dir/dev/tty.c.obj" \
+"CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj" \
 "CMakeFiles/kernel.dir/fs/file.c.obj" \
 "CMakeFiles/kernel.dir/fs/fs.c.obj" \
 "CMakeFiles/kernel.dir/init/first_task.c.obj" \
@@ -439,6 +452,7 @@ source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/dev/dev.c.obj
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/dev/kbd.c.obj
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/dev/time.c.obj
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/dev/tty.c.obj
+source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/fs/file.c.obj
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/init/first_task.c.obj
@@ -453,7 +467,7 @@ source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/tools/log.c.obj
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/build.make
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/linkLibs.rsp
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking C executable kernel.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/diy-x86os-master/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking C executable kernel.exe"
 	cd C:/diy-x86os-master/start/start/build/source/kernel && x86_64-elf-ld @CMakeFiles/kernel.dir/objects1.rsp -m elf_i386  -T C:/diy-x86os-master/start/start/source/kernel/kernel.lds -L C:/diy-x86os-master/start/start/build/source/applib/ -lapp -o C:/diy-x86os-master/start/start/build/source/kernel/kernel.elf
 	cd C:/diy-x86os-master/start/start/build/source/kernel && x86_64-elf-objcopy -S kernel.elf C:/diy-x86os-master/start/start/../../image/kernel.elf
 	cd C:/diy-x86os-master/start/start/build/source/kernel && x86_64-elf-objdump -x -d -S -m i386 C:/diy-x86os-master/start/start/build/source/kernel/kernel.elf > kernel_dis.txt

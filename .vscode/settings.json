@@ -26,6 +26,8 @@
         "main.h": "c",
         "_locale.h": "c",
         "strings.h": "c",
-        "STDLIB.H": "cpp"
+        "STDLIB.H": "cpp",
+        "mutex.h": "c",
+        "file.h": "c"
     },
 }

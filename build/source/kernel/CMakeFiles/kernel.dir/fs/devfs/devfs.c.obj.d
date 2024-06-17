@@ -1,27 +1,8 @@
-source/kernel/CMakeFiles/kernel.dir/init/init.c.obj: \
- C:/diy-x86os-master/start/start/source/kernel/init/init.c \
- C:/diy-x86os-master/start/start/source/kernel/init/init.h \
- C:/diy-x86os-master/start/start/source/comm/boot_info.h \
+source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj: \
+ C:/diy-x86os-master/start/start/source/kernel/fs/devfs/devfs.c \
+ C:/diy-x86os-master/start/start/source/kernel/include/dev/dev.h \
  C:/diy-x86os-master/start/start/source/comm/types.h \
- C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
- C:/diy-x86os-master/start/start/source/comm/types.h \
- C:/diy-x86os-master/start/start/source/kernel/include/cpu/irq.h \
- C:/diy-x86os-master/start/start/source/kernel/include/dev/time.h \
- C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h \
- C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h \
- C:/diy-x86os-master/start/start/source/kernel/include/tools/klib.h \
- c:\x86_64-elf-tools-windows\lib\gcc\x86_64-elf\7.1.0\include\stdarg.h \
- C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
- C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
- C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
- C:/diy-x86os-master/start/start/source/comm/cpu_instr.h \
- C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h \
- C:/diy-x86os-master/start/start/source/kernel/include/core/memory.h \
- C:/diy-x86os-master/start/start/source/kernel/include/tools/bitmap.h \
- C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
- C:/diy-x86os-master/start/start/source/kernel/include/dev/console.h \
- C:/diy-x86os-master/start/start/source/kernel/include/dev/tty.h \
- C:/diy-x86os-master/start/start/source/kernel/include/dev/kbd.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/fs/devfs/devfs.h \
  C:/diy-x86os-master/start/start/source/kernel/include/fs/fs.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\sys\stat.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\_ansi.h \
@@ -53,7 +34,16 @@ source/kernel/CMakeFiles/kernel.dir/init/init.c.obj: \
  c:\diy-x86os-master\start\newlib\i686-elf\include\sys\sched.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\machine\types.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_locale.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/ipc/mutex.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/core/task.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/cpu/cpu.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
  C:/diy-x86os-master/start/start/source/applib/lib_syscall.h \
  C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h \
- C:/diy-x86os-master/start/start/source/applib/lib_syscall.h
+ C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h \
+ C:/diy-x86os-master/start/start/source/applib/lib_syscall.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/tools/klib.h \
+ c:\x86_64-elf-tools-windows\lib\gcc\x86_64-elf\7.1.0\include\stdarg.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h

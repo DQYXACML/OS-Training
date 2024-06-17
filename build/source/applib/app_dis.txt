@@ -1,7 +1,7 @@
 In archive C:/diy-x86os-master/start/start/build/source/applib/libapp.a:
 
 crt0.S.obj:     file format elf32-i386
-rw-rw-rw- 0/0   1324 Jun 15 12:27 2024 crt0.S.obj
+rw-rw-rw- 0/0   1324 Jun 17 17:56 2024 crt0.S.obj
 architecture: i386, flags 0x00000011:
 HAS_RELOC, HAS_SYMS
 start address 0x00000000
@@ -61,7 +61,7 @@ _start:
 			c: R_386_PC32	cstart
 
 cstart.c.obj:     file format elf32-i386
-rw-rw-rw- 0/0   7436 Jun 16 20:11 2024 cstart.c.obj
+rw-rw-rw- 0/0   7436 Jun 17 17:56 2024 cstart.c.obj
 architecture: i386, flags 0x00000011:
 HAS_RELOC, HAS_SYMS
 start address 0x00000000
@@ -151,7 +151,7 @@ void cstart(int argc, char **argv)
 			3a: R_386_PC32	exit
 
 lib_syscall.c.obj:     file format elf32-i386
-rw-rw-rw- 0/0  12268 Jun 16 20:11 2024 lib_syscall.c.obj
+rw-rw-rw- 0/0  12268 Jun 17 17:56 2024 lib_syscall.c.obj
 architecture: i386, flags 0x00000011:
 HAS_RELOC, HAS_SYMS
 start address 0x00000000
