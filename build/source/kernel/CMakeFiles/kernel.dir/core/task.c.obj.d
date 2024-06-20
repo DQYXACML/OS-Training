@@ -52,4 +52,5 @@ source/kernel/CMakeFiles/kernel.dir/core/task.c.obj: \
  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
  C:/diy-x86os-master/start/start/source/applib/lib_syscall.h \
  C:/diy-x86os-master/start/start/source/applib/lib_syscall.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/fs/fatfs/fatfs.h \
  C:/diy-x86os-master/start/start/source/comm/elf.h

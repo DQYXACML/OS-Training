@@ -44,6 +44,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/diy-x86os-master/start/start/build/source/kernel/cmake_install.cmake")
   include("C:/diy-x86os-master/start/start/build/source/applib/cmake_install.cmake")
   include("C:/diy-x86os-master/start/start/build/source/shell/cmake_install.cmake")
+  include("C:/diy-x86os-master/start/start/build/source/init/cmake_install.cmake")
+  include("C:/diy-x86os-master/start/start/build/source/loop/cmake_install.cmake")
 
 endif()
 

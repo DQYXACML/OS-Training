@@ -73,7 +73,7 @@ SYMBOL TABLE:
 000083d1 l     F .text	0000012f read_disk
 00008500 l     F .text	0000011a reload_elf_file
 0000861a l     F .text	00000005 die
-0000a000 l     O .data	00001000 page_dir.1900
+0000a000 l     O .data	00001000 page_dir.1904
 0000830d g     F .text	00000023 loader_entry
 00009000 g     O .data	00000018 gdt_table
 00008660 g     F .text	00000051 load_kernel
@@ -168,6 +168,9 @@ static inline void outb(uint16_t port, uint8_t data)
     806d:	66 c3                	retl   
 
 0000806f <cli>:
+{
+    __asm__ __volatile__("out %[v], %[p]" : : [p] "d"(port), [v] "a"(data));
+}
 
 static inline void cli(void)
 {

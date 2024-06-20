@@ -44,6 +44,7 @@ source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj: \
  C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h \
  C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h \
  C:/diy-x86os-master/start/start/source/applib/lib_syscall.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/fs/fatfs/fatfs.h \
  C:/diy-x86os-master/start/start/source/kernel/include/tools/klib.h \
  c:\x86_64-elf-tools-windows\lib\gcc\x86_64-elf\7.1.0\include\stdarg.h \
  C:/diy-x86os-master/start/start/source/kernel/include/tools/log.h

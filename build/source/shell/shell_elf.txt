@@ -8,9 +8,9 @@ ELF Header:
   Type:                              EXEC (Executable file)
   Machine:                           Intel 80386
   Version:                           0x1
-  Entry point address:               0x8100062a
+  Entry point address:               0x81000aed
   Start of program headers:          52 (bytes into file)
-  Start of section headers:          265396 (bytes into file)
+  Start of section headers:          310528 (bytes into file)
   Flags:                             0x0
   Size of this header:               52 (bytes)
   Size of program headers:           32 (bytes)
@@ -22,23 +22,23 @@ ELF Header:
 Section Headers:
   [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
   [ 0]                   NULL            00000000 000000 000000 00      0   0  0
-  [ 1] .text             PROGBITS        81000000 001000 0071b2 00  AX  0   0 16
-  [ 2] .rodata           PROGBITS        810071c0 0081c0 00059d 00   A  0   0 32
-  [ 3] .data             PROGBITS        81007760 008760 0009f0 00  WA  0   0 32
-  [ 4] .bss              NOBITS          81008160 009150 0005a0 00  WA  0   0 32
-  [ 5] .debug_info       PROGBITS        00000000 009150 02400a 00      0   0  1
-  [ 6] .debug_abbrev     PROGBITS        00000000 02d15a 007ed1 00      0   0  1
-  [ 7] .debug_aranges    PROGBITS        00000000 035030 000828 00      0   0  8
-  [ 8] .debug_ranges     PROGBITS        00000000 035858 000018 00      0   0  1
-  [ 9] .debug_line       PROGBITS        00000000 035870 0051fd 00      0   0  1
-  [10] .debug_str        PROGBITS        00000000 03aa6d 001665 01  MS  0   0  1
-  [11] .comment          PROGBITS        00000000 03c0d2 000023 01  MS  0   0  1
-  [12] .debug_frame      PROGBITS        00000000 03c0f8 001a30 00      0   0  4
-  [13] .debug_line_str   PROGBITS        00000000 03db28 0011ae 01  MS  0   0  1
-  [14] .debug_rnglists   PROGBITS        00000000 03ecd6 00004e 00      0   0  1
-  [15] .symtab           SYMTAB          00000000 03ed24 001400 10     16 154  4
-  [16] .strtab           STRTAB          00000000 040124 000ad7 00      0   0  1
-  [17] .shstrtab         STRTAB          00000000 040bfb 0000b8 00      0   0  1
+  [ 1] .text             PROGBITS        81000000 001000 00853a 00  AX  0   0 16
+  [ 2] .rodata           PROGBITS        81008540 009540 00071d 00   A  0   0 32
+  [ 3] .data             PROGBITS        81008c60 009c60 0009f0 00  WA  0   0 32
+  [ 4] .bss              NOBITS          81009660 00a650 0005a0 00  WA  0   0 32
+  [ 5] .debug_info       PROGBITS        00000000 00a650 02a878 00      0   0  1
+  [ 6] .debug_abbrev     PROGBITS        00000000 034ec8 009790 00      0   0  1
+  [ 7] .debug_aranges    PROGBITS        00000000 03e658 000988 00      0   0  8
+  [ 8] .debug_ranges     PROGBITS        00000000 03efe0 000030 00      0   0  1
+  [ 9] .debug_line       PROGBITS        00000000 03f010 005eb7 00      0   0  1
+  [10] .debug_str        PROGBITS        00000000 044ec7 0017ef 01  MS  0   0  1
+  [11] .comment          PROGBITS        00000000 0466b6 000023 01  MS  0   0  1
+  [12] .debug_frame      PROGBITS        00000000 0466dc 001ea4 00      0   0  4
+  [13] .debug_line_str   PROGBITS        00000000 048580 001422 01  MS  0   0  1
+  [14] .debug_rnglists   PROGBITS        00000000 0499a2 00004e 00      0   0  1
+  [15] .symtab           SYMTAB          00000000 0499f0 001660 10     16 169  4
+  [16] .strtab           STRTAB          00000000 04b050 000bf7 00      0   0  1
+  [17] .shstrtab         STRTAB          00000000 04bc47 0000b8 00      0   0  1
 Key to Flags:
   W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
   L (link order), O (extra OS processing required), G (group), T (TLS),
@@ -49,7 +49,7 @@ There are no section groups in this file.
 
 Program Headers:
   Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
-  LOAD           0x001000 0x81000000 0x81000000 0x08150 0x08700 RWE 0x1000
+  LOAD           0x001000 0x81000000 0x81000000 0x09650 0x09c00 RWE 0x1000
 
  Section to Segment mapping:
   Segment Sections...
@@ -61,13 +61,13 @@ There are no relocations in this file.
 
 The decoding of unwind sections for machine type Intel 80386 is not currently supported.
 
-Symbol table '.symtab' contains 320 entries:
+Symbol table '.symtab' contains 358 entries:
    Num:    Value  Size Type    Bind   Vis      Ndx Name
      0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
      1: 81000000     0 SECTION LOCAL  DEFAULT    1 
-     2: 810071c0     0 SECTION LOCAL  DEFAULT    2 
-     3: 81007760     0 SECTION LOCAL  DEFAULT    3 
-     4: 81008160     0 SECTION LOCAL  DEFAULT    4 
+     2: 81008540     0 SECTION LOCAL  DEFAULT    2 
+     3: 81008c60     0 SECTION LOCAL  DEFAULT    3 
+     4: 81009660     0 SECTION LOCAL  DEFAULT    4 
      5: 00000000     0 SECTION LOCAL  DEFAULT    5 
      6: 00000000     0 SECTION LOCAL  DEFAULT    6 
      7: 00000000     0 SECTION LOCAL  DEFAULT    7 
@@ -79,309 +79,347 @@ Symbol table '.symtab' contains 320 entries:
     13: 00000000     0 SECTION LOCAL  DEFAULT   13 
     14: 00000000     0 SECTION LOCAL  DEFAULT   14 
     15: 00000000     0 FILE    LOCAL  DEFAULT  ABS main.c
-    16: 81008160  1036 OBJECT  LOCAL  DEFAULT    4 cli
-    17: 81007760     4 OBJECT  LOCAL  DEFAULT    3 promot
+    16: 81009660  1036 OBJECT  LOCAL  DEFAULT    4 cli
+    17: 81008c60     4 OBJECT  LOCAL  DEFAULT    3 promot
     18: 81000000    51 FUNC    LOCAL  DEFAULT    1 show_promot
     19: 81000033    66 FUNC    LOCAL  DEFAULT    1 do_help
     20: 81000075    55 FUNC    LOCAL  DEFAULT    1 do_clear
-    21: 810000ac   416 FUNC    LOCAL  DEFAULT    1 do_echo
-    22: 8100024c    16 FUNC    LOCAL  DEFAULT    1 do_exit
-    23: 810072c0    48 OBJECT  LOCAL  DEFAULT    2 cmd_list
-    24: 8100025c    72 FUNC    LOCAL  DEFAULT    1 cli_init
-    25: 810002a4    68 FUNC    LOCAL  DEFAULT    1 find_builtin
-    26: 810002e8    66 FUNC    LOCAL  DEFAULT    1 run_builtin
-    27: 8100032a   129 FUNC    LOCAL  DEFAULT    1 find_exec_path
-    28: 81008580   255 OBJECT  LOCAL  DEFAULT    4 path.3747
-    29: 810003ab   180 FUNC    LOCAL  DEFAULT    1 run_exec_file
-    30: 00000000     0 FILE    LOCAL  DEFAULT  ABS cstart.c
-    31: 00000000     0 FILE    LOCAL  DEFAULT  ABS lib_syscall.c
-    32: 81000678    76 FUNC    LOCAL  DEFAULT    1 sys_call
-    33: 00000000     0 FILE    LOCAL  DEFAULT  ABS atoi.c
-    34: 00000000     0 FILE    LOCAL  DEFAULT  ABS exit.c
-    35: 00000000     0 FILE    LOCAL  DEFAULT  ABS fflush.c
-    36: 00000000     0 FILE    LOCAL  DEFAULT  ABS fgets.c
-    37: 00000000     0 FILE    LOCAL  DEFAULT  ABS findfp.c
-    38: 81000ddb   173 FUNC    LOCAL  DEFAULT    1 std
-    39: 81000e88    27 FUNC    LOCAL  DEFAULT    1 stdin_init
-    40: 81000ea3    27 FUNC    LOCAL  DEFAULT    1 stdout_init
-    41: 81000ebe    27 FUNC    LOCAL  DEFAULT    1 stderr_init
-    42: 81008680     4 OBJECT  LOCAL  DEFAULT    4 __sfp_recursive_mutex
-    43: 81008684     4 OBJECT  LOCAL  DEFAULT    4 __sinit_recursive_mutex
-    44: 81001181    10 FUNC    LOCAL  DEFAULT    1 __fp_lock
-    45: 8100118b    10 FUNC    LOCAL  DEFAULT    1 __fp_unlock
-    46: 00000000     0 FILE    LOCAL  DEFAULT  ABS fprintf.c
-    47: 00000000     0 FILE    LOCAL  DEFAULT  ABS mallocr.c
-    48: 00000000     0 FILE    LOCAL  DEFAULT  ABS fwalk.c
-    49: 00000000     0 FILE    LOCAL  DEFAULT  ABS fwrite.c
-    50: 00000000     0 FILE    LOCAL  DEFAULT  ABS getopt.c
-    51: 81008690     4 OBJECT  LOCAL  DEFAULT    4 optwhere
-    52: 81008694     4 OBJECT  LOCAL  DEFAULT    4 permute_from
-    53: 81008698     4 OBJECT  LOCAL  DEFAULT    4 num_nonopts
-    54: 8100191e   123 FUNC    LOCAL  DEFAULT    1 reverse_argv_elements
-    55: 81001999    54 FUNC    LOCAL  DEFAULT    1 permute
-    56: 810019cf    49 FUNC    LOCAL  DEFAULT    1 is_option
-    57: 81001a00    89 FUNC    LOCAL  DEFAULT    1 read_globals
-    58: 81001a59    82 FUNC    LOCAL  DEFAULT    1 write_globals
-    59: 81001aab  2837 FUNC    LOCAL  DEFAULT    1 getopt_internal
-    60: 00000000     0 FILE    LOCAL  DEFAULT  ABS impure.c
-    61: 81007780  1060 OBJECT  LOCAL  DEFAULT    3 impure_data
-    62: 00000000     0 FILE    LOCAL  DEFAULT  ABS mallocr.c
-    63: 8100270c   659 FUNC    LOCAL  DEFAULT    1 malloc_extend_top
-    64: 00000000     0 FILE    LOCAL  DEFAULT  ABS lib_a-memchr.o
-    65: 8100325d     0 NOTYPE  LOCAL  DEFAULT    1 L20
-    66: 81003214     0 NOTYPE  LOCAL  DEFAULT    1 L5
-    67: 8100325a     0 NOTYPE  LOCAL  DEFAULT    1 L15
-    68: 81003220     0 NOTYPE  LOCAL  DEFAULT    1 L8
-    69: 81003241     0 NOTYPE  LOCAL  DEFAULT    1 L9
-    70: 81003250     0 NOTYPE  LOCAL  DEFAULT    1 L10
-    71: 00000000     0 FILE    LOCAL  DEFAULT  ABS lib_a-memcmp.o
-    72: 810032af     0 NOTYPE  LOCAL  DEFAULT    1 L4
-    73: 810032a1     0 NOTYPE  LOCAL  DEFAULT    1 BYTECMP
-    74: 8100329c     0 NOTYPE  LOCAL  DEFAULT    1 L5
-    75: 810032a3     0 NOTYPE  LOCAL  DEFAULT    1 L3
-    76: 00000000     0 FILE    LOCAL  DEFAULT  ABS mlock.c
-    77: 810086e8     4 OBJECT  LOCAL  DEFAULT    4 __malloc_recursive_mutex
-    78: 00000000     0 FILE    LOCAL  DEFAULT  ABS nano-vfprintf.c
-    79: 81003470   102 FUNC    LOCAL  DEFAULT    1 __sfputc_r
-    80: 00000000     0 FILE    LOCAL  DEFAULT  ABS nano-vfprintf_i.c
-    81: 00000000     0 FILE    LOCAL  DEFAULT  ABS printf.c
-    82: 00000000     0 FILE    LOCAL  DEFAULT  ABS puts.c
-    83: 00000000     0 FILE    LOCAL  DEFAULT  ABS refill.c
-    84: 81004037    45 FUNC    LOCAL  DEFAULT    1 lflush
-    85: 00000000     0 FILE    LOCAL  DEFAULT  ABS sbrkr.c
-    86: 00000000     0 FILE    LOCAL  DEFAULT  ABS sprintf.c
-    87: 00000000     0 FILE    LOCAL  DEFAULT  ABS stdio.c
-    88: 00000000     0 FILE    LOCAL  DEFAULT  ABS lib_a-strchr.o
-    89: 8100451b     0 NOTYPE  LOCAL  DEFAULT    1 L25
-    90: 810044c2     0 NOTYPE  LOCAL  DEFAULT    1 L5
-    91: 8100450e     0 NOTYPE  LOCAL  DEFAULT    1 L14
-    92: 81004514     0 NOTYPE  LOCAL  DEFAULT    1 L19
-    93: 810044d3     0 NOTYPE  LOCAL  DEFAULT    1 L10
-    94: 81004500     0 NOTYPE  LOCAL  DEFAULT    1 L9
-    95: 81004503     0 NOTYPE  LOCAL  DEFAULT    1 L15
-    96: 8100454e     0 NOTYPE  LOCAL  DEFAULT    1 L26
-    97: 81004551     0 NOTYPE  LOCAL  DEFAULT    1 L27
-    98: 00000000     0 FILE    LOCAL  DEFAULT  ABS strcmp.c
-    99: 00000000     0 FILE    LOCAL  DEFAULT  ABS lib_a-strlen.o
-   100: 81004656     0 NOTYPE  LOCAL  DEFAULT    1 L5
-   101: 8100468e     0 NOTYPE  LOCAL  DEFAULT    1 L15
-   102: 81004660     0 NOTYPE  LOCAL  DEFAULT    1 L10
-   103: 00000000     0 FILE    LOCAL  DEFAULT  ABS strtok.c
-   104: 00000000     0 FILE    LOCAL  DEFAULT  ABS strtok_r.c
-   105: 00000000     0 FILE    LOCAL  DEFAULT  ABS strtol.c
-   106: 8100479c    10 FUNC    LOCAL  DEFAULT    1 __locale_ctype_ptr_l
-   107: 810047a6    10 FUNC    LOCAL  DEFAULT    1 __get_global_locale
-   108: 810047b0    10 FUNC    LOCAL  DEFAULT    1 __get_current_locale
-   109: 810047ba   466 FUNC    LOCAL  DEFAULT    1 _strtol_l
-   110: 00000000     0 FILE    LOCAL  DEFAULT  ABS wbuf.c
-   111: 00000000     0 FILE    LOCAL  DEFAULT  ABS writer.c
-   112: 00000000     0 FILE    LOCAL  DEFAULT  ABS wsetup.c
-   113: 00000000     0 FILE    LOCAL  DEFAULT  ABS __call_atexit.c
-   114: 810086ec     4 OBJECT  LOCAL  DEFAULT    4 __atexit_recursive_mutex
-   115: 00000000     0 FILE    LOCAL  DEFAULT  ABS closer.c
-   116: 00000000     0 FILE    LOCAL  DEFAULT  ABS ctype_.c
-   117: 00000000     0 FILE    LOCAL  DEFAULT  ABS errno.c
-   118: 00000000     0 FILE    LOCAL  DEFAULT  ABS fclose.c
-   119: 00000000     0 FILE    LOCAL  DEFAULT  ABS fputc.c
-   120: 00000000     0 FILE    LOCAL  DEFAULT  ABS fputs.c
-   121: 00000000     0 FILE    LOCAL  DEFAULT  ABS fputwc.c
-   122: 810050af   102 FUNC    LOCAL  DEFAULT    1 __sputc_r
-   123: 00000000     0 FILE    LOCAL  DEFAULT  ABS fvwrite.c
-   124: 00000000     0 FILE    LOCAL  DEFAULT  ABS getenv.c
-   125: 00000000     0 FILE    LOCAL  DEFAULT  ABS getenv_r.c
-   126: 81007fd0     4 OBJECT  LOCAL  DEFAULT    3 p_environ
-   127: 00000000     0 FILE    LOCAL  DEFAULT  ABS locale.c
-   128: 8100584c    10 FUNC    LOCAL  DEFAULT    1 __get_global_locale
-   129: 81005856    10 FUNC    LOCAL  DEFAULT    1 __get_current_locale
-   130: 00000000     0 FILE    LOCAL  DEFAULT  ABS lseekr.c
-   131: 00000000     0 FILE    LOCAL  DEFAULT  ABS makebuf.c
-   132: 00000000     0 FILE    LOCAL  DEFAULT  ABS mbtowc_r.c
-   133: 81005ab8    10 FUNC    LOCAL  DEFAULT    1 __get_global_locale
-   134: 81005ac2    10 FUNC    LOCAL  DEFAULT    1 __get_current_locale
-   135: 00000000     0 FILE    LOCAL  DEFAULT  ABS nano-vfprintf.c
-   136: 00000000     0 FILE    LOCAL  DEFAULT  ABS putc.c
-   137: 81006300   102 FUNC    LOCAL  DEFAULT    1 __sputc_r
-   138: 00000000     0 FILE    LOCAL  DEFAULT  ABS readr.c
-   139: 00000000     0 FILE    LOCAL  DEFAULT  ABS mallocr.c
-   140: 00000000     0 FILE    LOCAL  DEFAULT  ABS reent.c
-   141: 00000000     0 FILE    LOCAL  DEFAULT  ABS strncmp.c
-   142: 00000000     0 FILE    LOCAL  DEFAULT  ABS wcrtomb.c
-   143: 81006f9e    10 FUNC    LOCAL  DEFAULT    1 __get_global_locale
-   144: 81006fa8    10 FUNC    LOCAL  DEFAULT    1 __get_current_locale
-   145: 00000000     0 FILE    LOCAL  DEFAULT  ABS wctomb_r.c
-   146: 810070a8    10 FUNC    LOCAL  DEFAULT    1 __get_global_locale
-   147: 810070b2    10 FUNC    LOCAL  DEFAULT    1 __get_current_locale
-   148: 00000000     0 FILE    LOCAL  DEFAULT  ABS environ.c
-   149: 810086f8     4 OBJECT  LOCAL  DEFAULT    4 initial_env
-   150: 00000000     0 FILE    LOCAL  DEFAULT  ABS envlock.c
-   151: 810086fc     4 OBJECT  LOCAL  DEFAULT    4 __env_recursive_mutex
-   152: 00000000     0 FILE    LOCAL  DEFAULT  ABS fstatr.c
-   153: 00000000     0 FILE    LOCAL  DEFAULT  ABS isattyr.c
-   154: 81007172    64 FUNC    GLOBAL DEFAULT    1 _isatty_r
-   155: 81006d24    55 FUNC    GLOBAL DEFAULT    1 cleanup_glue
-   156: 81003f45   214 FUNC    GLOBAL DEFAULT    1 _puts_r
-   157: 810058f2    70 FUNC    GLOBAL DEFAULT    1 _lseek_r
-   158: 81000779    27 FUNC    GLOBAL DEFAULT    1 yield
-   159: 810042a5    85 FUNC    GLOBAL DEFAULT    1 _siprintf_r
-   160: 81004782    26 FUNC    GLOBAL DEFAULT    1 strtok_r
-   161: 81003f10    53 FUNC    GLOBAL DEFAULT    1 printf
-   162: 81006fb2   119 FUNC    GLOBAL DEFAULT    1 _wcrtomb_r
-   163: 810043fb    74 FUNC    GLOBAL DEFAULT    1 __sseek
-   164: 810010d0   153 FUNC    GLOBAL DEFAULT    1 __sinit
-   165: 810049ff   274 FUNC    GLOBAL DEFAULT    1 __swbuf_r
-   166: 81005860    95 FUNC    GLOBAL DEFAULT    1 _setlocale_r
-   167: 81000ed9   111 FUNC    GLOBAL DEFAULT    1 __sfmoreglue
-   168: 8100338e     6 FUNC    GLOBAL DEFAULT    1 __malloc_unlock
-   169: 81005b50     0 NOTYPE  GLOBAL DEFAULT    1 memmove
-   170: 81002607    73 FUNC    GLOBAL DEFAULT    1 getopt_long
-   171: 810010b6    26 FUNC    GLOBAL DEFAULT    1 _cleanup
-   172: 810046c2   192 FUNC    GLOBAL DEFAULT    1 __strtok_r
-   173: 81004e28    10 FUNC    GLOBAL DEFAULT    1 __errno
-   174: 81005722    32 FUNC    GLOBAL DEFAULT    1 getenv
-   175: 8100712f    67 FUNC    GLOBAL DEFAULT    1 _fstat_r
-   176: 810086f4     4 OBJECT  GLOBAL DEFAULT    4 errno
-   177: 81004396    10 FUNC    GLOBAL DEFAULT    1 __seofread
-   178: 8100074c    45 FUNC    GLOBAL DEFAULT    1 execve
-   179: 810006ee    27 FUNC    GLOBAL DEFAULT    1 getpid
-   180: 81000dbc    31 FUNC    GLOBAL DEFAULT    1 fgets
-   181: 810032b8     0 NOTYPE  GLOBAL DEFAULT    1 memcpy
-   182: 81001095    33 FUNC    GLOBAL DEFAULT    1 _cleanup_r
-   183: 81005fc6   826 FUNC    GLOBAL DEFAULT    1 _svfprintf_r
-   184: 8100401b    28 FUNC    GLOBAL DEFAULT    1 puts
-   185: 81003ee3    45 FUNC    GLOBAL DEFAULT    1 _printf_r
-   186: 8100088a    33 FUNC    GLOBAL DEFAULT    1 isatty
-   187: 81008688     4 OBJECT  GLOBAL DEFAULT    4 optarg
-   188: 810086a0     4 OBJECT  GLOBAL DEFAULT    4 __malloc_top_pad
-   189: 81008160     0 NOTYPE  GLOBAL DEFAULT    4 __bss_start__
-   190: 81005264  1182 FUNC    GLOBAL DEFAULT    1 __sfvwrite_r
-   191: 81004265    64 FUNC    GLOBAL DEFAULT    1 _sbrk_r
-   192: 81007764     4 OBJECT  GLOBAL DEFAULT    3 opterr
-   193: 81006404    70 FUNC    GLOBAL DEFAULT    1 _read_r
-   194: 81004e32   263 FUNC    GLOBAL DEFAULT    1 _fclose_r
-   195: 81000c25    57 FUNC    GLOBAL DEFAULT    1 fflush
-   196: 810086a4     4 OBJECT  GLOBAL DEFAULT    4 __malloc_max_sbrked_mem
-   197: 81000836    45 FUNC    GLOBAL DEFAULT    1 lseek
-   198: 810073f0     4 OBJECT  GLOBAL DEFAULT    2 _global_impure_ptr
-   199: 8100644a  2266 FUNC    GLOBAL DEFAULT    1 _realloc_r
-   200: 810049b1    37 FUNC    GLOBAL DEFAULT    1 strtol_l
-   201: 810051c5    87 FUNC    GLOBAL DEFAULT    1 _fputwc_r
-   202: 81001195    36 FUNC    GLOBAL DEFAULT    1 __fp_lock_all
-   203: 810049d6    41 FUNC    GLOBAL DEFAULT    1 strtol
-   204: 81006d5b   352 FUNC    GLOBAL DEFAULT    1 _reclaim_reent
-   205: 81004f56    70 FUNC    GLOBAL DEFAULT    1 _fputc_r
-   206: 810007e8    45 FUNC    GLOBAL DEFAULT    1 write
-   207: 81006366    75 FUNC    GLOBAL DEFAULT    1 _putc_r
-   208: 8100814c     4 OBJECT  GLOBAL DEFAULT    3 environ
-   209: 81000863    39 FUNC    GLOBAL DEFAULT    1 fstat
-   210: 81001206    44 FUNC    GLOBAL DEFAULT    1 fprintf
-   211: 810026e5    39 FUNC    GLOBAL DEFAULT    1 __getopt_long_only_r
-   212: 81000949    26 FUNC    GLOBAL DEFAULT    1 _atoi_r
-   213: 81005bdd   439 FUNC    GLOBAL DEFAULT    1 __ssputs_r
-   214: 810034d6   168 FUNC    GLOBAL DEFAULT    1 __sfputs_r
-   215: 8100868c     4 OBJECT  GLOBAL DEFAULT    4 optind
-   216: 81001169     6 FUNC    GLOBAL DEFAULT    1 __sfp_lock_acquire
-   217: 810031d0     0 NOTYPE  GLOBAL DEFAULT    1 memchr
-   218: 810042a5    85 FUNC    GLOBAL DEFAULT    1 _sprintf_r
-   219: 81008700     0 NOTYPE  GLOBAL DEFAULT    4 __bss_end__
-   220: 81001232   987 FUNC    GLOBAL DEFAULT    1 _free_r
-   221: 810008ed    33 FUNC    GLOBAL DEFAULT    1 wait
-   222: 810074c0   384 OBJECT  GLOBAL DEFAULT    2 _ctype_b
-   223: 810058bf    20 FUNC    GLOBAL DEFAULT    1 __locale_mb_cur_max
-   224: 81004cd3   277 FUNC    GLOBAL DEFAULT    1 __call_exitprocs
-   225: 81007fcc     4 OBJECT  GLOBAL DEFAULT    3 __malloc_sbrk_base
-   226: 8100062a     0 NOTYPE  GLOBAL DEFAULT    1 _start
-   227: 810007bb    45 FUNC    GLOBAL DEFAULT    1 read
-   228: 81005d94   562 FUNC    GLOBAL DEFAULT    1 __ssprint_r
-   229: 81006ebb   227 FUNC    GLOBAL DEFAULT    1 strncmp
-   230: 810026be    39 FUNC    GLOBAL DEFAULT    1 __getopt_long_r
-   231: 810086c0    40 OBJECT  GLOBAL DEFAULT    4 __malloc_current_mallinfo
-   232: 81003ee3    45 FUNC    GLOBAL DEFAULT    1 _iprintf_r
-   233: 81004de8    64 FUNC    GLOBAL DEFAULT    1 _close_r
-   234: 81004699    41 FUNC    GLOBAL DEFAULT    1 strtok
-   235: 81003265     0 NOTYPE  GLOBAL DEFAULT    1 memcmp
-   236: 81001841   184 FUNC    GLOBAL DEFAULT    1 _fwrite_r
-   237: 81000731    27 FUNC    GLOBAL DEFAULT    1 fork
-   238: 81004b78   347 FUNC    GLOBAL DEFAULT    1 __swsetup_r
-   239: 81000f48   333 FUNC    GLOBAL DEFAULT    1 __sfp
-   240: 81007bc0  1032 OBJECT  GLOBAL DEFAULT    3 __malloc_av_
-   241: 8100117b     6 FUNC    GLOBAL DEFAULT    1 __sinit_lock_release
-   242: 81004352    68 FUNC    GLOBAL DEFAULT    1 __sread
-   243: 81003388     6 FUNC    GLOBAL DEFAULT    1 __malloc_lock
-   244: 810011dd    41 FUNC    GLOBAL DEFAULT    1 _fprintf_r
-   245: 810008ab    33 FUNC    GLOBAL DEFAULT    1 sbrk
-   246: 81000bcd    88 FUNC    GLOBAL DEFAULT    1 _fflush_r
-   247: 8100063a    62 FUNC    GLOBAL DEFAULT    1 cstart
-   248: 810025c0    71 FUNC    GLOBAL DEFAULT    1 getopt
-   249: 81003300     0 NOTYPE  GLOBAL DEFAULT    1 memset
-   250: 8100045f   459 FUNC    GLOBAL DEFAULT    1 main
-   251: 810086a8     4 OBJECT  GLOBAL DEFAULT    4 __malloc_max_total_mem
-   252: 81004b11    33 FUNC    GLOBAL DEFAULT    1 __swbuf
-   253: 81004445    37 FUNC    GLOBAL DEFAULT    1 __sclose
-   254: 81004f39    29 FUNC    GLOBAL DEFAULT    1 fclose
-   255: 8100498c    37 FUNC    GLOBAL DEFAULT    1 _strtol_r
-   256: 81005742   237 FUNC    GLOBAL DEFAULT    1 _findenv_r
-   257: 8100299f  2082 FUNC    GLOBAL DEFAULT    1 _malloc_r
-   258: 810070e0    67 FUNC    GLOBAL DEFAULT    1 __ascii_wctomb
-   259: 810011dd    41 FUNC    GLOBAL DEFAULT    1 _fiprintf_r
-   260: 81007129     6 FUNC    GLOBAL DEFAULT    1 __env_unlock
-   261: 81005702    32 FUNC    GLOBAL DEFAULT    1 _findenv
-   262: 8100176e   104 FUNC    GLOBAL DEFAULT    1 _fwalk
-   263: 81000c5e   350 FUNC    GLOBAL DEFAULT    1 _fgets_r
-   264: 81005acc    42 FUNC    GLOBAL DEFAULT    1 _mbtowc_r
-   265: 810063b1    83 FUNC    GLOBAL DEFAULT    1 putc
-   266: 81002650    73 FUNC    GLOBAL DEFAULT    1 getopt_long_only
-   267: 8100160d   353 FUNC    GLOBAL DEFAULT    1 _malloc_trim_r
-   268: 8100456c   165 FUNC    GLOBAL DEFAULT    1 strcmp
-   269: 8100357e    37 FUNC    GLOBAL DEFAULT    1 vfiprintf
-   270: 810008cc    33 FUNC    GLOBAL DEFAULT    1 dup
-   271: 81003f10    53 FUNC    GLOBAL DEFAULT    1 iprintf
-   272: 810042fa    88 FUNC    GLOBAL DEFAULT    1 sprintf
-   273: 810086f0     4 OBJECT  GLOBAL DEFAULT    4 _PathLocale
-   274: 81004b32    70 FUNC    GLOBAL DEFAULT    1 _write_r
-   275: 810058d3    31 FUNC    GLOBAL DEFAULT    1 setlocale
-   276: 810038f9   411 FUNC    GLOBAL DEFAULT    1 _printf_common
-   277: 81007ba4     4 OBJECT  GLOBAL DEFAULT    3 _impure_ptr
-   278: 810009a7   550 FUNC    GLOBAL DEFAULT    1 __sflush_r
-   279: 81005fc6   826 FUNC    GLOBAL DEFAULT    1 _svfiprintf_r
-   280: 81004064   513 FUNC    GLOBAL DEFAULT    1 __srefill_r
-   281: 81005af6    88 FUNC    GLOBAL DEFAULT    1 __ascii_mbtowc
-   282: 810011b9    36 FUNC    GLOBAL DEFAULT    1 __fp_unlock_all
-   283: 81004f9c    78 FUNC    GLOBAL DEFAULT    1 fputc
-   284: 81000709    40 FUNC    GLOBAL DEFAULT    1 print_msg
-   285: 81007768     4 OBJECT  GLOBAL DEFAULT    3 optopt
-   286: 81005a25   147 FUNC    GLOBAL DEFAULT    1 __swhatbuf_r
-   287: 810018f9    37 FUNC    GLOBAL DEFAULT    1 fwrite
-   288: 81005115   176 FUNC    GLOBAL DEFAULT    1 __fputwc
-   289: 81004fea   166 FUNC    GLOBAL DEFAULT    1 _fputs_r
-   290: 810043a0    91 FUNC    GLOBAL DEFAULT    1 __swrite
-   291: 81007fc8     4 OBJECT  GLOBAL DEFAULT    3 __malloc_trim_threshold
-   292: 81000963    68 FUNC    GLOBAL DEFAULT    1 exit
-   293: 81001206    44 FUNC    GLOBAL DEFAULT    1 fiprintf
-   294: 810035a3   854 FUNC    GLOBAL DEFAULT    1 _vfiprintf_r
-   295: 810017d6   107 FUNC    GLOBAL DEFAULT    1 _fwalk_reent
-   296: 8100116f     6 FUNC    GLOBAL DEFAULT    1 __sfp_lock_release
-   297: 810042fa    88 FUNC    GLOBAL DEFAULT    1 siprintf
-   298: 8100092f    26 FUNC    GLOBAL DEFAULT    1 atoi
-   299: 81007640   257 OBJECT  GLOBAL DEFAULT    2 _ctype_
-   300: 81002699    37 FUNC    GLOBAL DEFAULT    1 __getopt_r
-   301: 8100090e    33 FUNC    GLOBAL DEFAULT    1 _exit
-   302: 81005938   237 FUNC    GLOBAL DEFAULT    1 __smakebuf_r
-   303: 81004620     0 NOTYPE  GLOBAL DEFAULT    1 strlen
-   304: 81003a94  1103 FUNC    GLOBAL DEFAULT    1 _printf_i
-   305: 81000794    39 FUNC    GLOBAL DEFAULT    1 open
-   306: 81003394   220 FUNC    GLOBAL DEFAULT    1 __sprint_r
-   307: 81004470     0 NOTYPE  GLOBAL DEFAULT    1 strchr
-   308: 81005090    31 FUNC    GLOBAL DEFAULT    1 fputs
-   309: 810070bc    36 FUNC    GLOBAL DEFAULT    1 _wctomb_r
-   310: 81007123     6 FUNC    GLOBAL DEFAULT    1 __env_lock
-   311: 810035a3   854 FUNC    GLOBAL DEFAULT    1 _vfprintf_r
-   312: 810006c4    42 FUNC    GLOBAL DEFAULT    1 msleep
-   313: 81007029   127 FUNC    GLOBAL DEFAULT    1 wcrtomb
-   314: 81000815    33 FUNC    GLOBAL DEFAULT    1 close
-   315: 81007fe0   364 OBJECT  GLOBAL DEFAULT    3 __global_locale
-   316: 8100357e    37 FUNC    GLOBAL DEFAULT    1 vfprintf
-   317: 8100521c    72 FUNC    GLOBAL DEFAULT    1 fputwc
-   318: 81001175     6 FUNC    GLOBAL DEFAULT    1 __sinit_lock_acquire
-   319: 8100582f    29 FUNC    GLOBAL DEFAULT    1 _getenv_r
+    21: 810000ac   170 FUNC    LOCAL  DEFAULT    1 do_ls
+    22: 81000156   416 FUNC    LOCAL  DEFAULT    1 do_echo
+    23: 810002f6    16 FUNC    LOCAL  DEFAULT    1 do_exit
+    24: 81000306   668 FUNC    LOCAL  DEFAULT    1 do_less
+    25: 810005a2   263 FUNC    LOCAL  DEFAULT    1 do_cp
+    26: 810006a9   120 FUNC    LOCAL  DEFAULT    1 do_remove
+    27: 81008780    96 OBJECT  LOCAL  DEFAULT    2 cmd_list
+    28: 81000721    72 FUNC    LOCAL  DEFAULT    1 cli_init
+    29: 81000769    68 FUNC    LOCAL  DEFAULT    1 find_builtin
+    30: 810007ad    66 FUNC    LOCAL  DEFAULT    1 run_builtin
+    31: 810007ef   129 FUNC    LOCAL  DEFAULT    1 find_exec_path
+    32: 81009a80   255 OBJECT  LOCAL  DEFAULT    4 path.3905
+    33: 81000870   178 FUNC    LOCAL  DEFAULT    1 run_exec_file
+    34: 00000000     0 FILE    LOCAL  DEFAULT  ABS cstart.c
+    35: 00000000     0 FILE    LOCAL  DEFAULT  ABS lib_syscall.c
+    36: 81000b3b    76 FUNC    LOCAL  DEFAULT    1 sys_call
+    37: 00000000     0 FILE    LOCAL  DEFAULT  ABS atoi.c
+    38: 00000000     0 FILE    LOCAL  DEFAULT  ABS exit.c
+    39: 00000000     0 FILE    LOCAL  DEFAULT  ABS fclose.c
+    40: 00000000     0 FILE    LOCAL  DEFAULT  ABS fflush.c
+    41: 00000000     0 FILE    LOCAL  DEFAULT  ABS fgetc.c
+    42: 00000000     0 FILE    LOCAL  DEFAULT  ABS fgets.c
+    43: 00000000     0 FILE    LOCAL  DEFAULT  ABS findfp.c
+    44: 810015df   173 FUNC    LOCAL  DEFAULT    1 std
+    45: 8100168c    27 FUNC    LOCAL  DEFAULT    1 stdin_init
+    46: 810016a7    27 FUNC    LOCAL  DEFAULT    1 stdout_init
+    47: 810016c2    27 FUNC    LOCAL  DEFAULT    1 stderr_init
+    48: 81009b80     4 OBJECT  LOCAL  DEFAULT    4 __sfp_recursive_mutex
+    49: 81009b84     4 OBJECT  LOCAL  DEFAULT    4 __sinit_recursive_mutex
+    50: 81001985    10 FUNC    LOCAL  DEFAULT    1 __fp_lock
+    51: 8100198f    10 FUNC    LOCAL  DEFAULT    1 __fp_unlock
+    52: 00000000     0 FILE    LOCAL  DEFAULT  ABS fopen.c
+    53: 00000000     0 FILE    LOCAL  DEFAULT  ABS fprintf.c
+    54: 00000000     0 FILE    LOCAL  DEFAULT  ABS fputs.c
+    55: 00000000     0 FILE    LOCAL  DEFAULT  ABS fread.c
+    56: 00000000     0 FILE    LOCAL  DEFAULT  ABS mallocr.c
+    57: 00000000     0 FILE    LOCAL  DEFAULT  ABS fseek.c
+    58: 00000000     0 FILE    LOCAL  DEFAULT  ABS fseeko.c
+    59: 00000000     0 FILE    LOCAL  DEFAULT  ABS fstatr.c
+    60: 00000000     0 FILE    LOCAL  DEFAULT  ABS fvwrite.c
+    61: 00000000     0 FILE    LOCAL  DEFAULT  ABS fwalk.c
+    62: 00000000     0 FILE    LOCAL  DEFAULT  ABS fwrite.c
+    63: 00000000     0 FILE    LOCAL  DEFAULT  ABS getopt.c
+    64: 81009b90     4 OBJECT  LOCAL  DEFAULT    4 optwhere
+    65: 81009b94     4 OBJECT  LOCAL  DEFAULT    4 permute_from
+    66: 81009b98     4 OBJECT  LOCAL  DEFAULT    4 num_nonopts
+    67: 81002f64   123 FUNC    LOCAL  DEFAULT    1 reverse_argv_elements
+    68: 81002fdf    54 FUNC    LOCAL  DEFAULT    1 permute
+    69: 81003015    49 FUNC    LOCAL  DEFAULT    1 is_option
+    70: 81003046    89 FUNC    LOCAL  DEFAULT    1 read_globals
+    71: 8100309f    82 FUNC    LOCAL  DEFAULT    1 write_globals
+    72: 810030f1  2837 FUNC    LOCAL  DEFAULT    1 getopt_internal
+    73: 00000000     0 FILE    LOCAL  DEFAULT  ABS impure.c
+    74: 81008c80  1060 OBJECT  LOCAL  DEFAULT    3 impure_data
+    75: 00000000     0 FILE    LOCAL  DEFAULT  ABS makebuf.c
+    76: 00000000     0 FILE    LOCAL  DEFAULT  ABS malloc.c
+    77: 00000000     0 FILE    LOCAL  DEFAULT  ABS mallocr.c
+    78: 81003f0b   659 FUNC    LOCAL  DEFAULT    1 malloc_extend_top
+    79: 00000000     0 FILE    LOCAL  DEFAULT  ABS lib_a-memchr.o
+    80: 81004a4d     0 NOTYPE  LOCAL  DEFAULT    1 L20
+    81: 81004a04     0 NOTYPE  LOCAL  DEFAULT    1 L5
+    82: 81004a4a     0 NOTYPE  LOCAL  DEFAULT    1 L15
+    83: 81004a10     0 NOTYPE  LOCAL  DEFAULT    1 L8
+    84: 81004a31     0 NOTYPE  LOCAL  DEFAULT    1 L9
+    85: 81004a40     0 NOTYPE  LOCAL  DEFAULT    1 L10
+    86: 00000000     0 FILE    LOCAL  DEFAULT  ABS lib_a-memcmp.o
+    87: 81004a9f     0 NOTYPE  LOCAL  DEFAULT    1 L4
+    88: 81004a91     0 NOTYPE  LOCAL  DEFAULT    1 BYTECMP
+    89: 81004a8c     0 NOTYPE  LOCAL  DEFAULT    1 L5
+    90: 81004a93     0 NOTYPE  LOCAL  DEFAULT    1 L3
+    91: 00000000     0 FILE    LOCAL  DEFAULT  ABS mlock.c
+    92: 81009be8     4 OBJECT  LOCAL  DEFAULT    4 __malloc_recursive_mutex
+    93: 00000000     0 FILE    LOCAL  DEFAULT  ABS nano-vfprintf.c
+    94: 81004ced   102 FUNC    LOCAL  DEFAULT    1 __sfputc_r
+    95: 00000000     0 FILE    LOCAL  DEFAULT  ABS nano-vfprintf_i.c
+    96: 00000000     0 FILE    LOCAL  DEFAULT  ABS openr.c
+    97: 00000000     0 FILE    LOCAL  DEFAULT  ABS printf.c
+    98: 00000000     0 FILE    LOCAL  DEFAULT  ABS puts.c
+    99: 00000000     0 FILE    LOCAL  DEFAULT  ABS mallocr.c
+   100: 00000000     0 FILE    LOCAL  DEFAULT  ABS reent.c
+   101: 00000000     0 FILE    LOCAL  DEFAULT  ABS refill.c
+   102: 8100636b    45 FUNC    LOCAL  DEFAULT    1 lflush
+   103: 00000000     0 FILE    LOCAL  DEFAULT  ABS rget.c
+   104: 00000000     0 FILE    LOCAL  DEFAULT  ABS sbrkr.c
+   105: 00000000     0 FILE    LOCAL  DEFAULT  ABS setvbuf.c
+   106: 00000000     0 FILE    LOCAL  DEFAULT  ABS sprintf.c
+   107: 00000000     0 FILE    LOCAL  DEFAULT  ABS stdio.c
+   108: 00000000     0 FILE    LOCAL  DEFAULT  ABS lib_a-strchr.o
+   109: 81006adb     0 NOTYPE  LOCAL  DEFAULT    1 L25
+   110: 81006a82     0 NOTYPE  LOCAL  DEFAULT    1 L5
+   111: 81006ace     0 NOTYPE  LOCAL  DEFAULT    1 L14
+   112: 81006ad4     0 NOTYPE  LOCAL  DEFAULT    1 L19
+   113: 81006a93     0 NOTYPE  LOCAL  DEFAULT    1 L10
+   114: 81006ac0     0 NOTYPE  LOCAL  DEFAULT    1 L9
+   115: 81006ac3     0 NOTYPE  LOCAL  DEFAULT    1 L15
+   116: 81006b0e     0 NOTYPE  LOCAL  DEFAULT    1 L26
+   117: 81006b11     0 NOTYPE  LOCAL  DEFAULT    1 L27
+   118: 00000000     0 FILE    LOCAL  DEFAULT  ABS strcmp.c
+   119: 00000000     0 FILE    LOCAL  DEFAULT  ABS lib_a-strlen.o
+   120: 81006c16     0 NOTYPE  LOCAL  DEFAULT    1 L5
+   121: 81006c4e     0 NOTYPE  LOCAL  DEFAULT    1 L15
+   122: 81006c20     0 NOTYPE  LOCAL  DEFAULT    1 L10
+   123: 00000000     0 FILE    LOCAL  DEFAULT  ABS strlwr.c
+   124: 00000000     0 FILE    LOCAL  DEFAULT  ABS strtok.c
+   125: 00000000     0 FILE    LOCAL  DEFAULT  ABS strtok_r.c
+   126: 00000000     0 FILE    LOCAL  DEFAULT  ABS strtol.c
+   127: 81006db4    10 FUNC    LOCAL  DEFAULT    1 __locale_ctype_ptr_l
+   128: 81006dbe    10 FUNC    LOCAL  DEFAULT    1 __get_global_locale
+   129: 81006dc8    10 FUNC    LOCAL  DEFAULT    1 __get_current_locale
+   130: 81006dd2   466 FUNC    LOCAL  DEFAULT    1 _strtol_l
+   131: 00000000     0 FILE    LOCAL  DEFAULT  ABS wbuf.c
+   132: 00000000     0 FILE    LOCAL  DEFAULT  ABS writer.c
+   133: 00000000     0 FILE    LOCAL  DEFAULT  ABS wsetup.c
+   134: 00000000     0 FILE    LOCAL  DEFAULT  ABS __call_atexit.c
+   135: 81009bf0     4 OBJECT  LOCAL  DEFAULT    4 __atexit_recursive_mutex
+   136: 00000000     0 FILE    LOCAL  DEFAULT  ABS closer.c
+   137: 00000000     0 FILE    LOCAL  DEFAULT  ABS ctype_.c
+   138: 00000000     0 FILE    LOCAL  DEFAULT  ABS errno.c
+   139: 00000000     0 FILE    LOCAL  DEFAULT  ABS flags.c
+   140: 00000000     0 FILE    LOCAL  DEFAULT  ABS fputc.c
+   141: 00000000     0 FILE    LOCAL  DEFAULT  ABS fputwc.c
+   142: 81007598   102 FUNC    LOCAL  DEFAULT    1 __sputc_r
+   143: 00000000     0 FILE    LOCAL  DEFAULT  ABS getenv.c
+   144: 00000000     0 FILE    LOCAL  DEFAULT  ABS getenv_r.c
+   145: 810094d0     4 OBJECT  LOCAL  DEFAULT    3 p_environ
+   146: 00000000     0 FILE    LOCAL  DEFAULT  ABS isattyr.c
+   147: 00000000     0 FILE    LOCAL  DEFAULT  ABS locale.c
+   148: 810078d7    10 FUNC    LOCAL  DEFAULT    1 __get_global_locale
+   149: 810078e1    10 FUNC    LOCAL  DEFAULT    1 __get_current_locale
+   150: 00000000     0 FILE    LOCAL  DEFAULT  ABS lseekr.c
+   151: 00000000     0 FILE    LOCAL  DEFAULT  ABS mbtowc_r.c
+   152: 810079c3    10 FUNC    LOCAL  DEFAULT    1 __get_global_locale
+   153: 810079cd    10 FUNC    LOCAL  DEFAULT    1 __get_current_locale
+   154: 00000000     0 FILE    LOCAL  DEFAULT  ABS nano-vfprintf.c
+   155: 00000000     0 FILE    LOCAL  DEFAULT  ABS putc.c
+   156: 8100817c   102 FUNC    LOCAL  DEFAULT    1 __sputc_r
+   157: 00000000     0 FILE    LOCAL  DEFAULT  ABS readr.c
+   158: 00000000     0 FILE    LOCAL  DEFAULT  ABS strncmp.c
+   159: 00000000     0 FILE    LOCAL  DEFAULT  ABS wcrtomb.c
+   160: 810083a9    10 FUNC    LOCAL  DEFAULT    1 __get_global_locale
+   161: 810083b3    10 FUNC    LOCAL  DEFAULT    1 __get_current_locale
+   162: 00000000     0 FILE    LOCAL  DEFAULT  ABS wctomb_r.c
+   163: 810084b3    10 FUNC    LOCAL  DEFAULT    1 __get_global_locale
+   164: 810084bd    10 FUNC    LOCAL  DEFAULT    1 __get_current_locale
+   165: 00000000     0 FILE    LOCAL  DEFAULT  ABS environ.c
+   166: 81009bf8     4 OBJECT  LOCAL  DEFAULT    4 initial_env
+   167: 00000000     0 FILE    LOCAL  DEFAULT  ABS envlock.c
+   168: 81009bfc     4 OBJECT  LOCAL  DEFAULT    4 __env_recursive_mutex
+   169: 81007897    64 FUNC    GLOBAL DEFAULT    1 _isatty_r
+   170: 810061d4    55 FUNC    GLOBAL DEFAULT    1 cleanup_glue
+   171: 81005808   214 FUNC    GLOBAL DEFAULT    1 _puts_r
+   172: 8100797d    70 FUNC    GLOBAL DEFAULT    1 _lseek_r
+   173: 81000c3c    27 FUNC    GLOBAL DEFAULT    1 yield
+   174: 81006865    85 FUNC    GLOBAL DEFAULT    1 _siprintf_r
+   175: 8100744a   186 FUNC    GLOBAL DEFAULT    1 __sflags
+   176: 81000ef2    51 FUNC    GLOBAL DEFAULT    1 ioctl
+   177: 81006d9a    26 FUNC    GLOBAL DEFAULT    1 strtok_r
+   178: 810057d3    53 FUNC    GLOBAL DEFAULT    1 printf
+   179: 810083bd   119 FUNC    GLOBAL DEFAULT    1 _wcrtomb_r
+   180: 810069bb    74 FUNC    GLOBAL DEFAULT    1 __sseek
+   181: 810018d4   153 FUNC    GLOBAL DEFAULT    1 __sinit
+   182: 81007017   274 FUNC    GLOBAL DEFAULT    1 __swbuf_r
+   183: 810078eb    95 FUNC    GLOBAL DEFAULT    1 _setlocale_r
+   184: 810016dd   111 FUNC    GLOBAL DEFAULT    1 __sfmoreglue
+   185: 81004c0b     6 FUNC    GLOBAL DEFAULT    1 __malloc_unlock
+   186: 81006c59    88 FUNC    GLOBAL DEFAULT    1 strlwr
+   187: 81004af0     0 NOTYPE  GLOBAL DEFAULT    1 memmove
+   188: 81003c4d    73 FUNC    GLOBAL DEFAULT    1 getopt_long
+   189: 810018ba    26 FUNC    GLOBAL DEFAULT    1 _cleanup
+   190: 81006cda   192 FUNC    GLOBAL DEFAULT    1 __strtok_r
+   191: 81007440    10 FUNC    GLOBAL DEFAULT    1 __errno
+   192: 8100776d    32 FUNC    GLOBAL DEFAULT    1 getenv
+   193: 810028d3    67 FUNC    GLOBAL DEFAULT    1 _fstat_r
+   194: 81009bec     4 OBJECT  GLOBAL DEFAULT    4 errno
+   195: 810065fc    29 FUNC    GLOBAL DEFAULT    1 __srget
+   196: 81006956    10 FUNC    GLOBAL DEFAULT    1 __seofread
+   197: 81000c0f    45 FUNC    GLOBAL DEFAULT    1 execve
+   198: 81000bb1    27 FUNC    GLOBAL DEFAULT    1 getpid
+   199: 810015c0    31 FUNC    GLOBAL DEFAULT    1 fgets
+   200: 81004aa8     0 NOTYPE  GLOBAL DEFAULT    1 memcpy
+   201: 81006659   524 FUNC    GLOBAL DEFAULT    1 setvbuf
+   202: 81001899    33 FUNC    GLOBAL DEFAULT    1 _cleanup_r
+   203: 81007e42   826 FUNC    GLOBAL DEFAULT    1 _svfprintf_r
+   204: 810058de    28 FUNC    GLOBAL DEFAULT    1 puts
+   205: 81003ed2    28 FUNC    GLOBAL DEFAULT    1 malloc
+   206: 810057a6    45 FUNC    GLOBAL DEFAULT    1 _printf_r
+   207: 81000d4d    33 FUNC    GLOBAL DEFAULT    1 isatty
+   208: 81009b88     4 OBJECT  GLOBAL DEFAULT    4 optarg
+   209: 81009ba0     4 OBJECT  GLOBAL DEFAULT    4 __malloc_top_pad
+   210: 81009660     0 NOTYPE  GLOBAL DEFAULT    4 __bss_start__
+   211: 81002916  1182 FUNC    GLOBAL DEFAULT    1 __sfvwrite_r
+   212: 81006619    64 FUNC    GLOBAL DEFAULT    1 _sbrk_r
+   213: 81008c64     4 OBJECT  GLOBAL DEFAULT    3 opterr
+   214: 81000e5d    64 FUNC    GLOBAL DEFAULT    1 readdir
+   215: 81008280    70 FUNC    GLOBAL DEFAULT    1 _read_r
+   216: 81000f9d   263 FUNC    GLOBAL DEFAULT    1 _fclose_r
+   217: 8100133f    57 FUNC    GLOBAL DEFAULT    1 fflush
+   218: 81009ba4     4 OBJECT  GLOBAL DEFAULT    4 __malloc_max_sbrked_mem
+   219: 81001378   113 FUNC    GLOBAL DEFAULT    1 _fgetc_r
+   220: 81000cf9    45 FUNC    GLOBAL DEFAULT    1 lseek
+   221: 810088e4     4 OBJECT  GLOBAL DEFAULT    2 _global_impure_ptr
+   222: 810058fa  2266 FUNC    GLOBAL DEFAULT    1 _realloc_r
+   223: 81006fc9    37 FUNC    GLOBAL DEFAULT    1 strtol_l
+   224: 810076ae    87 FUNC    GLOBAL DEFAULT    1 _fputwc_r
+   225: 81001999    36 FUNC    GLOBAL DEFAULT    1 __fp_lock_all
+   226: 81006fee    41 FUNC    GLOBAL DEFAULT    1 strtol
+   227: 81002402  1201 FUNC    GLOBAL DEFAULT    1 _fseeko_r
+   228: 8100620b   352 FUNC    GLOBAL DEFAULT    1 _reclaim_reent
+   229: 81007504    70 FUNC    GLOBAL DEFAULT    1 _fputc_r
+   230: 81000cab    45 FUNC    GLOBAL DEFAULT    1 write
+   231: 810081e2    75 FUNC    GLOBAL DEFAULT    1 _putc_r
+   232: 8100964c     4 OBJECT  GLOBAL DEFAULT    3 environ
+   233: 81000d26    39 FUNC    GLOBAL DEFAULT    1 fstat
+   234: 81001afe    44 FUNC    GLOBAL DEFAULT    1 fprintf
+   235: 81003d2b    39 FUNC    GLOBAL DEFAULT    1 __getopt_long_only_r
+   236: 810028b3    32 FUNC    GLOBAL DEFAULT    1 fseeko
+   237: 81000f3f    26 FUNC    GLOBAL DEFAULT    1 _atoi_r
+   238: 81007a59   439 FUNC    GLOBAL DEFAULT    1 __ssputs_r
+   239: 810023e2    32 FUNC    GLOBAL DEFAULT    1 fseek
+   240: 81004d53   168 FUNC    GLOBAL DEFAULT    1 __sfputs_r
+   241: 81009b8c     4 OBJECT  GLOBAL DEFAULT    4 optind
+   242: 8100196d     6 FUNC    GLOBAL DEFAULT    1 __sfp_lock_acquire
+   243: 810049c0     0 NOTYPE  GLOBAL DEFAULT    1 memchr
+   244: 81006865    85 FUNC    GLOBAL DEFAULT    1 _sprintf_r
+   245: 81009c00     0 NOTYPE  GLOBAL DEFAULT    4 __bss_end__
+   246: 81001e89   987 FUNC    GLOBAL DEFAULT    1 _free_r
+   247: 81000db0    33 FUNC    GLOBAL DEFAULT    1 wait
+   248: 810089c0   384 OBJECT  GLOBAL DEFAULT    2 _ctype_b
+   249: 8100794a    20 FUNC    GLOBAL DEFAULT    1 __locale_mb_cur_max
+   250: 81006599    99 FUNC    GLOBAL DEFAULT    1 __srget_r
+   251: 810072eb   277 FUNC    GLOBAL DEFAULT    1 __call_exitprocs
+   252: 810094cc     4 OBJECT  GLOBAL DEFAULT    3 __malloc_sbrk_base
+   253: 81000aed     0 NOTYPE  GLOBAL DEFAULT    1 _start
+   254: 81000c7e    45 FUNC    GLOBAL DEFAULT    1 read
+   255: 81007c10   562 FUNC    GLOBAL DEFAULT    1 __ssprint_r
+   256: 81005760    70 FUNC    GLOBAL DEFAULT    1 _open_r
+   257: 810082c6   227 FUNC    GLOBAL DEFAULT    1 strncmp
+   258: 81003d04    39 FUNC    GLOBAL DEFAULT    1 __getopt_long_r
+   259: 81009bc0    40 OBJECT  GLOBAL DEFAULT    4 __malloc_current_mallinfo
+   260: 81000ed1    33 FUNC    GLOBAL DEFAULT    1 unlink
+   261: 810057a6    45 FUNC    GLOBAL DEFAULT    1 _iprintf_r
+   262: 81007400    64 FUNC    GLOBAL DEFAULT    1 _close_r
+   263: 81006cb1    41 FUNC    GLOBAL DEFAULT    1 strtok
+   264: 81004a55     0 NOTYPE  GLOBAL DEFAULT    1 memcmp
+   265: 81002e87   184 FUNC    GLOBAL DEFAULT    1 _fwrite_r
+   266: 81000bf4    27 FUNC    GLOBAL DEFAULT    1 fork
+   267: 81007190   347 FUNC    GLOBAL DEFAULT    1 __swsetup_r
+   268: 8100174c   333 FUNC    GLOBAL DEFAULT    1 __sfp
+   269: 810090c0  1032 OBJECT  GLOBAL DEFAULT    3 __malloc_av_
+   270: 8100197f     6 FUNC    GLOBAL DEFAULT    1 __sinit_lock_release
+   271: 81006912    68 FUNC    GLOBAL DEFAULT    1 __sread
+   272: 81001e64    37 FUNC    GLOBAL DEFAULT    1 fread
+   273: 81004c05     6 FUNC    GLOBAL DEFAULT    1 __malloc_lock
+   274: 81001ad5    41 FUNC    GLOBAL DEFAULT    1 _fprintf_r
+   275: 81000d6e    33 FUNC    GLOBAL DEFAULT    1 sbrk
+   276: 810012e7    88 FUNC    GLOBAL DEFAULT    1 _fflush_r
+   277: 81000afd    62 FUNC    GLOBAL DEFAULT    1 cstart
+   278: 81001ab6    31 FUNC    GLOBAL DEFAULT    1 fopen
+   279: 81003c06    71 FUNC    GLOBAL DEFAULT    1 getopt
+   280: 81004b7d     0 NOTYPE  GLOBAL DEFAULT    1 memset
+   281: 81000922   459 FUNC    GLOBAL DEFAULT    1 main
+   282: 81009ba8     4 OBJECT  GLOBAL DEFAULT    4 __malloc_max_total_mem
+   283: 81007129    33 FUNC    GLOBAL DEFAULT    1 __swbuf
+   284: 81001bef   629 FUNC    GLOBAL DEFAULT    1 _fread_r
+   285: 81006a05    37 FUNC    GLOBAL DEFAULT    1 __sclose
+   286: 810010a4    29 FUNC    GLOBAL DEFAULT    1 fclose
+   287: 81006fa4    37 FUNC    GLOBAL DEFAULT    1 _strtol_r
+   288: 8100778d   237 FUNC    GLOBAL DEFAULT    1 _findenv_r
+   289: 8100419e  2082 FUNC    GLOBAL DEFAULT    1 _malloc_r
+   290: 810084eb    67 FUNC    GLOBAL DEFAULT    1 __ascii_wctomb
+   291: 81000df2   107 FUNC    GLOBAL DEFAULT    1 opendir
+   292: 81001ad5    41 FUNC    GLOBAL DEFAULT    1 _fiprintf_r
+   293: 81008534     6 FUNC    GLOBAL DEFAULT    1 __env_unlock
+   294: 8100774d    32 FUNC    GLOBAL DEFAULT    1 _findenv
+   295: 81002db4   104 FUNC    GLOBAL DEFAULT    1 _fwalk
+   296: 81001462   350 FUNC    GLOBAL DEFAULT    1 _fgets_r
+   297: 810079d7    42 FUNC    GLOBAL DEFAULT    1 _mbtowc_r
+   298: 8100822d    83 FUNC    GLOBAL DEFAULT    1 putc
+   299: 81003c96    73 FUNC    GLOBAL DEFAULT    1 getopt_long_only
+   300: 81002264   353 FUNC    GLOBAL DEFAULT    1 _malloc_trim_r
+   301: 81006b2c   165 FUNC    GLOBAL DEFAULT    1 strcmp
+   302: 81004dfb    37 FUNC    GLOBAL DEFAULT    1 vfiprintf
+   303: 81000d8f    33 FUNC    GLOBAL DEFAULT    1 dup
+   304: 810057d3    53 FUNC    GLOBAL DEFAULT    1 iprintf
+   305: 810013e9   121 FUNC    GLOBAL DEFAULT    1 fgetc
+   306: 810068ba    88 FUNC    GLOBAL DEFAULT    1 sprintf
+   307: 81009bf4     4 OBJECT  GLOBAL DEFAULT    4 _PathLocale
+   308: 8100714a    70 FUNC    GLOBAL DEFAULT    1 _write_r
+   309: 8100795e    31 FUNC    GLOBAL DEFAULT    1 setlocale
+   310: 81005176   411 FUNC    GLOBAL DEFAULT    1 _printf_common
+   311: 810090a4     4 OBJECT  GLOBAL DEFAULT    3 _impure_ptr
+   312: 810010c1   550 FUNC    GLOBAL DEFAULT    1 __sflush_r
+   313: 810023c5    29 FUNC    GLOBAL DEFAULT    1 _fseek_r
+   314: 81007e42   826 FUNC    GLOBAL DEFAULT    1 _svfiprintf_r
+   315: 81006398   513 FUNC    GLOBAL DEFAULT    1 __srefill_r
+   316: 81007a01    88 FUNC    GLOBAL DEFAULT    1 __ascii_mbtowc
+   317: 810019bd    36 FUNC    GLOBAL DEFAULT    1 __fp_unlock_all
+   318: 8100754a    78 FUNC    GLOBAL DEFAULT    1 fputc
+   319: 81000bcc    40 FUNC    GLOBAL DEFAULT    1 print_msg
+   320: 81008c68     4 OBJECT  GLOBAL DEFAULT    3 optopt
+   321: 81003e3f   147 FUNC    GLOBAL DEFAULT    1 __swhatbuf_r
+   322: 81002f3f    37 FUNC    GLOBAL DEFAULT    1 fwrite
+   323: 810075fe   176 FUNC    GLOBAL DEFAULT    1 __fputwc
+   324: 81001b2a   166 FUNC    GLOBAL DEFAULT    1 _fputs_r
+   325: 81006960    91 FUNC    GLOBAL DEFAULT    1 __swrite
+   326: 810094c8     4 OBJECT  GLOBAL DEFAULT    3 __malloc_trim_threshold
+   327: 81000f59    68 FUNC    GLOBAL DEFAULT    1 exit
+   328: 81001afe    44 FUNC    GLOBAL DEFAULT    1 fiprintf
+   329: 81004e20   854 FUNC    GLOBAL DEFAULT    1 _vfiprintf_r
+   330: 81002e1c   107 FUNC    GLOBAL DEFAULT    1 _fwalk_reent
+   331: 81001973     6 FUNC    GLOBAL DEFAULT    1 __sfp_lock_release
+   332: 810068ba    88 FUNC    GLOBAL DEFAULT    1 siprintf
+   333: 81000f25    26 FUNC    GLOBAL DEFAULT    1 atoi
+   334: 81008b40   257 OBJECT  GLOBAL DEFAULT    2 _ctype_
+   335: 81003cdf    37 FUNC    GLOBAL DEFAULT    1 __getopt_r
+   336: 810019e1   213 FUNC    GLOBAL DEFAULT    1 _fopen_r
+   337: 81000dd1    33 FUNC    GLOBAL DEFAULT    1 _exit
+   338: 81003d52   237 FUNC    GLOBAL DEFAULT    1 __smakebuf_r
+   339: 81006be0     0 NOTYPE  GLOBAL DEFAULT    1 strlen
+   340: 81005311  1103 FUNC    GLOBAL DEFAULT    1 _printf_i
+   341: 81000c57    39 FUNC    GLOBAL DEFAULT    1 open
+   342: 81004c11   220 FUNC    GLOBAL DEFAULT    1 __sprint_r
+   343: 81006a30     0 NOTYPE  GLOBAL DEFAULT    1 strchr
+   344: 81001bd0    31 FUNC    GLOBAL DEFAULT    1 fputs
+   345: 81000e9d    52 FUNC    GLOBAL DEFAULT    1 closedir
+   346: 810084c7    36 FUNC    GLOBAL DEFAULT    1 _wctomb_r
+   347: 8100852e     6 FUNC    GLOBAL DEFAULT    1 __env_lock
+   348: 81004e20   854 FUNC    GLOBAL DEFAULT    1 _vfprintf_r
+   349: 81000b87    42 FUNC    GLOBAL DEFAULT    1 msleep
+   350: 81008434   127 FUNC    GLOBAL DEFAULT    1 wcrtomb
+   351: 81000cd8    33 FUNC    GLOBAL DEFAULT    1 close
+   352: 810094e0   364 OBJECT  GLOBAL DEFAULT    3 __global_locale
+   353: 81004dfb    37 FUNC    GLOBAL DEFAULT    1 vfprintf
+   354: 81007705    72 FUNC    GLOBAL DEFAULT    1 fputwc
+   355: 81003eee    29 FUNC    GLOBAL DEFAULT    1 free
+   356: 81001979     6 FUNC    GLOBAL DEFAULT    1 __sinit_lock_acquire
+   357: 8100787a    29 FUNC    GLOBAL DEFAULT    1 _getenv_r
 
 No version information found in this file.

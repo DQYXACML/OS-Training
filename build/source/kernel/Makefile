@@ -31,6 +31,9 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -298,6 +301,30 @@ dev/dev.c.s:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/dev.c.s
 .PHONY : dev/dev.c.s
 
+dev/disk.obj: dev/disk.c.obj
+.PHONY : dev/disk.obj
+
+# target to build an object file
+dev/disk.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/disk.c.obj
+.PHONY : dev/disk.c.obj
+
+dev/disk.i: dev/disk.c.i
+.PHONY : dev/disk.i
+
+# target to preprocess a source file
+dev/disk.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/disk.c.i
+.PHONY : dev/disk.c.i
+
+dev/disk.s: dev/disk.c.s
+.PHONY : dev/disk.s
+
+# target to generate assembly for a file
+dev/disk.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/dev/disk.c.s
+.PHONY : dev/disk.c.s
+
 dev/kbd.obj: dev/kbd.c.obj
 .PHONY : dev/kbd.obj
 
@@ -393,6 +420,30 @@ fs/devfs/devfs.s: fs/devfs/devfs.c.s
 fs/devfs/devfs.c.s:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/fs/devfs/devfs.c.s
 .PHONY : fs/devfs/devfs.c.s
+
+fs/fatfs/fatfs.obj: fs/fatfs/fatfs.c.obj
+.PHONY : fs/fatfs/fatfs.obj
+
+# target to build an object file
+fs/fatfs/fatfs.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/fs/fatfs/fatfs.c.obj
+.PHONY : fs/fatfs/fatfs.c.obj
+
+fs/fatfs/fatfs.i: fs/fatfs/fatfs.c.i
+.PHONY : fs/fatfs/fatfs.i
+
+# target to preprocess a source file
+fs/fatfs/fatfs.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/fs/fatfs/fatfs.c.i
+.PHONY : fs/fatfs/fatfs.c.i
+
+fs/fatfs/fatfs.s: fs/fatfs/fatfs.c.s
+.PHONY : fs/fatfs/fatfs.s
+
+# target to generate assembly for a file
+fs/fatfs/fatfs.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/fs/fatfs/fatfs.c.s
+.PHONY : fs/fatfs/fatfs.c.s
 
 fs/file.obj: fs/file.c.obj
 .PHONY : fs/file.obj
@@ -497,6 +548,30 @@ init/init.s: init/init.c.s
 init/init.c.s:
 	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/init/init.c.s
 .PHONY : init/init.c.s
+
+init/lib_syscall.obj: init/lib_syscall.c.obj
+.PHONY : init/lib_syscall.obj
+
+# target to build an object file
+init/lib_syscall.c.obj:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/init/lib_syscall.c.obj
+.PHONY : init/lib_syscall.c.obj
+
+init/lib_syscall.i: init/lib_syscall.c.i
+.PHONY : init/lib_syscall.i
+
+# target to preprocess a source file
+init/lib_syscall.c.i:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/init/lib_syscall.c.i
+.PHONY : init/lib_syscall.c.i
+
+init/lib_syscall.s: init/lib_syscall.c.s
+.PHONY : init/lib_syscall.s
+
+# target to generate assembly for a file
+init/lib_syscall.c.s:
+	cd C:/diy-x86os-master/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/init/lib_syscall.c.s
+.PHONY : init/lib_syscall.c.s
 
 init/start.obj: init/start.S.obj
 .PHONY : init/start.obj
@@ -680,6 +755,9 @@ help:
 	@echo "... dev/dev.obj"
 	@echo "... dev/dev.i"
 	@echo "... dev/dev.s"
+	@echo "... dev/disk.obj"
+	@echo "... dev/disk.i"
+	@echo "... dev/disk.s"
 	@echo "... dev/kbd.obj"
 	@echo "... dev/kbd.i"
 	@echo "... dev/kbd.s"
@@ -692,6 +770,9 @@ help:
 	@echo "... fs/devfs/devfs.obj"
 	@echo "... fs/devfs/devfs.i"
 	@echo "... fs/devfs/devfs.s"
+	@echo "... fs/fatfs/fatfs.obj"
+	@echo "... fs/fatfs/fatfs.i"
+	@echo "... fs/fatfs/fatfs.s"
 	@echo "... fs/file.obj"
 	@echo "... fs/file.i"
 	@echo "... fs/file.s"
@@ -705,6 +786,9 @@ help:
 	@echo "... init/init.obj"
 	@echo "... init/init.i"
 	@echo "... init/init.s"
+	@echo "... init/lib_syscall.obj"
+	@echo "... init/lib_syscall.i"
+	@echo "... init/lib_syscall.s"
 	@echo "... init/start.obj"
 	@echo "... ipc/mutex.obj"
 	@echo "... ipc/mutex.i"

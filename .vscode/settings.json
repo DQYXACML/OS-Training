@@ -28,6 +28,7 @@
         "strings.h": "c",
         "STDLIB.H": "cpp",
         "mutex.h": "c",
-        "file.h": "c"
+        "file.h": "c",
+        "tty.h": "c"
     },
 }

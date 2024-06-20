@@ -9,4 +9,5 @@
 #define OS_TICK_MS 10                // 每毫秒的时钟数
 #define OS_VERSION "1.0.0"
 #define TASK_NR 128
+#define ROOT_DEV DEV_DISK, 0xb1
 #endif

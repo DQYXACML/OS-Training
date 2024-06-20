@@ -31,6 +31,9 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -181,6 +184,32 @@ shell/fast:
 	$(MAKE) $(MAKESILENT) -f source/shell/CMakeFiles/shell.dir/build.make source/shell/CMakeFiles/shell.dir/build
 .PHONY : shell/fast
 
+#=============================================================================
+# Target rules for targets named init
+
+# Build rule for target.
+init: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 init
+.PHONY : init
+
+# fast build rule for target.
+init/fast:
+	$(MAKE) $(MAKESILENT) -f source/init/CMakeFiles/init.dir/build.make source/init/CMakeFiles/init.dir/build
+.PHONY : init/fast
+
+#=============================================================================
+# Target rules for targets named loop
+
+# Build rule for target.
+loop: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 loop
+.PHONY : loop
+
+# fast build rule for target.
+loop/fast:
+	$(MAKE) $(MAKESILENT) -f source/loop/CMakeFiles/loop.dir/build.make source/loop/CMakeFiles/loop.dir/build
+.PHONY : loop/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -191,8 +220,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... app"
 	@echo "... boot"
+	@echo "... init"
 	@echo "... kernel"
 	@echo "... loader"
+	@echo "... loop"
 	@echo "... shell"
 .PHONY : help
 

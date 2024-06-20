@@ -5,6 +5,7 @@
 #include "file.h"
 #include "tools/list.h"
 #include "applib/lib_syscall.h"
+#include "fatfs/fatfs.h"
 
 #define FS_MOUNTP_SIZE 512
 
@@ -25,9 +26,9 @@ typedef struct _fs_op_t
     int (*stat)(file_t *file, struct stat *st);
     int (*ioctl)(file_t *file, int cmd, int arg0, int arg1);
 
-    // int (*opendir)(struct _fs_t *fs, const char *name, DIR *dir);
-    // int (*readdir)(struct _fs_t *fs, DIR *dir, struct dirent *dirent);
-    // int (*closedir)(struct _fs_t *fs, DIR *dir);
+    int (*opendir)(struct _fs_t *fs, const char *name, DIR *dir);
+    int (*readdir)(struct _fs_t *fs, DIR *dir, struct dirent *dirent);
+    int (*closedir)(struct _fs_t *fs, DIR *dir);
     int (*unlink)(struct _fs_t *fs, const char *path);
 } fs_op_t;
 
@@ -51,10 +52,10 @@ typedef struct _fs_t
 
     // 目前暂时这样设计，可能看起来不好，但是是最简单的方法
     // 这样就不用考虑内存分配的问题
-    // union
-    // {
-    //     fat_t fat_data; // 文件系统相关数据
-    // };
+    union
+    {
+        fat_t fat_data; // 文件系统相关数据
+    };
     mutex_t *mutex; // 文件系统操作互斥信号量
 } fs_t;
 
@@ -71,4 +72,10 @@ int sys_close(int file);
 int sys_isatty(int file);
 int sys_fstat(int file, struct stat *st);
 int sys_dup(int file);
+
+int sys_opendir(const char *name, DIR *dir);
+int sys_readdir(DIR *dir, struct dirent *dirent);
+int sys_closedir(DIR *dir);
+int sys_unlink(const char *path);
+int sys_ioctl(int fd, int cmd, int arg0, int arg1);
 #endif

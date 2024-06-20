@@ -180,6 +180,7 @@ void kernel_itoa(char *buf, int num, int base)
         start++;
     }
 }
+
 // buf 为最终显示的目标
 // fmt 为整个字符串
 // args 为va_list 可变变量
@@ -239,6 +240,18 @@ void kernel_vsprintf(char *buf, const char *fmt, va_list args)
             break;
         }
     }
+}
+
+/**
+ * @brief 格式化字符串到缓存中
+ */
+void kernel_sprintf(char *buffer, const char *fmt, ...)
+{
+    va_list args;
+
+    va_start(args, fmt);
+    kernel_vsprintf(buffer, fmt, args);
+    va_end(args);
 }
 
 void panic(const char *file, int line, const char *func, const char *cond)

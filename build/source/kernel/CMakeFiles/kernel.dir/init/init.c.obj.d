@@ -56,4 +56,5 @@ source/kernel/CMakeFiles/kernel.dir/init/init.c.obj: \
  C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
  C:/diy-x86os-master/start/start/source/applib/lib_syscall.h \
  C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h \
- C:/diy-x86os-master/start/start/source/applib/lib_syscall.h
+ C:/diy-x86os-master/start/start/source/applib/lib_syscall.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/fs/fatfs/fatfs.h

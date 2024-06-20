@@ -107,10 +107,11 @@ void move_to_first_task(void)
 void init_main(void)
 {
     // list_test();
-
+    log_printf("===================================");
     log_printf("Kernel is running...");
     log_printf("Version: %s", OS_VERSION);
-    log_printf("%d %d %x %c", 123456, -123, 0x123456, 'a');
+    log_printf("===================================");
+    // log_printf("%d %d %x %c", 123456, -123, 0x123456, 'a');
 
     // task_init(&init_task, "init task", (uint32_t)init_task_entry, (uint32_t)&init_task_stack[1024]); // 压栈先-4再入栈
     task_first_init();

@@ -34,22 +34,6 @@
 			"value" : "C:/x86_64-elf-tools-windows/bin/x86_64-elf-ar.exe"
 		},
 		{
-			"name" : "CMAKE_ASM_COMPILER",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : ""
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
-		},
-		{
 			"name" : "CMAKE_ASM_COMPILER_AR",
 			"properties" : 
 			[
@@ -307,10 +291,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "C:/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe"
 		},
 		{
@@ -807,7 +791,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "6"
+			"value" : "8"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -1366,6 +1350,42 @@
 			"value" : "C:/diy-x86os-master/start/start/source/boot"
 		},
 		{
+			"name" : "init_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/diy-x86os-master/start/start/build/source/init"
+		},
+		{
+			"name" : "init_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "init_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/diy-x86os-master/start/start/source/init"
+		},
+		{
 			"name" : "kernel_BINARY_DIR",
 			"properties" : 
 			[
@@ -1436,6 +1456,42 @@
 			],
 			"type" : "STATIC",
 			"value" : "C:/diy-x86os-master/start/start/source/loader"
+		},
+		{
+			"name" : "loop_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/diy-x86os-master/start/start/build/source/loop"
+		},
+		{
+			"name" : "loop_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "loop_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/diy-x86os-master/start/start/source/loop"
 		},
 		{
 			"name" : "os_BINARY_DIR",

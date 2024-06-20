@@ -45,6 +45,7 @@ source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj: \
  C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h \
  C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h \
  C:/diy-x86os-master/start/start/source/applib/lib_syscall.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/fs/fatfs/fatfs.h \
  C:/diy-x86os-master/start/start/source/comm/boot_info.h \
  C:/diy-x86os-master/start/start/source/comm/types.h \
  C:/diy-x86os-master/start/start/source/kernel/include/dev/console.h \
@@ -54,4 +55,5 @@ source/kernel/CMakeFiles/kernel.dir/fs/fs.c.obj: \
  C:/diy-x86os-master/start/start/source/kernel/include/dev/dev.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\sys\file.h \
  c:\diy-x86os-master\start\newlib\i686-elf\include\sys\fcntl.h \
- c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_default_fcntl.h
+ c:\diy-x86os-master\start\newlib\i686-elf\include\sys\_default_fcntl.h \
+ C:/diy-x86os-master/start/start/source/kernel/include/dev/disk.h

@@ -12,7 +12,9 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6,
+						7
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -49,7 +51,7 @@
 					"source" : "source/loader",
 					"targetIndexes" : 
 					[
-						3
+						4
 					]
 				},
 				{
@@ -64,7 +66,7 @@
 					"source" : "source/kernel",
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -94,7 +96,37 @@
 					"source" : "source/shell",
 					"targetIndexes" : 
 					[
-						4
+						6
+					]
+				},
+				{
+					"build" : "source/init",
+					"jsonFile" : "directory-source.init-Debug-bc1492dd513896d7b635.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 6,
+					"source" : "source/init",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "source/loop",
+					"jsonFile" : "directory-source.loop-Debug-59fddbe57aec05a21d60.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 7,
+					"source" : "source/loop",
+					"targetIndexes" : 
+					[
+						5
 					]
 				}
 			],
@@ -108,7 +140,9 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6,
+						7
 					],
 					"directoryIndexes" : 
 					[
@@ -137,7 +171,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						3
+						4
 					]
 				},
 				{
@@ -149,7 +183,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -173,7 +207,31 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						4
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "init",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "loop",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5
 					]
 				}
 			],
@@ -194,9 +252,16 @@
 					"projectIndex" : 1
 				},
 				{
+					"directoryIndex" : 6,
+					"id" : "init::@fa7672a329b369120015",
+					"jsonFile" : "target-init-Debug-49f66139285131a3ab1f.json",
+					"name" : "init",
+					"projectIndex" : 6
+				},
+				{
 					"directoryIndex" : 3,
 					"id" : "kernel::@483af936ae9a949d521e",
-					"jsonFile" : "target-kernel-Debug-66d23fef49d5591f2502.json",
+					"jsonFile" : "target-kernel-Debug-cb91495429677b40afb0.json",
 					"name" : "kernel",
 					"projectIndex" : 3
 				},
@@ -206,6 +271,13 @@
 					"jsonFile" : "target-loader-Debug-555307dfe629892f18b7.json",
 					"name" : "loader",
 					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "loop::@c739ad1222b82d308c45",
+					"jsonFile" : "target-loop-Debug-44495cbed6515e011a05.json",
+					"name" : "loop",
+					"projectIndex" : 7
 				},
 				{
 					"directoryIndex" : 5,

@@ -185,3 +185,69 @@ void _exit(int status)
     {
     }
 }
+
+DIR *opendir(const char *name)
+{
+    DIR *dir = (DIR *)malloc(sizeof(DIR));
+    if (dir == (DIR *)0)
+    {
+        return (DIR *)0;
+    }
+
+    syscall_args_t args;
+    args.id = SYS_opendir;
+    args.arg0 = (int)name;
+    args.arg1 = (int)dir;
+    int err = sys_call(&args);
+    if (err < 0)
+    {
+        free(dir);
+        return (DIR *)0;
+    }
+    return dir;
+}
+
+struct dirent *readdir(DIR *dir)
+{
+
+    syscall_args_t args;
+    args.id = SYS_readdir;
+    args.arg0 = (int)dir;
+    args.arg1 = (int)&dir->dirent;
+    int err = sys_call(&args);
+    if (err < 0)
+    {
+        return (struct dirent *)0;
+    }
+    return &dir->dirent;
+}
+
+int closedir(DIR *dir)
+{
+    syscall_args_t args;
+    args.id = SYS_closedir;
+    args.arg0 = (int)dir;
+    sys_call(&args);
+
+    free(dir);
+    return 0;
+}
+
+int unlink(const char *path)
+{
+    syscall_args_t args;
+    args.id = SYS_unlink;
+    args.arg0 = (int)path;
+    return sys_call(&args);
+}
+
+int ioctl(int fd, int cmd, int arg0, int arg1)
+{
+    syscall_args_t args;
+    args.id = SYS_ioctl;
+    args.arg0 = fd;
+    args.arg1 = cmd;
+    args.arg2 = arg0;
+    args.arg3 = arg1;
+    return sys_call(&args);
+}

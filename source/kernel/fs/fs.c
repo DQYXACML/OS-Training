@@ -10,6 +10,7 @@
 #include "dev/dev.h"
 #include <sys/file.h>
 #include "os_cfg.h"
+#include "dev/disk.h"
 
 #define FS_TABLE_SIZE 10 // 文件系统表数量
 static uint8_t TEMP_ADDR[100 * 1024];
@@ -22,7 +23,7 @@ static fs_t fs_tbl[FS_TABLE_SIZE]; // 空闲文件系统列表大小
 static fs_t *root_fs;              // 根文件系统
 
 extern fs_op_t devfs_op;
-// extern fs_op_t fatfs_op;
+extern fs_op_t fatfs_op;
 
 static void fs_protect(fs_t *fs)
 {
@@ -94,12 +95,15 @@ static int is_path_valid(const char *path)
 
 int sys_open(const char *name, int flags, ...)
 {
-    if (kernel_strncmp(name, "/shell.elf", 3) == 0)
-    {
-        read_disk(5000, 80, (uint8_t *)TEMP_ADDR);
-        temp_pos = (uint8_t *)TEMP_ADDR;
-        return TEMP_FILE_ID;
-    }
+    // if (kernel_strncmp(name, "/shell.elf", 3) == 0)
+    // {
+    //     // read_disk(5000, 80, (uint8_t *)TEMP_ADDR);
+    //     // temp_pos = (uint8_t *)TEMP_ADDR;
+    //     int dev_id = dev_open(DEV_DISK, 0xa0, (void *)0);
+    //     dev_read(dev_id, 5000, (uint8_t *)TEMP_ADDR, 80);
+    //     temp_pos = (uint8_t *)TEMP_ADDR;
+    //     return TEMP_FILE_ID;
+    // }
 
     // 分配文件描述符链接
     file_t *file = file_alloc();
@@ -131,6 +135,7 @@ int sys_open(const char *name, int flags, ...)
     }
     else
     {
+        fs = root_fs;
     }
 
     file->dev_id = -1;
@@ -160,12 +165,12 @@ sys_open_failed:
 
 int sys_read(int file, char *ptr, int len)
 {
-    if (file == TEMP_FILE_ID)
-    {
-        kernel_memcpy(ptr, temp_pos, len);
-        temp_pos += len;
-        return len;
-    }
+    // if (file == TEMP_FILE_ID)
+    // {
+    //     kernel_memcpy(ptr, temp_pos, len);
+    //     temp_pos += len;
+    //     return len;
+    // }
     if (is_fd_bad(file) || !ptr || !len)
     {
         return 0;
@@ -219,11 +224,11 @@ int sys_write(int file, char *ptr, int len)
 
 int sys_lseek(int file, int ptr, int dir)
 {
-    if (file == TEMP_FILE_ID)
-    {
-        temp_pos = (uint8_t *)(TEMP_ADDR + ptr);
-        return 0;
-    }
+    // if (file == TEMP_FILE_ID)
+    // {
+    //     temp_pos = (uint8_t *)(TEMP_ADDR + ptr);
+    //     return 0;
+    // }
 
     if (is_fd_bad(file))
     {
@@ -248,10 +253,10 @@ int sys_lseek(int file, int ptr, int dir)
 
 int sys_close(int file)
 {
-    if (file == TEMP_FILE_ID)
-    {
-        return 0;
-    }
+    // if (file == TEMP_FILE_ID)
+    // {
+    //     return 0;
+    // }
 
     if (is_fd_bad(file))
     {
@@ -412,8 +417,8 @@ static fs_op_t *get_fs_op(fs_type_t type, int major)
 {
     switch (type)
     {
-    // case FS_FAT16:
-    //     return &fatfs_op;
+    case FS_FAT16:
+        return &fatfs_op;
     case FS_DEVFS:
         return &devfs_op;
     default:
@@ -505,13 +510,69 @@ void fs_init(void)
     file_table_init();
 
     // // 磁盘检查
-    // disk_init();
+    disk_init();
 
     // 挂载设备文件系统，待后续完成。挂载点名称可随意
     fs_t *fs = mount(FS_DEVFS, "/dev", 0, 0);
     ASSERT(fs != (fs_t *)0);
 
-    // // 挂载根文件系统
-    // root_fs = mount(FS_FAT16, "/home", ROOT_DEV);
-    // ASSERT(root_fs != (fs_t *)0);
+    // 挂载根文件系统
+    root_fs = mount(FS_FAT16, "/home", ROOT_DEV);
+    ASSERT(root_fs != (fs_t *)0);
+}
+
+int sys_opendir(const char *name, DIR *dir)
+{
+    fs_protect(root_fs);
+    int err = root_fs->op->opendir(root_fs, name, dir);
+    fs_unprotect(root_fs);
+    return err;
+}
+
+int sys_readdir(DIR *dir, struct dirent *dirent)
+{
+    fs_protect(root_fs);
+    int err = root_fs->op->readdir(root_fs, dir, dirent);
+    fs_unprotect(root_fs);
+    return err;
+}
+
+int sys_closedir(DIR *dir)
+{
+    fs_protect(root_fs);
+    int err = root_fs->op->closedir(root_fs, dir);
+    fs_unprotect(root_fs);
+    return err;
+}
+
+int sys_unlink(const char *path)
+{
+    fs_protect(root_fs);
+    int err = root_fs->op->unlink(root_fs, path);
+    fs_unprotect(root_fs);
+    return err;
+}
+
+/**
+ * @brief IO设备控制
+ */
+int sys_ioctl(int fd, int cmd, int arg0, int arg1)
+{
+    if (is_fd_bad(fd))
+    {
+        return 0;
+    }
+
+    file_t *pfile = task_file(fd);
+    if (pfile == (file_t *)0)
+    {
+        return 0;
+    }
+
+    fs_t *fs = pfile->fs;
+
+    fs_protect(fs);
+    int err = fs->op->ioctl(pfile, cmd, arg0, arg1);
+    fs_unprotect(fs);
+    return err;
 }

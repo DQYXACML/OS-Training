@@ -99,7 +99,7 @@ Symbol table '.symtab' contains 47 entries:
     33: 000083d1   303 FUNC    LOCAL  DEFAULT    1 read_disk
     34: 00008500   282 FUNC    LOCAL  DEFAULT    1 reload_elf_file
     35: 0000861a     5 FUNC    LOCAL  DEFAULT    1 die
-    36: 0000a000  4096 OBJECT  LOCAL  DEFAULT    3 page_dir.1900
+    36: 0000a000  4096 OBJECT  LOCAL  DEFAULT    3 page_dir.1904
     37: 0000830d    35 FUNC    GLOBAL DEFAULT    1 loader_entry
     38: 00009000    24 OBJECT  GLOBAL DEFAULT    3 gdt_table
     39: 00008660    81 FUNC    GLOBAL DEFAULT    1 load_kernel

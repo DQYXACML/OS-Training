@@ -4,6 +4,7 @@
 #include "comm/cpu_instr.h"
 #include "os_cfg.h"
 #include "tools/log.h"
+#include "core/task.h"
 
 #define IDT_TABLE_NR 128
 
@@ -47,9 +48,19 @@ static void do_default_handler(exception_frame_t *frame, const char *msg)
 
     dump_core_regs(frame); // 打印寄存器
     log_printf("--------------------------------");
-    for (;;)
+
+    // 用户特权下，直接退出
+    if (frame->cs & 0x3)
     {
-        hlt();
+        sys_exit(frame->err_code);
+    }
+    else
+    {
+        // 内核特权下，死机
+        while (1)
+        {
+            hlt();
+        }
     }
 }
 
@@ -173,22 +184,20 @@ void do_handler_general_protection(exception_frame_t *frame)
     log_printf("segment index: %d", frame->err_code & 0xFFF8);
 
     dump_core_regs(frame);
-    while (1)
-    {
-        hlt();
-    }
 
-    // if (frame->cs & 0x3)
-    // {
-    //     sys_exit(frame->error_code);
-    // }
-    // else
-    // {
-    //     for (;;)
-    //     {
-    //         hlt();
-    //     }
-    // }
+    // 用户特权下，直接退出
+    if (frame->cs & 0x3)
+    {
+        sys_exit(frame->err_code);
+    }
+    else
+    {
+        // 内核特权下，死机
+        while (1)
+        {
+            hlt();
+        }
+    }
 }
 
 void do_handler_page_fault(exception_frame_t *frame)
@@ -225,22 +234,20 @@ void do_handler_page_fault(exception_frame_t *frame)
     }
 
     dump_core_regs(frame);
-    while (1)
-    {
-        hlt();
-    }
 
-    // if (frame->cs & 0x3)
-    // {
-    //     sys_exit(frame->err_code);
-    // }
-    // else
-    // {
-    //     for (;;)
-    //     {
-    //         hlt();
-    //     }
-    // }
+    // 用户特权下，直接退出
+    if (frame->cs & 0x3)
+    {
+        sys_exit(frame->err_code);
+    }
+    else
+    {
+        // 内核特权下，死机
+        while (1)
+        {
+            hlt();
+        }
+    }
 }
 
 static void init_pic(void)

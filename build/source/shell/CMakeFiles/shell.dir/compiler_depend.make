@@ -4,8 +4,11 @@
 source/shell/CMakeFiles/shell.dir/main.c.obj: C:/diy-x86os-master/start/start/source/shell/main.c \
   C:/diy-x86os-master/start/start/source/comm/types.h \
   C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/dev/tty.h \
   C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h \
   C:/diy-x86os-master/start/start/source/kernel/include/os_cfg.h \
+  C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h \
   C:/diy-x86os-master/start/start/source/shell/main.h \
   C:/diy-x86os-master/start/newlib/i686-elf/include/_ansi.h \
   C:/diy-x86os-master/start/newlib/i686-elf/include/_newlib_version.h \
@@ -52,6 +55,10 @@ source/shell/CMakeFiles/shell.dir/main.c.obj: C:/diy-x86os-master/start/start/so
   C:/x86_64-elf-tools-windows/lib/gcc/x86_64-elf/7.1.0/include/stddef.h
 
 
+C:/diy-x86os-master/start/start/source/kernel/include/ipc/sem.h:
+
+C:/diy-x86os-master/start/start/source/kernel/include/tools/list.h:
+
 C:/diy-x86os-master/start/start/source/kernel/include/fs/file.h:
 
 C:/diy-x86os-master/start/newlib/i686-elf/include/time.h:
@@ -60,6 +67,10 @@ C:/diy-x86os-master/start/newlib/i686-elf/include/stdio.h:
 
 C:/diy-x86os-master/start/start/source/shell/main.c:
 
+C:/diy-x86os-master/start/start/source/comm/types.h:
+
+C:/diy-x86os-master/start/start/source/kernel/include/dev/tty.h:
+
 C:/diy-x86os-master/start/newlib/i686-elf/include/sys/config.h:
 
 C:/diy-x86os-master/start/newlib/i686-elf/include/sys/_default_fcntl.h:
@@ -67,8 +78,6 @@ C:/diy-x86os-master/start/newlib/i686-elf/include/sys/_default_fcntl.h:
 C:/diy-x86os-master/start/newlib/i686-elf/include/machine/_types.h:
 
 C:/diy-x86os-master/start/start/source/kernel/include/core/syscall.h:
-
-C:/diy-x86os-master/start/start/source/comm/types.h:
 
 C:/diy-x86os-master/start/newlib/i686-elf/include/sys/select.h:
 

@@ -1,7 +1,7 @@
 In archive C:/diy-x86os-master/start/start/build/source/applib/libapp.a:
 
 crt0.S.obj:     file format elf32-i386
-rw-rw-rw- 0/0   1324 Jun 17 17:56 2024 crt0.S.obj
+rw-rw-rw- 0/0   1324 Jun 19 15:27 2024 crt0.S.obj
 architecture: i386, flags 0x00000011:
 HAS_RELOC, HAS_SYMS
 start address 0x00000000
@@ -61,7 +61,7 @@ _start:
 			c: R_386_PC32	cstart
 
 cstart.c.obj:     file format elf32-i386
-rw-rw-rw- 0/0   7436 Jun 17 17:56 2024 cstart.c.obj
+rw-rw-rw- 0/0   7436 Jun 19 15:27 2024 cstart.c.obj
 architecture: i386, flags 0x00000011:
 HAS_RELOC, HAS_SYMS
 start address 0x00000000
@@ -151,32 +151,32 @@ void cstart(int argc, char **argv)
 			3a: R_386_PC32	exit
 
 lib_syscall.c.obj:     file format elf32-i386
-rw-rw-rw- 0/0  12268 Jun 17 17:56 2024 lib_syscall.c.obj
+rw-rw-rw- 0/0  14056 Jun 19 15:27 2024 lib_syscall.c.obj
 architecture: i386, flags 0x00000011:
 HAS_RELOC, HAS_SYMS
 start address 0x00000000
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         000002b7  00000000  00000000  00000034  2**0
-                  CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00000000  00000000  000002eb  2**0
+  0 .text         000003ea  00000000  00000000  00000034  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  00000000  00000000  0000041e  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          00000000  00000000  00000000  000002eb  2**0
+  2 .bss          00000000  00000000  00000000  0000041e  2**0
                   ALLOC
-  3 .debug_info   00000f69  00000000  00000000  000002eb  2**0
+  3 .debug_info   0000118f  00000000  00000000  0000041e  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
-  4 .debug_abbrev 00000259  00000000  00000000  00001254  2**0
+  4 .debug_abbrev 00000295  00000000  00000000  000015ad  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_aranges 00000020  00000000  00000000  000014ad  2**0
+  5 .debug_aranges 00000020  00000000  00000000  00001842  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
-  6 .debug_line   0000024c  00000000  00000000  000014cd  2**0
+  6 .debug_line   0000028e  00000000  00000000  00001862  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
-  7 .debug_str    000007a4  00000000  00000000  00001719  2**0
+  7 .debug_str    000007f7  00000000  00000000  00001af0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .comment      00000012  00000000  00000000  00001ebd  2**0
+  8 .comment      00000012  00000000  00000000  000022e7  2**0
                   CONTENTS, READONLY
-  9 .debug_frame  00000258  00000000  00000000  00001ed0  2**2
+  9 .debug_frame  000002f8  00000000  00000000  000022fc  2**2
                   CONTENTS, RELOC, READONLY, DEBUGGING
 SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 lib_syscall.c
@@ -208,6 +208,13 @@ SYMBOL TABLE:
 00000254 g     F .text	00000021 dup
 00000275 g     F .text	00000021 wait
 00000296 g     F .text	00000021 _exit
+000002b7 g     F .text	0000006b opendir
+00000000         *UND*	00000000 malloc
+00000000         *UND*	00000000 free
+00000322 g     F .text	00000040 readdir
+00000362 g     F .text	00000034 closedir
+00000396 g     F .text	00000021 unlink
+000003b7 g     F .text	00000033 ioctl
 
 
 
@@ -680,3 +687,187 @@ void _exit(int status)
  2b2:	83 c4 04             	add    $0x4,%esp
     for (;;)
  2b5:	eb fe                	jmp    2b5 <_exit+0x1f>
+
+000002b7 <opendir>:
+    {
+    }
+}
+
+DIR *opendir(const char *name)
+{
+ 2b7:	55                   	push   %ebp
+ 2b8:	89 e5                	mov    %esp,%ebp
+ 2ba:	83 ec 28             	sub    $0x28,%esp
+    DIR *dir = (DIR *)malloc(sizeof(DIR));
+ 2bd:	83 ec 0c             	sub    $0xc,%esp
+ 2c0:	68 10 01 00 00       	push   $0x110
+ 2c5:	e8 fc ff ff ff       	call   2c6 <opendir+0xf>
+			2c6: R_386_PC32	malloc
+ 2ca:	83 c4 10             	add    $0x10,%esp
+ 2cd:	89 45 f4             	mov    %eax,-0xc(%ebp)
+    if (dir == (DIR *)0)
+ 2d0:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 2d4:	75 07                	jne    2dd <opendir+0x26>
+    {
+        return (DIR *)0;
+ 2d6:	b8 00 00 00 00       	mov    $0x0,%eax
+ 2db:	eb 43                	jmp    320 <opendir+0x69>
+    }
+
+    syscall_args_t args;
+    args.id = SYS_opendir;
+ 2dd:	c7 45 dc 3c 00 00 00 	movl   $0x3c,-0x24(%ebp)
+    args.arg0 = (int)name;
+ 2e4:	8b 45 08             	mov    0x8(%ebp),%eax
+ 2e7:	89 45 e0             	mov    %eax,-0x20(%ebp)
+    args.arg1 = (int)dir;
+ 2ea:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 2ed:	89 45 e4             	mov    %eax,-0x1c(%ebp)
+    int err = sys_call(&args);
+ 2f0:	83 ec 0c             	sub    $0xc,%esp
+ 2f3:	8d 45 dc             	lea    -0x24(%ebp),%eax
+ 2f6:	50                   	push   %eax
+ 2f7:	e8 04 fd ff ff       	call   0 <sys_call>
+ 2fc:	83 c4 10             	add    $0x10,%esp
+ 2ff:	89 45 f0             	mov    %eax,-0x10(%ebp)
+    if (err < 0)
+ 302:	83 7d f0 00          	cmpl   $0x0,-0x10(%ebp)
+ 306:	79 15                	jns    31d <opendir+0x66>
+    {
+        free(dir);
+ 308:	83 ec 0c             	sub    $0xc,%esp
+ 30b:	ff 75 f4             	pushl  -0xc(%ebp)
+ 30e:	e8 fc ff ff ff       	call   30f <opendir+0x58>
+			30f: R_386_PC32	free
+ 313:	83 c4 10             	add    $0x10,%esp
+        return (DIR *)0;
+ 316:	b8 00 00 00 00       	mov    $0x0,%eax
+ 31b:	eb 03                	jmp    320 <opendir+0x69>
+    }
+    return dir;
+ 31d:	8b 45 f4             	mov    -0xc(%ebp),%eax
+}
+ 320:	c9                   	leave  
+ 321:	c3                   	ret    
+
+00000322 <readdir>:
+
+struct dirent *readdir(DIR *dir)
+{
+ 322:	55                   	push   %ebp
+ 323:	89 e5                	mov    %esp,%ebp
+ 325:	83 ec 20             	sub    $0x20,%esp
+
+    syscall_args_t args;
+    args.id = SYS_readdir;
+ 328:	c7 45 e8 3d 00 00 00 	movl   $0x3d,-0x18(%ebp)
+    args.arg0 = (int)dir;
+ 32f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 332:	89 45 ec             	mov    %eax,-0x14(%ebp)
+    args.arg1 = (int)&dir->dirent;
+ 335:	8b 45 08             	mov    0x8(%ebp),%eax
+ 338:	83 c0 04             	add    $0x4,%eax
+ 33b:	89 45 f0             	mov    %eax,-0x10(%ebp)
+    int err = sys_call(&args);
+ 33e:	8d 45 e8             	lea    -0x18(%ebp),%eax
+ 341:	50                   	push   %eax
+ 342:	e8 b9 fc ff ff       	call   0 <sys_call>
+ 347:	83 c4 04             	add    $0x4,%esp
+ 34a:	89 45 fc             	mov    %eax,-0x4(%ebp)
+    if (err < 0)
+ 34d:	83 7d fc 00          	cmpl   $0x0,-0x4(%ebp)
+ 351:	79 07                	jns    35a <readdir+0x38>
+    {
+        return (struct dirent *)0;
+ 353:	b8 00 00 00 00       	mov    $0x0,%eax
+ 358:	eb 06                	jmp    360 <readdir+0x3e>
+    }
+    return &dir->dirent;
+ 35a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 35d:	83 c0 04             	add    $0x4,%eax
+}
+ 360:	c9                   	leave  
+ 361:	c3                   	ret    
+
+00000362 <closedir>:
+
+int closedir(DIR *dir)
+{
+ 362:	55                   	push   %ebp
+ 363:	89 e5                	mov    %esp,%ebp
+ 365:	83 ec 28             	sub    $0x28,%esp
+    syscall_args_t args;
+    args.id = SYS_closedir;
+ 368:	c7 45 e4 3e 00 00 00 	movl   $0x3e,-0x1c(%ebp)
+    args.arg0 = (int)dir;
+ 36f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 372:	89 45 e8             	mov    %eax,-0x18(%ebp)
+    sys_call(&args);
+ 375:	8d 45 e4             	lea    -0x1c(%ebp),%eax
+ 378:	50                   	push   %eax
+ 379:	e8 82 fc ff ff       	call   0 <sys_call>
+ 37e:	83 c4 04             	add    $0x4,%esp
+
+    free(dir);
+ 381:	83 ec 0c             	sub    $0xc,%esp
+ 384:	ff 75 08             	pushl  0x8(%ebp)
+ 387:	e8 fc ff ff ff       	call   388 <closedir+0x26>
+			388: R_386_PC32	free
+ 38c:	83 c4 10             	add    $0x10,%esp
+    return 0;
+ 38f:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 394:	c9                   	leave  
+ 395:	c3                   	ret    
+
+00000396 <unlink>:
+
+int unlink(const char *path)
+{
+ 396:	55                   	push   %ebp
+ 397:	89 e5                	mov    %esp,%ebp
+ 399:	83 ec 20             	sub    $0x20,%esp
+    syscall_args_t args;
+    args.id = SYS_unlink;
+ 39c:	c7 45 ec 3f 00 00 00 	movl   $0x3f,-0x14(%ebp)
+    args.arg0 = (int)path;
+ 3a3:	8b 45 08             	mov    0x8(%ebp),%eax
+ 3a6:	89 45 f0             	mov    %eax,-0x10(%ebp)
+    return sys_call(&args);
+ 3a9:	8d 45 ec             	lea    -0x14(%ebp),%eax
+ 3ac:	50                   	push   %eax
+ 3ad:	e8 4e fc ff ff       	call   0 <sys_call>
+ 3b2:	83 c4 04             	add    $0x4,%esp
+}
+ 3b5:	c9                   	leave  
+ 3b6:	c3                   	ret    
+
+000003b7 <ioctl>:
+
+int ioctl(int fd, int cmd, int arg0, int arg1)
+{
+ 3b7:	55                   	push   %ebp
+ 3b8:	89 e5                	mov    %esp,%ebp
+ 3ba:	83 ec 20             	sub    $0x20,%esp
+    syscall_args_t args;
+    args.id = SYS_ioctl;
+ 3bd:	c7 45 ec 3b 00 00 00 	movl   $0x3b,-0x14(%ebp)
+    args.arg0 = fd;
+ 3c4:	8b 45 08             	mov    0x8(%ebp),%eax
+ 3c7:	89 45 f0             	mov    %eax,-0x10(%ebp)
+    args.arg1 = cmd;
+ 3ca:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 3cd:	89 45 f4             	mov    %eax,-0xc(%ebp)
+    args.arg2 = arg0;
+ 3d0:	8b 45 10             	mov    0x10(%ebp),%eax
+ 3d3:	89 45 f8             	mov    %eax,-0x8(%ebp)
+    args.arg3 = arg1;
+ 3d6:	8b 45 14             	mov    0x14(%ebp),%eax
+ 3d9:	89 45 fc             	mov    %eax,-0x4(%ebp)
+    return sys_call(&args);
+ 3dc:	8d 45 ec             	lea    -0x14(%ebp),%eax
+ 3df:	50                   	push   %eax
+ 3e0:	e8 1b fc ff ff       	call   0 <sys_call>
+ 3e5:	83 c4 04             	add    $0x4,%esp
+ 3e8:	c9                   	leave  
+ 3e9:	c3                   	ret    

@@ -1,0 +1,1 @@
+-I"C:/diy-x86os-master/start/start/source" -I"C:/diy-x86os-master/start/start/source/kernel/include" -I"C:/diy-x86os-master/start/start/../newlib/i686-elf/include" -I"C:/diy-x86os-master/start/start/source/loop/../applib"

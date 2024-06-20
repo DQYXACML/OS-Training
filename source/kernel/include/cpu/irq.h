@@ -22,6 +22,8 @@
 #define IRQ19_XM 19
 #define IRQ20_VE 20
 
+#define IRQ14_HARDDISK_PRIMARY 0x2E // 主总线上的ATA磁盘中断
+
 // PIC控制器相关的寄存器及位配置
 #define PIC0_ICW1 0x20
 #define PIC0_ICW2 0x21
